@@ -53,3 +53,12 @@ sysinfo.txt
 # Ignore temporary files
 Temp/
 Obj/
+
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+UserSettings/
+Logs/
+
