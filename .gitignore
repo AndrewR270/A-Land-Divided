@@ -1,32 +1,6 @@
-[Libraries]
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
-# Unity
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
-[Libraries]/
-[Libraries]/*
-[Libraries]/**
-
 # Unity generated folders
 [Libraries]/
-[Libraries]/*
+[Libraries]/
 [Libraries]/**
 
 # Ignore build results
@@ -61,4 +35,3 @@ Build/
 Builds/
 UserSettings/
 Logs/
-
