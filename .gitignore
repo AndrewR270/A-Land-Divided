@@ -1,0 +1,55 @@
+[Libraries]
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+# Unity
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+# Unity generated folders
+[Libraries]/
+[Libraries]/*
+[Libraries]/**
+
+# Ignore build results
+Build/
+Builds/
+
+# Ignore user-specific files
+UserSettings/
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+
+# Ignore logs
+*.log
+
+# Ignore crash reports
+sysinfo.txt
+
+# Ignore temporary files
+Temp/
+Obj/
