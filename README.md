@@ -1,3 +1,13 @@
+# Branch Notes
+
+This branch is a snapshot of the first working UI movement system finished on 8/28, and will not be updated - it serves as a reference point for future stable development. It is intentionally kept static. The code in this branch reflects a stable, functional version of the system before major updates and refactors were introduced on main.
+
+The following features were completed for this branch
+
+- Map Navigation using **Map Navigation.cs**, but may later adjust values and weights and implement player settings to change them.
+- Resolution Scaling in **ResolutionScaler.cs**, which for now only scales the map and background - need to implement UI components in scaling as well.
+- Scenario Management with **ScenarioAsset.cs** and **ScenarioManager.cs** which only contain texture data. Other fields are empty and must be edited to become functional later.
+
 # A Land Divided
 
 A strategy game built upon the Unity Game Engine. You are a statesman aiming to unite the realm. One land, one culture, one people divided.
