@@ -5,6 +5,7 @@ public class MapNavigation : MonoBehaviour
 {
     public RectTransform mapRoot;
     public RectTransform mapBounds;
+    public MapResolutionScaler scaler;
 
     [Header("Zoom")]
     public float zoomSpeed;
@@ -12,7 +13,7 @@ public class MapNavigation : MonoBehaviour
     public float maxZoom;
     public float zoomLerpSpeed;
 
-    private float targetZoom = 1f;
+    private float targetZoom = 0.8f;
 
     [Header("Pan")]
     public float panSpeed = 1.0f;
@@ -30,38 +31,9 @@ public class MapNavigation : MonoBehaviour
     // NEW: Resolution‑normalized base scale
     // ---------------------------------------------------------
     // NEW: resolution‑normalized zoom limits
-    private float actualMinZoom;
-    private float actualMaxZoom;
 
-    void ApplyBaseScale()
-    {
-        if (mapRoot == null) return;
-
-        RectTransform canvasRect = mapRoot.parent as RectTransform;
-        if (canvasRect == null) return;
-
-        float canvasHeight = canvasRect.rect.height;
-        float mapHeight = mapBounds.rect.height;
-
-        float baseScale = canvasHeight / mapHeight;
-
-        mapRoot.localScale = new Vector3(baseScale, baseScale, 1f);
-
-        // resolution‑normalized zoom limits
-        actualMinZoom = baseScale * minZoom;
-        actualMaxZoom = baseScale * maxZoom;
-
-        targetZoom = baseScale;
-    }
-
-    void Awake()
-    {
-        ApplyBaseScale(); // ensure correct baseline before zoom/pan begins
-    }
-
-    void OnRectTransformDimensionsChange()
-    {
-        ApplyBaseScale(); // resolution changed → recompute baseline
+    public void updateScale() { 
+        targetZoom = scaler.mapScale;
     }
 
     // ---------------------------------------------------------
@@ -115,8 +87,8 @@ public class MapNavigation : MonoBehaviour
                 float zoomMultiplier = zoomSpeed > 1f ? zoomSpeed : 1.1f;
                 targetZoom = Mathf.Clamp(
                     currentZoom * Mathf.Pow(zoomMultiplier, zoomSteps),
-                    actualMinZoom,
-                    actualMaxZoom
+                    scaler.mapScale * minZoom,
+                    scaler.mapScale * maxZoom
                 );
             }
         }
