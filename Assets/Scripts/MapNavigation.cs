@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class MapNavigation : MonoBehaviour
 {
-    public RectTransform mapRoot;
+    public RectTransform map;
     public RectTransform mapBounds;
     public MapResolutionScaler scaler;
 
@@ -13,12 +13,14 @@ public class MapNavigation : MonoBehaviour
     public float maxZoom;
     public float zoomLerpSpeed;
 
-    private float targetZoom = 0.8f;
+    private float targetZoom;
 
     [Header("Pan")]
-    public float panSpeed = 1.0f;
-    public float keyPanSpeed = 500f;
-    public float inertiaDamping = 5f;
+    public float panSpeed;
+    public float keyPanSpeed;
+    public float inertiaDamping;
+
+    private float keyPanning;
 
     private Vector2 lastMousePos;
     private Vector2 inertiaVelocity;
@@ -34,6 +36,7 @@ public class MapNavigation : MonoBehaviour
 
     public void updateScale() { 
         targetZoom = scaler.mapScale;
+        keyPanning = keyPanSpeed * scaler.mapScale * 2;
     }
 
     // ---------------------------------------------------------
@@ -53,17 +56,15 @@ public class MapNavigation : MonoBehaviour
     // ---------------------------------------------------------
     void HandleZoom()
     {
-        if (mapRoot == null) return;
-
         float scroll = Mouse.current != null ? Mouse.current.scroll.ReadValue().y : 0f;
-        float currentZoom = mapRoot.localScale.x;
+        float currentZoom = map.localScale.x;
 
         if (Mouse.current == null) return;
 
         if (Mathf.Abs(scroll) >= 0.01f ||
             (!hasZoomFocus && Mathf.Abs(targetZoom - currentZoom) >= 0.0001f))
         {
-            RectTransform canvasRect = mapRoot.parent as RectTransform;
+            RectTransform canvasRect = map.parent as RectTransform;
             if (canvasRect == null) return;
 
             Canvas canvas = canvasRect.GetComponentInParent<Canvas>();
@@ -78,7 +79,7 @@ public class MapNavigation : MonoBehaviour
                 out zoomFocusCanvas
             );
 
-            zoomFocusMap = (zoomFocusCanvas - mapRoot.anchoredPosition) / currentZoom;
+            zoomFocusMap = (zoomFocusCanvas - map.anchoredPosition) / currentZoom;
             hasZoomFocus = true;
 
             if (Mathf.Abs(scroll) >= 0.01f)
@@ -98,12 +99,12 @@ public class MapNavigation : MonoBehaviour
 
         float newScale = Mathf.Lerp(currentZoom, targetZoom, Time.deltaTime * zoomLerpSpeed);
 
-        mapRoot.anchoredPosition += zoomFocusMap * (currentZoom - newScale);
-        mapRoot.localScale = new Vector3(newScale, newScale, 1f);
+        map.anchoredPosition += zoomFocusMap * (currentZoom - newScale);
+        map.localScale = new Vector3(newScale, newScale, 1f);
 
         if (Mathf.Abs(targetZoom - newScale) < 0.001f)
         {
-            mapRoot.localScale = new Vector3(targetZoom, targetZoom, 1f);
+            map.localScale = new Vector3(targetZoom, targetZoom, 1f);
             hasZoomFocus = false;
         }
     }
@@ -113,7 +114,7 @@ public class MapNavigation : MonoBehaviour
     // ---------------------------------------------------------
     void HandlePan()
     {
-        if (Mouse.current == null || mapRoot == null) return;
+        if (Mouse.current == null) return;
 
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
@@ -129,7 +130,7 @@ public class MapNavigation : MonoBehaviour
             lastMousePos = mousePos;
 
             Vector2 movement = delta * panSpeed;
-            mapRoot.anchoredPosition += movement;
+            map.anchoredPosition += movement;
 
             inertiaVelocity = movement;
         }
@@ -140,7 +141,7 @@ public class MapNavigation : MonoBehaviour
     // ---------------------------------------------------------
     void HandleKeyboardPan()
     {
-        if (Keyboard.current == null || mapRoot == null) return;
+        if (Keyboard.current == null) return;
 
         Vector2 move = Vector2.zero;
 
@@ -158,8 +159,8 @@ public class MapNavigation : MonoBehaviour
 
         if (move != Vector2.zero)
         {
-            Vector2 movement = move * keyPanSpeed * Time.deltaTime;
-            mapRoot.anchoredPosition += movement;
+            Vector2 movement = move * keyPanning * Time.deltaTime;
+            map.anchoredPosition += movement;
 
             inertiaVelocity = movement;
         }
@@ -170,15 +171,9 @@ public class MapNavigation : MonoBehaviour
     // ---------------------------------------------------------
     void ApplyInertia()
     {
-        if (mapRoot == null)
-        {
-            inertiaVelocity = Vector2.zero;
-            return;
-        }
-
         if (inertiaVelocity.magnitude > 0.01f)
         {
-            mapRoot.anchoredPosition += inertiaVelocity;
+            map.anchoredPosition += inertiaVelocity;
             inertiaVelocity = Vector2.Lerp(inertiaVelocity, Vector2.zero, Time.deltaTime * inertiaDamping);
         }
     }
@@ -188,16 +183,15 @@ public class MapNavigation : MonoBehaviour
     // ---------------------------------------------------------
     void ClampMapPosition()
     {
-        if (mapRoot == null || mapBounds == null)
-            return;
+        if (mapBounds == null) return;
 
-        float scale = Mathf.Abs(mapRoot.localScale.x);
+        float scale = Mathf.Abs(map.localScale.x);
         float halfWidth = scale * mapBounds.rect.width * 0.5f;
         float halfHeight = scale * mapBounds.rect.height * 0.5f;
 
-        mapRoot.anchoredPosition = new Vector2(
-            Mathf.Clamp(mapRoot.anchoredPosition.x, -halfWidth, halfWidth),
-            Mathf.Clamp(mapRoot.anchoredPosition.y, -halfHeight, halfHeight)
+        map.anchoredPosition = new Vector2(
+            Mathf.Clamp(map.anchoredPosition.x, -halfWidth, halfWidth),
+            Mathf.Clamp(map.anchoredPosition.y, -halfHeight, halfHeight)
         );
     }
 }

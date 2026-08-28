@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3f49d2b3f08934aac89bc24c5d5878, type: 3}
+  m_Name: ArchaicGreece
+  m_EditorClassIdentifier: Assembly-CSharp::ScenarioAsset
+  scenarioName: Archaic Greece
+  scenarioID: 0
+  baseMap: {fileID: 2800000, guid: 49dcd295980cb474eafc2d130d5860ca, type: 3}
+  regionMap: {fileID: 2800000, guid: a60a270e6c8fea94bb4de0909b28577c, type: 3}
+  labelsMap: {fileID: 2800000, guid: c6db51035b0c22849bdc9a9720f7eb9f, type: 3}
+  citiesMap: {fileID: 2800000, guid: bda0419d37326e447ba2d3eabfa3b190, type: 3}
+  backgroundPrefab: {fileID: 0}
+  factionColors: []
+  regionListJSON: {fileID: 0}
