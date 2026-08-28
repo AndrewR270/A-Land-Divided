@@ -26,3 +26,4 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Updated support for different screens with a separate **ResolutionScaler.cs** file. Independently scales map and background components in the Canvas by dividing the window size by the standard sizes of the component.
 - Began scenario management code to make asset switching modular, making only one scene necessary to manage multiple scenarios. Stores only rudimentary texture data for now.
 - Added background animation screen for the Archaic Greece scenario, the first in development.
+- Archived completed version of input system and scaler into *snapshot/input-system-v1*
