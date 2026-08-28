@@ -27,3 +27,4 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Began scenario management code to make asset switching modular, making only one scene necessary to manage multiple scenarios. Stores only rudimentary texture data for now.
 - Added background animation screen for the Archaic Greece scenario, the first in development.
 - Archived completed version of input system and scaler into *snapshot/input-system-v1*
+- Created *develop* branch, which will now contain all work: main represents latest stable build, updated through PRs from *develop* instead of direct commits. Enforced with a protection ruleset.
