@@ -35,3 +35,7 @@ Build/
 Builds/
 UserSettings/
 Logs/
+
+# Ignore Textures
+
+Textures/
