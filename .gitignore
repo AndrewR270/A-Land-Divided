@@ -39,3 +39,11 @@ Logs/
 # Ignore Textures
 
 Textures/
+*/Textures/*
+*.png
+*.jpg
+*.jpeg
+*.tga
+*.psd
+*.tif
+*.tiff
