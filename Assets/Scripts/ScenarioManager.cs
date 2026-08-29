@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ScenarioManager : MonoBehaviour
 {
-    public ScenarioAsset[] scenarios;
+    public ScenarioData[] scenarios;
 
     public RawImage baseMap;
     public RawImage highlightLayer;
@@ -13,7 +13,7 @@ public class ScenarioManager : MonoBehaviour
     public Transform background;
 
     private GameObject activeBackground;
-    public ScenarioAsset activeScenario;
+    public ScenarioData activeScenario;
 
     public void LoadScenario(int id)
     {

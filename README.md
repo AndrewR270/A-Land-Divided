@@ -27,3 +27,11 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Began scenario management code to make asset switching modular, making only one scene necessary to manage multiple scenarios. Stores only rudimentary texture data for now.
 - Added background animation screen for the Archaic Greece scenario, the first in development.
 - Archived completed version of input system and scaler into *snapshot/input-system-v1*
+- Created *develop* branch, which will now contain all work: main represents latest stable build, updated through PRs from *develop* instead of direct commits. Enforced with a protection ruleset.
+
+**8/29/26**
+- Created a new *Classes* folder in the Scripts folder to hold definitions for objects representing important game elements.
+- Created rudimentary **Province.cs** and **Building.cs** variable schema, boilerplate for other files.
+- Created a *Text* folder to hold display text instead of directly writing in logic files - will help with localization later.
+- Updated **Building.cs** to define subclasses of a parent Building class - building IDs unneeded as types will be directly initialized. Upgrade cost and time, benefits determined by tier index.
+- Added some display text construction for each building, to be expanded later.
