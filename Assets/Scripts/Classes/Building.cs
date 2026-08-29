@@ -2,11 +2,11 @@ using UnityEngine;
 
 public abstract class Building
 {
-	public virtual string Name;
-	public virtual string Description;
+	public abstract string Name { get; }
+	public abstract string Description { get; }
 	public abstract BuildingText Text { get; }
 
-	private int TIER = 0;
+	protected int TIER = 0;
 	public int Tier => TIER;
 
 	private const int MIN_TIER = 0;
@@ -22,12 +22,12 @@ public abstract class Building
 	public int UpgradeTime => UpgradeTimes[TIER];
 }
 
-public struct FarmsStats
+public struct FarmsTierStats
 {
 	public int Surplus;
 	public float Growth;
 
-	public FarmsStats(int surplus, float growth)
+	public FarmsTierStats(int surplus, float growth)
 	{
 		Surplus = surplus;
 		Growth = growth;
@@ -36,15 +36,15 @@ public struct FarmsStats
 
 public class Farms : Building
 {
-	public static readonly FarmsStats[] stats = {
-		new FarmTierData(0, 0.0f),
-		new FarmTierData(1, 0.6f),
-		new FarmTierData(2, 0.5f),
-		new FarmTierData(3, 0.4f),
-		new FarmTierData(4, 0.4f),
-		new FarmTierData(6, 0.3f),
-		new FarmTierData(8, 0.3f),
-		new FarmTierData(0, 0.0f)
+	public static readonly FarmsTierStats[] stats = {
+		new FarmsTierStats(0, 0.0f),
+		new FarmsTierStats(1, 0.6f),
+		new FarmsTierStats(2, 0.5f),
+		new FarmsTierStats(3, 0.4f),
+		new FarmsTierStats(4, 0.4f),
+		new FarmsTierStats(6, 0.3f),
+		new FarmsTierStats(8, 0.3f),
+		new FarmsTierStats(0, 0.0f)
 	};
 
 	public int Surplus => stats[TIER].Surplus;
@@ -53,23 +53,23 @@ public class Farms : Building
 	public int NextSurplus => stats[TIER+1].Surplus;
 	public float NextGrowth => stats[TIER+1].Growth;
 
-	public override BuildingText Text => BuildingDescriptions.Farm;
+	public override BuildingText Text => BuildingDescriptions.Farms;
 
 	public override string Name => Text.Name;
 	public override string Description => Text.Description;
 
-	public void getBenefits(int tier) 
+	public string getBenefits(int tier) 
 	{
-		$"<b>+{stats[tier].Surplus}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].Growth}</b>" + Text.Benefit2;
+		return $"<b>+{stats[tier].Surplus}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].Growth}</b>" + Text.Benefit2;
 	}
 }
 
-public struct BarracksStats
+public struct BarracksTierStats
 {
 	public int ReplenishTime;
 	public float ExpGain;
 
-	public BarracksStats(int replenishTime, float expGain)
+	public BarracksTierStats(int replenishTime, float expGain)
 	{
 		ReplenishTime = replenishTime;
 		ExpGain = expGain;
@@ -78,15 +78,15 @@ public struct BarracksStats
 
 public class Barracks : Building
 {
-	public static readonly BarracksStats[] stats = {
-		new BarracksTierData(10, 0.00f),
-		new BarracksTierData(9, 0.05f),
-		new BarracksTierData(8, 0.10f),
-		new BarracksTierData(7, 0.15f),
-		new BarracksTierData(6, 0.20f),
-		new BarracksTierData(5, 0.25f),
-		new BarracksTierData(4, 0.30f),
-		new BarracksTierData(10, 0.00f)
+	public static readonly BarracksTierStats[] stats = {
+		new BarracksTierStats(10, 0.00f),
+		new BarracksTierStats(9, 0.05f),
+		new BarracksTierStats(8, 0.10f),
+		new BarracksTierStats(7, 0.15f),
+		new BarracksTierStats(6, 0.20f),
+		new BarracksTierStats(5, 0.25f),
+		new BarracksTierStats(4, 0.30f),
+		new BarracksTierStats(10, 0.00f)
 	};
 
 	public int ReplenishTime => stats[TIER].ReplenishTime;
@@ -100,60 +100,60 @@ public class Barracks : Building
 	public override string Name => Text.Name;
 	public override string Description => Text.Description;
 
-	public void getBenefits(int tier) 
+	public string getBenefits(int tier) 
 	{
-		$"<b>{stats[tier].ReplenishTime}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].ExpGain * 100}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].ReplenishTime}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].ExpGain * 100}</b>" + Text.Benefit2;
 	}
 }
 
-public struct MarketsStats
+public struct MarketsTierStats
 {
 	public float TradeBonus;
 	public int TaxBonus;
 
-	public MarketsStats(float tradeBonus, int taxBonus)
+	public MarketsTierStats(float tradeBonus, int taxBonus)
 	{
 		TradeBonus = tradeBonus;
 		TaxBonus = taxBonus;
 	}
 }
 
-public class Market : Building
+public class Markets : Building
 {
-	public static readonly MarketsStats[] stats = {
-		new MarketTierData(0.00f, 0),
-		new MarketTierData(0.02f, 1),
-		new MarketTierData(0.04f, 1),
-		new MarketTierData(0.06f, 2),
-		new MarketTierData(0.08f, 2),
-		new MarketTierData(0.10f, 3),
-		new MarketTierData(0.12f, 3),
-		new MarketTierData(0.00f, 0)
+	public static readonly MarketsTierStats[] stats = {
+		new MarketsTierStats(0.00f, 0),
+		new MarketsTierStats(0.02f, 1),
+		new MarketsTierStats(0.04f, 1),
+		new MarketsTierStats(0.06f, 2),
+		new MarketsTierStats(0.08f, 2),
+		new MarketsTierStats(0.10f, 3),
+		new MarketsTierStats(0.12f, 3),
+		new MarketsTierStats(0.00f, 0)
 	};
 
-	public int TradeBonus => stats[TIER].TradeBonus;
-	public float TaxBonus => stats[TIER].TaxBonus;
+	public float TradeBonus => stats[TIER].TradeBonus;
+	public int TaxBonus => stats[TIER].TaxBonus;
 	
-	public int NextTradeBonus => stats[TIER+1].TradeBonus;
-	public float NextTaxBonus => stats[TIER+1].TaxBonus;
+	public float NextTradeBonus => stats[TIER+1].TradeBonus;
+	public int NextTaxBonus => stats[TIER+1].TaxBonus;
 
 	public override BuildingText Text => BuildingDescriptions.Markets;
 
 	public override string Name => Text.Name;
 	public override string Description => Text.Description;
 
-	public void getBenefits(int tier) 
+	public string getBenefits(int tier) 
 	{
-		$"<b>{stats[tier].TradeBonus * 100}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].TaxBonus}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].TradeBonus * 100}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].TaxBonus}</b>" + Text.Benefit2;
 	}
 }
 
-public struct PortStats
+public struct PortTierStats
 {
-	public float FleetsSupported;
+	public int FleetsSupported;
 	public int ShipCost;
 
-	public PortStats(float fleetsSupported, int shipCost)
+	public PortTierStats(int fleetsSupported, int shipCost)
 	{
 		FleetsSupported = fleetsSupported;
 		ShipCost = shipCost;
@@ -162,30 +162,30 @@ public struct PortStats
 
 public class Port : Building
 {
-	public static readonly PortStats[] stats = {
-		new PortTierData(0, 0),
-		new PortTierData(1, 200),
-		new PortTierData(2, 180),
-		new PortTierData(3, 160),
-		new PortTierData(4, 140),
-		new PortTierData(5, 120),
-		new PortTierData(6, 100),
-		new PortTierData(0, 0)
+	public static readonly PortTierStats[] stats = {
+		new PortTierStats(0, 0),
+		new PortTierStats(1, 200),
+		new PortTierStats(2, 180),
+		new PortTierStats(3, 160),
+		new PortTierStats(4, 140),
+		new PortTierStats(5, 120),
+		new PortTierStats(6, 100),
+		new PortTierStats(0, 0)
 	};
 
 	public int FleetsSupported => stats[TIER].FleetsSupported;
-	public float ShipCost => stats[TIER].ShipCost;
+	public int ShipCost => stats[TIER].ShipCost;
 		
 	public int NextFleetsSupported => stats[TIER+1].FleetsSupported;
-	public float NextShipCost => stats[TIER+1].ShipCost;
+	public int NextShipCost => stats[TIER+1].ShipCost;
 
 	public override BuildingText Text => BuildingDescriptions.Port;
 
 	public override string Name => Text.Name;
 	public override string Description => Text.Description;
 
-	public void getBenefits(int tier) 
+	public string getBenefits(int tier) 
 	{
-		$"<b>{stats[tier].FleetsSupported}</b>" + Text.Benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].FleetsSupported}</b>" + Text.Benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.Benefit2;
 	}
 }

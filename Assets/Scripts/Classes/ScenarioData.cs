@@ -1,7 +1,9 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 [CreateAssetMenu(fileName = "ScenarioAsset", menuName = "ALD/Scenario")]
-public class ScenarioAsset : ScriptableObject
+public class ScenarioData : ScriptableObject
 {
     [Header("Identity")]
     public string scenarioName;       // "Archaic Greece"
@@ -23,7 +25,7 @@ public class ScenarioAsset : ScriptableObject
 
     public List<Faction> Factions;
     public List<Province> Provinces;
-    public List<SeaRegion> SeaRegions;
+    public List<SeaProvince> SeaProvinces;
 
     public int DifficultyMultiplier; // 1x, 1.5x, 2x
 }

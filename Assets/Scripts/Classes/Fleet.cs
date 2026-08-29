@@ -1,7 +1,7 @@
 public class Fleet
 {
     public Faction Owner;
-    public SeaRegion Location;
+    public SeaProvince Location;
 
     public int Ships;
     public int Merchants;
