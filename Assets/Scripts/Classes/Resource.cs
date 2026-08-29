@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class TradeResource
+public class Resource
 {
     public string Name;
     public int Tier;
