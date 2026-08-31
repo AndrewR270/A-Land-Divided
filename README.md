@@ -35,3 +35,9 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Created a *Text* folder to hold display text instead of directly writing in logic files - will help with localization later.
 - Updated **Building.cs** to define subclasses of a parent Building class - building IDs unneeded as types will be directly initialized. Upgrade cost and time, benefits determined by tier index.
 - Added some display text construction for each building, to be expanded later.
+
+**8/31/26**
+- Created Victory type building to earn victory points and raise stability when built.
+- Created an *Assets/Text* folder - text is stored in .JSON files, not .cs files, to separate logic from data files.
+- Made **BuildingText.cs** file in the Scripts/Text folder to load JSON data based on scenario ID. **ScenarioManager.cs** now calls a helper function to get building text based on id, which is referenced by **Building.cs** to get a set of all building text for a scenario.
+- ScenarioID has an implementation for loading JSON, while BuildingID selects the specific building text entry in the scenario block.

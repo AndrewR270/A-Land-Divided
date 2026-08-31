@@ -1,0 +1,39 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "buildings": {
+        "Farms": {
+          "name": "Geōrgion",
+          "description": "Agricultural plots that increase surplus and population growth.",
+          "benefit1": " surplus",
+          "benefit2": " growth per surplus"
+        },
+        "Barracks": {
+          "name": "Hoplite Training Grounds",
+          "description": "Improves replenishment and levy experience.",
+          "benefit1": " turns to replenish",
+          "benefit2": "% chance of experience gain"
+        },
+        "Markets": {
+          "name": "Agora",
+          "description": "Increases trade income and tax revenue.",
+          "benefit1": " trade bonus",
+          "benefit2": " tax revenue"
+        },
+        "Port": {
+          "name": "Limēn",
+          "description": "Supports fleets and reduces ship cost.",
+          "benefit1": " fleets supported",
+          "benefit2": " ship cost"
+        },
+        "Victory": {
+          "name": "Temple",
+          "description": "Counts toward religious victory.",
+          "benefit1": " temple points",
+          "benefit2": " stability bonus"
+        }
+      }
+    }
+  ]
+}
