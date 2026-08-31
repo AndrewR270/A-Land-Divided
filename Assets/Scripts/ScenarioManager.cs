@@ -1,10 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
 
 public class ScenarioManager : MonoBehaviour
 {
+  public static ScenarioManager Instance { get; private set; }
+
   public ScenarioData[] scenarios;
   private Dictionary<int, ScenarioData> scenarioLookup;
+  public ScenarioData activeScenario;
+  public int ActiveScenarioID => activeScenario.scenarioID;
 
   public RawImage baseMap;
   public RawImage highlightLayer;
@@ -12,12 +18,13 @@ public class ScenarioManager : MonoBehaviour
   public RawImage labelLayer;
 
   public Transform background;
-
   private GameObject activeBackground;
-  public ScenarioData activeScenario;
+
+  public TextAsset buildingTextJSON;
 
   void Awake()
   {
+    Instance = this;
     scenarioLookup = new Dictionary<int, ScenarioData>();
     foreach (var s in scenarios)
       scenarioLookup[s.scenarioID] = s;
@@ -42,6 +49,8 @@ public class ScenarioManager : MonoBehaviour
       Destroy(activeBackground);
 
     activeBackground = Instantiate(activeScenario.backgroundPrefab, background);
+
+    BuildingTextLoader.LoadFromJson(buildingTextJSON.text);
 
     BroadcastScenarioLoaded();
   }
