@@ -189,3 +189,45 @@ public class Port : Building
 		return $"<b>{stats[tier].FleetsSupported}</b>" + Text.Benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.Benefit2;
 	}
 }
+
+public struct VictoryTierStats
+{
+	public int VictoryPoints;
+	public float StabilityBonus;
+
+	public VictoryTierStats(int victoryPoints, float stabilityBonus)
+	{
+		VictoryPoints = victoryPoints;
+		StabilityBonus = stabilityBonus;
+	}
+}
+
+public class Victory : Building
+{
+	public static readonly VictoryTierStats[] stats = {
+		new VictoryTierStats(0, 0.00f),
+		new VictoryTierStats(1, 0.10f),
+		new VictoryTierStats(2, 0.20f),
+		new VictoryTierStats(3, 0.30f),
+		new VictoryTierStats(4, 0.40f),
+		new VictoryTierStats(5, 0.50f),
+		new VictoryTierStats(6, 0.60f),
+		new VictoryTierStats(0, 0.00f)
+	};
+
+	public int VictoryPoints => stats[TIER].VictoryPoints;
+	public float StabilityBonus => stats[TIER].StabilityBonus;
+		
+	public int NextVictoryPoints => stats[TIER+1].VictoryPoints;
+	public float NextStabilityBonus => stats[TIER+1].StabilityBonus;
+
+	public override BuildingText Text => BuildingDescriptions.Victory;
+
+	public override string Name => Text.Name;
+	public override string Description => Text.Description;
+
+	public string getBenefits(int tier) 
+	{
+		return $"<b>{stats[tier].VictoryPoints}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].StabilityBonus}</b>" + Text.Benefit2;
+	}
+}

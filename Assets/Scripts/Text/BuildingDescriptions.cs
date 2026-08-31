@@ -45,4 +45,12 @@ public static class BuildingDescriptions
     " fleets supported",
     " cost to build ships"
   );
+
+  
+  public static readonly BuildingText Victory = new BuildingText(
+    "Victory Building",
+    "Counts towards special victory condition.",
+    " victory points per turn",
+    " bonus to province stability"
+  );
 }
