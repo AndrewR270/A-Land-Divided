@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class MapResolutionScaler : MonoBehaviour
+public class ResolutionScaler : MonoBehaviour
 {
     public MapNavigation navigator;
     

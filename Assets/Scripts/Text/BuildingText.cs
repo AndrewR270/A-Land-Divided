@@ -2,8 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+  Contains data structures and loader for building text descriptions 
+  in different scenarios.
+*/
+
+// Attributes for building text
 [Serializable]
-public struct BuildingText
+public struct BuildingText 
 {
   public string Name;
   public string Description;
@@ -11,8 +17,9 @@ public struct BuildingText
   public string Benefit2;
 }
 
+// Grouping of building texts for a scenario
 [Serializable]
-public struct BuildingTextGroup
+public struct BuildingTextGroup 
 {
   public BuildingText Farms;
   public BuildingText Barracks;
@@ -21,13 +28,15 @@ public struct BuildingTextGroup
   public BuildingText Victory;
 }
 
+// Entry for a specific scenario with ID
 [Serializable]
-public struct ScenarioTextEntry
+public struct ScenarioTextEntry 
 {
   public int id;
   public BuildingTextGroup buildings;
 }
 
+// Wrapper for all scenario text entries
 [Serializable]
 public struct ScenarioTextWrapper
 {

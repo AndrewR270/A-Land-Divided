@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class MapNavigation : MonoBehaviour
 {
     public RectTransform map;
     public RectTransform mapBounds;
-    public MapResolutionScaler scaler;
+    public ResolutionScaler scaler;
 
     [Header("Zoom")]
     public float zoomSpeed;
@@ -29,6 +30,11 @@ public class MapNavigation : MonoBehaviour
     private Vector2 zoomFocusCanvas;
     private Vector2 zoomFocusMap;
 
+    [Header("Layers")]
+    public RawImage textLayer;
+    public RawImage cityLayer;
+
+
     // ---------------------------------------------------------
     // NEW: Resolution‑normalized base scale
     // ---------------------------------------------------------
@@ -49,6 +55,7 @@ public class MapNavigation : MonoBehaviour
         HandleZoom();
         ApplyInertia();
         ClampMapPosition();
+        UpdateLayerOpacity();
     }
 
     // ---------------------------------------------------------
@@ -193,5 +200,49 @@ public class MapNavigation : MonoBehaviour
             Mathf.Clamp(map.anchoredPosition.x, -halfWidth, halfWidth),
             Mathf.Clamp(map.anchoredPosition.y, -halfHeight, halfHeight)
         );
+    }
+
+
+    // ---------------------------------------------------------
+    // LAYER OPACITY
+    // ---------------------------------------------------------
+    void UpdateLayerOpacity()
+    {
+        // Normalize zoom so 1x = scaler.mapScale
+        float zoom = map.localScale.x / scaler.mapScale;
+
+        // -------------------------
+        // TEXT LAYER (5 → 10)
+        // -------------------------
+        float textAlpha = 0f;
+
+        if (zoom >= 0.4f && zoom < 4f)
+            textAlpha = Mathf.InverseLerp(0.4f, 4f, zoom);
+        else if (zoom >= 4f)
+            textAlpha = 1f;
+
+        if (textLayer != null)
+        {
+            Color c = textLayer.color;
+            c.a = textAlpha;
+            textLayer.color = c;
+        }
+
+        // -------------------------
+        // CITIES LAYER (10 → 15)
+        // -------------------------
+        float cityAlpha = 0f;
+
+        if (zoom >= 4f && zoom < 8f)
+            cityAlpha = Mathf.InverseLerp(4f, 8f, zoom);
+        else if (zoom >= 8f)
+            cityAlpha = 1f;
+
+        if (cityLayer != null)
+        {
+            Color c = cityLayer.color;
+            c.a = cityAlpha;
+            cityLayer.color = c;
+        }
     }
 }
