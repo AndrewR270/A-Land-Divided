@@ -45,3 +45,4 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 **9/5/25**
 - Added fading functionality to the map navigation script which hides labels and cities at certain zoom levels
 - Created initial plan for JSON file storage for scenario data, keys as strings, and no display values
+- Added background for test scenario as a prefab
