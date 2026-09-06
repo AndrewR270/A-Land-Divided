@@ -40,7 +40,7 @@ public class ScenarioManager : MonoBehaviour
 
     // Load map textures
     baseMap.texture = activeScenario.baseMapImage;
-    highlightLayer.texture = activeScenario.highlightLayerImage;
+    //highlightLayer.texture = activeScenario.highlightLayerImage;
     cityLayer.texture = activeScenario.cityLayerImage;
     labelLayer.texture = activeScenario.labelLayerImage;
 

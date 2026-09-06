@@ -41,3 +41,7 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Created an *Assets/Text* folder - text is stored in .JSON files, not .cs files, to separate logic from data files.
 - Made **BuildingText.cs** file in the Scripts/Text folder to load JSON data based on scenario ID. **ScenarioManager.cs** now calls a helper function to get building text based on id, which is referenced by **Building.cs** to get a set of all building text for a scenario.
 - ScenarioID has an implementation for loading JSON, while BuildingID selects the specific building text entry in the scenario block.
+
+**9/5/25**
+- Added fading functionality to the map navigation script which hides labels and cities at certain zoom levels
+- Created initial plan for JSON file storage for scenario data, keys as strings, and no display values

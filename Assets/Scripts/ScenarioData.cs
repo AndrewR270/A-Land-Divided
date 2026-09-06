@@ -10,7 +10,7 @@ public class ScenarioData : ScriptableObject
 
     [Header("Map Layers")]
     public Texture2D baseMapImage;
-    public Texture2D highlightLayerImage;
+    public Texture2D provinceIDImage;
     public Texture2D cityLayerImage;
     public Texture2D labelLayerImage;
 
