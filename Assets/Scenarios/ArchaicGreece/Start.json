@@ -1,0 +1,56 @@
+{
+  "scenario": {
+    "scenario_id": "archaic_greece_650bc",
+    "scenario_key": "scenario_archaic_greece",
+    "currency_key": "currency_drachmae",
+    "victory_point_key": "vp_prestige",
+    "turn": 1,
+    "factions": [
+      {
+        "faction_id": "f_athens",
+        "money": 500,
+        "victory_points": 0,
+        "province_ids": [
+          "p_athens"
+        ],
+        "diplomacy": {}
+      }
+    ],
+    "provinces": [
+      {
+        "province_id": "p_athens",
+        "owner": "f_athens",
+        "population_home": 10,
+        "population_levied": 0,
+        "surplus": 1,
+        "stability": 100,
+        "bonus_key": "rbonus_athens",
+        "buildings": {
+          "farm": 1,
+          "barracks": 0,
+          "market": 0,
+          "port": 0,
+          "faith": 0,
+          "special": 0
+        },
+        "pending_construction": [],
+        "pending_recruitment": [],
+        "units": []
+      }
+    ],
+    "sea_regions": [
+      {
+        "region_id": "s_gulf_of_corinth",
+        "factions": {
+          "f_athens": {
+            "fleets": 0,
+            "merchants": 0,
+            "army_at_sea": false,
+            "pending_recruitment_fleets": [],
+            "pending_recruitment_merchants": []
+          }
+        }
+      }
+    ]
+  }
+}

@@ -46,3 +46,6 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Added fading functionality to the map navigation script which hides labels and cities at certain zoom levels
 - Created initial plan for JSON file storage for scenario data, keys as strings, and no display values
 - Added background for test scenario as a prefab
+
+**9/6/26**
+- Added a rudimentary example JSON file for the save data shape - defined structure as factions, provinces, sea regions, units, with nested objects for each
