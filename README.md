@@ -49,3 +49,4 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 
 **9/6/26**
 - Added a rudimentary example JSON file for the save data shape - defined structure as factions, provinces, sea regions, units, with nested objects for each
+- Objects interconnect based on pointers to their related elements, string ids serve as identifiers
