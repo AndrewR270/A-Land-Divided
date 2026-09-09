@@ -110,3 +110,11 @@ scenario:
 
 **9/8/26**
 - Added save data schema mockup to README and a general example in the *Scenario/* folder.
+
+**9/9/26**
+- Added rudimentary settings file which saves to the Application.persistentDataPath, can control localization language.
+Defined Scenario modularity: all scenario specific assets, including text, now live under a scenario folder, accessed using the scenario id. Each scenario will have *Background/, Data/, Text/, and Textures/* folders.
+- Created **ColorMap.json** to store hex string to province mapping. Unpacked by **MapColors.cs.**
+- Added **ProvinceText.cs** for province name, pronunciation, and local name as well as description.
+- Adjusted texture assignment and background instantiation to work with different map sizes.
+- **Initializer.cs** loads first, controls settings and calls scenario id. **ScenarioManager.cs** updated to call the scenario JSON data loaders, will be expanded in the future.
