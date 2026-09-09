@@ -32,7 +32,7 @@ public class Province
     public int SpecialBuildingLevel;
 
     // Stability
-    public int Stability;       // 0–100
+    public int Stability;
 
     // Contingents raised from this province
     public List<Contingent> Contingents = new List<Contingent>();

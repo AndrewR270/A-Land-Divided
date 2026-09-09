@@ -1,6 +1,13 @@
 using System.IO;
 using UnityEngine;
 
+/*
+
+  Default settings data structure for the game. 
+  This is used to store user preferences and game settings.
+
+*/
+
 [System.Serializable]
 public class SettingsData
 {
@@ -39,6 +46,13 @@ public class SettingsWrapper
 {
   public SettingsData settings = new SettingsData();
 }
+
+/*
+
+  A static class that handles loading, saving, and managing game settings.
+  Called on game start by GameInitializer.cs to load settings and apply them to the game.
+
+*/
 
 public static class SettingsManager
 {
