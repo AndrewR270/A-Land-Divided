@@ -20,7 +20,7 @@ public abstract class Building
 	{
 		get
 		{
-			int scenarioId = ScenarioManager.Instance.ActiveScenarioID;
+			string scenarioId = ScenarioManager.Instance.ActiveScenarioID;
 			var group = BuildingTextLoader.TextByScenario[scenarioId];
 
 			return ID switch
@@ -36,8 +36,8 @@ public abstract class Building
 	}
 
 	// Convenience accessors
-	public string Name => Text.Name;
-	public string Description => Text.Description;
+	public string Name => Text.name;
+	public string Description => Text.description;
 
 	// Tier system
 	protected int TIER = 0;
@@ -99,7 +99,7 @@ public class Farms : Building
 
 	public string getBenefits(int tier)
 	{
-		return $"<b>+{stats[tier].Surplus}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].Growth}</b>" + Text.Benefit2;
+		return $"<b>+{stats[tier].Surplus}</b>" + Text.benefit1 + $"\n<b>+{stats[tier].Growth}</b>" + Text.benefit2;
 	}
 }
 
@@ -138,7 +138,7 @@ public class Barracks : Building
 
 	public string getBenefits(int tier)
 	{
-		return $"<b>{stats[tier].ReplenishTime}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].ExpGain * 100}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].ReplenishTime}</b>" + Text.benefit1 + $"\n<b>+{stats[tier].ExpGain * 100}</b>" + Text.benefit2;
 	}
 }
 
@@ -177,7 +177,7 @@ public class Markets : Building
 
 	public string getBenefits(int tier)
 	{
-		return $"<b>{stats[tier].TradeBonus * 100}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].TaxBonus}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].TradeBonus * 100}</b>" + Text.benefit1 + $"\n<b>+{stats[tier].TaxBonus}</b>" + Text.benefit2;
 	}
 }
 
@@ -216,7 +216,7 @@ public class Port : Building
 
 	public string getBenefits(int tier)
 	{
-		return $"<b>{stats[tier].FleetsSupported}</b>" + Text.Benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].FleetsSupported}</b>" + Text.benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.benefit2;
 	}
 }
 
@@ -255,6 +255,6 @@ public class Victory : Building
 
 	public string getBenefits(int tier)
 	{
-		return $"<b>{stats[tier].VictoryPoints}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].StabilityBonus}</b>" + Text.Benefit2;
+		return $"<b>{stats[tier].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{stats[tier].StabilityBonus}</b>" + Text.benefit2;
 	}
 }

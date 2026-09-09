@@ -2,15 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-
 public class ScenarioManager : MonoBehaviour
 {
   public static ScenarioManager Instance { get; private set; }
 
   public ScenarioData[] scenarios;
-  private Dictionary<int, ScenarioData> scenarioLookup;
+  private Dictionary<string, ScenarioData> scenarioLookup;
   public ScenarioData activeScenario;
-  public int ActiveScenarioID => activeScenario.scenarioID;
+
+  public string ActiveScenarioID => activeScenario.scenarioID;
 
   public RawImage baseMap;
   public RawImage highlightLayer;
@@ -20,17 +20,16 @@ public class ScenarioManager : MonoBehaviour
   public Transform background;
   private GameObject activeBackground;
 
-  public TextAsset buildingTextJSON;
-
   void Awake()
   {
     Instance = this;
-    scenarioLookup = new Dictionary<int, ScenarioData>();
+    scenarioLookup = new Dictionary<string, ScenarioData>();
+
     foreach (var s in scenarios)
       scenarioLookup[s.scenarioID] = s;
   }
 
-  public void LoadScenario(int id)
+  public void LoadScenario(string id)
   {
     if (!scenarioLookup.TryGetValue(id, out activeScenario))
     {
@@ -40,24 +39,19 @@ public class ScenarioManager : MonoBehaviour
 
     // Load map textures
     baseMap.texture = activeScenario.baseMapImage;
-    //highlightLayer.texture = activeScenario.highlightLayerImage;
     cityLayer.texture = activeScenario.cityLayerImage;
     labelLayer.texture = activeScenario.labelLayerImage;
 
-    // Load background prefab
     if (activeBackground != null)
       Destroy(activeBackground);
 
     activeBackground = Instantiate(activeScenario.backgroundPrefab, background);
-
-    BuildingTextLoader.LoadFromJson(buildingTextJSON.text);
 
     BroadcastScenarioLoaded();
   }
 
   void BroadcastScenarioLoaded()
   {
-    // MapNavigation, UI, game logic, etc.
     SendMessage("OnScenarioLoaded", activeScenario, SendMessageOptions.DontRequireReceiver);
   }
 }

@@ -1,7 +1,7 @@
 {
   "scenarios": [
     {
-      "id": 1,
+      "id": "archaic_greece_650bc",
       "buildings": {
         "Farms": {
           "name": "Geōrgion",

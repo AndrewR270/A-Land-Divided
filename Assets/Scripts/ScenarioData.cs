@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class ScenarioData : ScriptableObject
 {
     [Header("Identity")]
-    public int scenarioID;
+    public string scenarioID;
 
     [Header("Map Layers")]
     public Texture2D baseMapImage;
