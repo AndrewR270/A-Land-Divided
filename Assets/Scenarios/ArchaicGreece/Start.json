@@ -35,9 +35,6 @@
           "special": 0
         },
         "pending_construction": [],
-        "available_contingents": [
-          "athens_1"
-        ],
         "time_to_recruit": 0,
         "time_to_replenish": 0,
         "lost_contingents": 0,

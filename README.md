@@ -2,6 +2,63 @@
 
 A strategy game built upon the Unity Game Engine. You are a statesman aiming to unite the realm. One land, one culture, one people divided.
 
+## Data Schema
+
+```bash
+scenario:
+  id_scenario: string
+  turn: int
+
+  factions[]:
+    id_faction: string
+    color: string
+    victory_points: int
+    money: int
+    province_ids[]: string
+    diplomacy{ faction_id: "hostile" | "allied" }
+
+  provinces[]:
+    id_province: string
+    owner: string
+    population_home: int
+    population_levied: int
+    surplus: int
+    stability: int
+    buildings:
+      farm: int
+      barracks: int
+      market: int
+      victory: int
+      resource: int
+      port: int
+    pending_construction[]:
+      building_type: string
+      turns_remaining: int
+    pending_recruitment[]:
+      id_unit: string
+      turns_remaining: int
+    replenishment_counter: int
+    unit_id_counter: int
+
+  contingents[]:
+    id_unit: string
+    name_unit: string
+    origin: string
+    experience: int
+    location: string
+    levied: bool
+    is_exile: bool
+
+  sea_regions[]:
+    id_sea_region: string
+    factions{ faction_id }:
+      fleets: int
+      merchants: int
+      army_at_sea: bool
+      ships_in_queue: int
+      merchants_in_queue: int
+```
+
 ## Devlog
 
 **Prior to this repo:**
@@ -50,3 +107,6 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 **9/6/26**
 - Added a rudimentary example JSON file for the save data shape - defined structure as factions, provinces, sea regions, units, with nested objects for each
 - Objects interconnect based on pointers to their related elements, string ids serve as identifiers
+
+**9/8/26**
+- Added save data schema mockup to README and a general example in the *Scenario/* folder.
