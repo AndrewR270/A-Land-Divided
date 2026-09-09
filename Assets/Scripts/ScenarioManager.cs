@@ -14,6 +14,7 @@ public class ScenarioManager : MonoBehaviour
 
   public Texture2D ProvinceColorMap => activeScenario.colorMap;
 
+  public RawImage mapBorders;
   public RawImage baseMap;
   public RawImage highlightLayer;
   public RawImage cityLayer;
@@ -40,6 +41,7 @@ public class ScenarioManager : MonoBehaviour
     }
 
     // Load map textures
+    mapBorders.texture = activeScenario.mapBorders;
     baseMap.texture = activeScenario.baseMapImage;
     cityLayer.texture = activeScenario.cityLayerImage;
     labelLayer.texture = activeScenario.labelLayerImage;

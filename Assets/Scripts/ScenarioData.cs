@@ -9,6 +9,7 @@ public class ScenarioData : ScriptableObject
     public string scenarioID;
 
     [Header("Map Layers")]
+    public Texture2D mapBorders;
     public Texture2D baseMapImage;
     public Texture2D colorMap;
     public Texture2D cityLayerImage;

@@ -6,6 +6,7 @@ public class MapNavigation : MonoBehaviour
 {
     public RectTransform map;
     public RectTransform mapBounds;
+    public RectTransform mapContent;
     public ResolutionScaler scaler;
 
     [Header("Zoom")]
@@ -261,7 +262,7 @@ public class MapNavigation : MonoBehaviour
         if (!Mouse.current.leftButton.wasPressedThisFrame) return;
 
         // Convert screen → local position relative to MAP
-        RectTransform mapRect = map;
+        RectTransform mapRect = mapContent;
         Canvas canvas = mapRect.GetComponentInParent<Canvas>();
         Camera eventCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
 
