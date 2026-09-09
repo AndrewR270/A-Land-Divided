@@ -57,13 +57,13 @@
     { "color": "#e18282", "id_province": "p_knidos" },
 
     { "color": "#ffffff", "id_province": "r_gulf_of_corinth" },
-    { "color": "#5f5f5f", "id_province": "r_ionian_sea" },
-    { "color": "#b9b9b9", "id_province": "r_sea_of_crete" },
+    { "color": "#5e5e5e", "id_province": "r_ionian_sea" },
+    { "color": "#bababa", "id_province": "r_sea_of_crete" },
     { "color": "#a5a5a5", "id_province": "r_myrtoan_sea" },
     { "color": "#4b4b4b", "id_province": "r_southern_aegean" },
-    { "color": "#d7d7d7", "id_province": "r_sea_of_the_cyclades" },
-    { "color": "#969696", "id_province": "r_rhodian_sea" },
-    { "color": "#323232", "id_province": "r_icarian_sea" },
+    { "color": "#d9d9d9", "id_province": "r_sea_of_the_cyclades" },
+    { "color": "#959595", "id_province": "r_rhodian_sea" },
+    { "color": "#2f2f2f", "id_province": "r_icarian_sea" },
     { "color": "#ebebeb", "id_province": "r_aeolian_sea" },
     { "color": "#737373", "id_province": "r_northern_aegean" }
   ]
