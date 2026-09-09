@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.IO;
 
 /*
 
@@ -19,6 +20,12 @@ public class ScenarioManager : MonoBehaviour
 
   public string ScenarioID => activeScenario.scenarioID;
   public Texture2D ColorMap => activeScenario.colorMap;
+
+  // Asset filepaths
+
+  public string ScenarioPath => Path.Combine(Application.dataPath, "Scenarios", ScenarioID);
+  public string DataPath => Path.Combine(ScenarioPath, "Data");
+  public string TextPath => Path.Combine(ScenarioPath, "Text", SettingsManager.Language);
 
   // Visual elements for the scenario map
 
@@ -42,7 +49,11 @@ public class ScenarioManager : MonoBehaviour
   {
     if (!scenarios.TryGetValue(id, out activeScenario)) { Debug.LogError($"Scenario not found."); return; }
 
-    ColorMap.Load(ScenarioID);
+    // Load Scenario JSON data
+    
+    MapColors.Load();
+    BuildingText.Load();
+    ProvinceText.Load();
 
     // Apply visual elements for the scenario map
 
@@ -50,22 +61,28 @@ public class ScenarioManager : MonoBehaviour
     baseMap.texture = activeScenario.baseMap;
     cityLayer.texture = activeScenario.cityLayer;
     labelLayer.texture = activeScenario.labelLayer;
+    mapBorders.SetNativeSize();
+    baseMap.SetNativeSize();
+    highlight.SetNativeSize();
+    cityLayer.SetNativeSize();
+    labelLayer.SetNativeSize();
+
 
     if (activeBackground != null) { Destroy(activeBackground); }
     activeBackground = Instantiate(activeScenario.background, background);
   }
 
-  public Province GetProvinceByID(string id)
-  {
-    foreach (var p in activeScenario.Provinces)
-      if (p.ProvinceID == id)
-        return p;
+  // public Province GetProvinceByID(string id)
+  // {
+  //   foreach (var p in activeScenario.Provinces)
+  //     if (p.ProvinceID == id)
+  //       return p;
 
-    foreach (var s in activeScenario.SeaProvinces)
-      if (s.ProvinceID == id)
-        return s;
+  //   foreach (var s in activeScenario.SeaProvinces)
+  //     if (s.ProvinceID == id)
+  //       return s;
 
-    Debug.LogError("Province ID not found: " + id);
-    return null;
-  }
+  //   Debug.LogError("Province ID not found: " + id);
+  //   return null;
+  // }
 }

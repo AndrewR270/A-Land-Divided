@@ -6,10 +6,10 @@ public class Province
     // Identifiers
     public string ProvinceID;
 
-    public string Name => ProvinceTextLoader.Provinces[ProvinceID].name;
-    public string PeriodName => ProvinceTextLoader.Provinces[ProvinceID].period_name;
-    public string Pronunciation => ProvinceTextLoader.Provinces[ProvinceID].pronunciation;
-    public string Description => ProvinceTextLoader.Provinces[ProvinceID].description;
+    public string Name => ProvinceText.Text[ProvinceID].name;
+    public string PeriodName => ProvinceText.Text[ProvinceID].period_name;
+    public string Pronunciation => ProvinceText.Text[ProvinceID].pronunciation;
+    public string Description => ProvinceText.Text[ProvinceID].description;
 
     // Information
     public Faction Owner;

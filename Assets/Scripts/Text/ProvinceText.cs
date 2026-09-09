@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 
+/*
+
+  Data shape for each province's text information.
+  A wrapper class is used to facilitate JSON deserialization.
+
+*/
+
 [Serializable]
 public struct ProvinceTextEntry
 {
@@ -19,30 +26,21 @@ public struct ProvinceTextWrapper
   public ProvinceTextEntry[] provinces;
 }
 
-public static class ProvinceTextLoader
+/*
+
+  Loads from a JSON file located in the scenario's Text folder, based on the selected language.
+  Unpacks the JSON into a dictionary for easy access to province text data.
+
+*/
+
+public static class ProvinceText
 {
-  public static Dictionary<string, ProvinceTextEntry> Provinces { get; private set; }
+  public static Dictionary<string, ProvinceTextEntry> Text { get; private set; }
 
   public static void Load()
   {
-    string lang = SettingsManager.Language;
-    string scenarioId = ScenarioManager.Instance.ActiveScenarioID;
-
-    string path = Path.Combine(
-        Application.dataPath,
-        "Scenarios",
-        scenarioId,
-        "Text",
-        lang,
-        "ProvinceText.json"
-    );
-
-    if (!File.Exists(path))
-    {
-      Debug.LogError("ProvinceText.json not found for scenario: " + scenarioId);
-      return;
-    }
-
+    string path = Path.Combine(ScenarioManager.Instance.TextPath, "ProvinceText.json");
+    if (!File.Exists(path)) { Debug.LogError("Missing ProvinceText for scenario."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }
@@ -50,12 +48,8 @@ public static class ProvinceTextLoader
   private static void LoadFromJson(string json)
   {
     ProvinceTextWrapper wrapper = JsonUtility.FromJson<ProvinceTextWrapper>(json);
-
-    Provinces = new Dictionary<string, ProvinceTextEntry>();
-
-    foreach (var p in wrapper.provinces)
-      Provinces[p.id_province] = p;
-
-    Debug.Log("Province text loaded for scenario: " + ScenarioManager.Instance.ActiveScenarioID);
+    Text = new Dictionary<string, ProvinceTextEntry>();
+    foreach (var p in wrapper.provinces) { Text[p.id_province] = p; }
+    Debug.Log("Province text loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
   }
 }

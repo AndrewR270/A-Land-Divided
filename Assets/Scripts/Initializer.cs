@@ -6,9 +6,5 @@ public class Initializer : MonoBehaviour
     {
       SettingsManager.Load();
       ScenarioManager.Instance.LoadScenario("archaic_greece_650bc");
-
-      // Load Text
-      BuildingTextLoader.Load();
-      ProvinceTextLoader.Load();
     }
 }

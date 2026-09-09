@@ -35,15 +35,15 @@ public abstract class Building
 	public int UpgradeCost => UpgradeCosts[TIER];
 	public int UpgradeTime => UpgradeTimes[TIER];
 
-	public BuildingText Text {
+	public BuildingTextEntry Text {
 		get {
-			var group = BuildingTextLoader.ScenarioBuildings;
+			var text = BuildingText.Text;
 			return ID switch {
-				BuildingID.Farms => group.Farms,
-				BuildingID.Barracks => group.Barracks,
-				BuildingID.Markets => group.Markets,
-				BuildingID.Port => group.Port,
-				BuildingID.Victory => group.Victory,
+				BuildingID.Farms => text.Farms,
+				BuildingID.Barracks => text.Barracks,
+				BuildingID.Markets => text.Markets,
+				BuildingID.Port => text.Port,
+				BuildingID.Victory => text.Victory,
 				_ => default
 			};
 		}

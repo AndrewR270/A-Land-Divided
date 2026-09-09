@@ -2,19 +2,25 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
+/*
+
+    Controls appearance of the map: panning, zooming, inertia, clamping, fading.
+    Adjusts position and scale of the map images on the Canvas.
+
+*/
+
 public class MapNavigation : MonoBehaviour
 {
-    public RectTransform map;
-    public RectTransform mapBounds;
-    public RectTransform mapContent;
-    public ResolutionScaler scaler;
+    public RectTransform Map;
+    public RectTransform MapBorder;
+    public RectTransform BaseMap;
+    public ResolutionScaler Scaler;
 
     [Header("Zoom")]
+    public float MIN_ZOOM;
+    public float MAX_ZOOM;
     public float zoomSpeed;
-    public float minZoom;
-    public float maxZoom;
     public float zoomLerpSpeed;
-
     private float targetZoom;
 
     [Header("Pan")]
@@ -35,110 +41,44 @@ public class MapNavigation : MonoBehaviour
     public RawImage textLayer;
     public RawImage cityLayer;
 
-    private Texture2D colorMap;
+    private Texture2D ColorMap;
 
     void Start()
     {
-        colorMap = ScenarioManager.Instance.activeScenario.colorMap;
+        ColorMap = ScenarioManager.Instance.ColorMap;
     }
-
-
-
-    // ---------------------------------------------------------
-    // NEW: Resolution‑normalized base scale
-    // ---------------------------------------------------------
-    // NEW: resolution‑normalized zoom limits
 
     public void updateScale() { 
-        targetZoom = scaler.mapScale;
-        keyPanning = keyPanSpeed * scaler.mapScale * 2;
+        targetZoom = Scaler.MapScale;
+        keyPanning = keyPanSpeed * Scaler.MapScale * 2;
     }
 
-    // ---------------------------------------------------------
-    // UPDATE LOOP
-    // ---------------------------------------------------------
     void Update()
     {
-        HandlePan();
-        HandleKeyboardPan();
-        HandleZoom();
+        MousePan();
+        KeyboardPan();
+        Zoom();
         ApplyInertia();
-        ClampMapPosition();
-        UpdateLayerOpacity();
-        HandleClick();
+        ClampPosition();
+        FadeLayers();
+        ClickMap();
     }
 
-    // ---------------------------------------------------------
-    // ZOOM
-    // ---------------------------------------------------------
-    void HandleZoom()
-    {
-        float scroll = Mouse.current != null ? Mouse.current.scroll.ReadValue().y : 0f;
-        float currentZoom = map.localScale.x;
+    /*
 
-        if (Mouse.current == null) return;
+        Panning functions.
+        These adjust the x and y coordinates of the map.
 
-        if (Mathf.Abs(scroll) >= 0.01f ||
-            (!hasZoomFocus && Mathf.Abs(targetZoom - currentZoom) >= 0.0001f))
-        {
-            RectTransform canvasRect = map.parent as RectTransform;
-            if (canvasRect == null) return;
+    */
 
-            Canvas canvas = canvasRect.GetComponentInParent<Canvas>();
-            Camera eventCamera = canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay
-                ? canvas.worldCamera
-                : null;
-
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(
-                canvasRect,
-                Mouse.current.position.ReadValue(),
-                eventCamera,
-                out zoomFocusCanvas
-            );
-
-            zoomFocusMap = (zoomFocusCanvas - map.anchoredPosition) / currentZoom;
-            hasZoomFocus = true;
-
-            if (Mathf.Abs(scroll) >= 0.01f)
-            {
-                float zoomSteps = Mathf.Sign(scroll) * Mathf.Max(1f, Mathf.Abs(scroll) / 120f);
-                float zoomMultiplier = zoomSpeed > 1f ? zoomSpeed : 1.1f;
-                targetZoom = Mathf.Clamp(
-                    currentZoom * Mathf.Pow(zoomMultiplier, zoomSteps),
-                    scaler.mapScale * minZoom,
-                    scaler.mapScale * maxZoom
-                );
-            }
-        }
-
-        if (!hasZoomFocus || Mathf.Abs(targetZoom - currentZoom) < 0.0001f)
-            return;
-
-        float newScale = Mathf.Lerp(currentZoom, targetZoom, Time.deltaTime * zoomLerpSpeed);
-
-        map.anchoredPosition += zoomFocusMap * (currentZoom - newScale);
-        map.localScale = new Vector3(newScale, newScale, 1f);
-
-        if (Mathf.Abs(targetZoom - newScale) < 0.001f)
-        {
-            map.localScale = new Vector3(targetZoom, targetZoom, 1f);
-            hasZoomFocus = false;
-        }
-    }
-
-    // ---------------------------------------------------------
-    // PAN
-    // ---------------------------------------------------------
-    void HandlePan()
+    void MousePan()
     {
         if (Mouse.current == null) return;
-
         Vector2 mousePos = Mouse.current.position.ReadValue();
 
-        if (Mouse.current.middleButton.wasPressedThisFrame)
-        {
-            lastMousePos = mousePos;
-            inertiaVelocity = Vector2.zero;
+        if (Mouse.current.middleButton.wasPressedThisFrame) { 
+            lastMousePos = mousePos; 
+            inertiaVelocity = Vector2.zero; 
         }
 
         if (Mouse.current.middleButton.isPressed)
@@ -147,122 +87,155 @@ public class MapNavigation : MonoBehaviour
             lastMousePos = mousePos;
 
             Vector2 movement = delta * panSpeed;
-            map.anchoredPosition += movement;
+            Map.anchoredPosition += movement;
 
             inertiaVelocity = movement;
         }
     }
 
-    // ---------------------------------------------------------
-    // KEYBOARD PAN
-    // ---------------------------------------------------------
-    void HandleKeyboardPan()
+    void KeyboardPan()
     {
         if (Keyboard.current == null) return;
 
         Vector2 move = Vector2.zero;
 
-        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)
-            move.y -= 1;
-
-        if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)
-            move.y += 1;
-
-        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)
-            move.x += 1;
-
-        if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)
-            move.x -= 1;
+        if (Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed) { move.y -= 1; }
+        if (Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed) { move.y += 1; }
+        if (Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed) { move.x += 1; }
+        if (Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed) { move.x -= 1; }
 
         if (move != Vector2.zero)
         {
             Vector2 movement = move * keyPanning * Time.deltaTime;
-            map.anchoredPosition += movement;
-
+            Map.anchoredPosition += movement;
             inertiaVelocity = movement;
         }
     }
 
-    // ---------------------------------------------------------
-    // INERTIA
-    // ---------------------------------------------------------
+    /*
+
+        Zoom function.
+        This increases map scale centering on the mouse position.
+
+    */
+
+    void Zoom()
+    {
+        if (Mouse.current == null) return;
+
+        float scroll = Mouse.current != null ? Mouse.current.scroll.ReadValue().y : 0f;
+        float currentZoom = Map.localScale.x;
+
+        if (Mathf.Abs(scroll) >= 0.01f || (!hasZoomFocus && Mathf.Abs(targetZoom - currentZoom) >= 0.0001f))
+        {
+            RectTransform canvasRect = Map.parent as RectTransform;
+            Canvas canvas = canvasRect.GetComponentInParent<Canvas>();
+            Camera eventCamera = canvas.renderMode != RenderMode.ScreenSpaceOverlay ? canvas.worldCamera : null;
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvasRect,
+                Mouse.current.position.ReadValue(),
+                eventCamera,
+                out zoomFocusCanvas
+            );
+
+            zoomFocusMap = (zoomFocusCanvas - Map.anchoredPosition) / currentZoom;
+            hasZoomFocus = true;
+
+            if (Mathf.Abs(scroll) >= 0.01f)
+            {
+                float zoomSteps = Mathf.Sign(scroll) * Mathf.Max(1f, Mathf.Abs(scroll) / 120f);
+                float zoomMultiplier = zoomSpeed > 1f ? zoomSpeed : 1.1f;
+                targetZoom = Mathf.Clamp(
+                    currentZoom * Mathf.Pow(zoomMultiplier, zoomSteps),
+                    Scaler.MapScale * MIN_ZOOM,
+                    Scaler.MapScale * MAX_ZOOM
+                );
+            }
+        }
+
+        if (!hasZoomFocus || Mathf.Abs(targetZoom - currentZoom) < 0.0001f) { return; }
+
+        float newScale = Mathf.Lerp(currentZoom, targetZoom, Time.deltaTime * zoomLerpSpeed);
+        Map.anchoredPosition += zoomFocusMap * (currentZoom - newScale);
+        Map.localScale = new Vector3(newScale, newScale, 1f);
+
+        if (Mathf.Abs(targetZoom - newScale) < 0.001f)
+        {
+            Map.localScale = new Vector3(targetZoom, targetZoom, 1f);
+            hasZoomFocus = false;
+        }
+    }
+
+    /*
+
+        Style functions. Inertia makes map movement smoother, 
+        clamp prevents moving off map, and fading adjusts layer opacity at zoom levels.
+
+    */
+
     void ApplyInertia()
     {
         if (inertiaVelocity.magnitude > 0.01f)
         {
-            map.anchoredPosition += inertiaVelocity;
+            Map.anchoredPosition += inertiaVelocity;
             inertiaVelocity = Vector2.Lerp(inertiaVelocity, Vector2.zero, Time.deltaTime * inertiaDamping);
         }
     }
 
-    // ---------------------------------------------------------
-    // CLAMP
-    // ---------------------------------------------------------
-    void ClampMapPosition()
+    void ClampPosition()
     {
-        if (mapBounds == null) return;
+        float scale = Mathf.Abs(Map.localScale.x);
+        float halfWidth = scale * MapBorder.rect.width * 0.5f;
+        float halfHeight = scale * MapBorder.rect.height * 0.5f;
 
-        float scale = Mathf.Abs(map.localScale.x);
-        float halfWidth = scale * mapBounds.rect.width * 0.5f;
-        float halfHeight = scale * mapBounds.rect.height * 0.5f;
-
-        map.anchoredPosition = new Vector2(
-            Mathf.Clamp(map.anchoredPosition.x, -halfWidth, halfWidth),
-            Mathf.Clamp(map.anchoredPosition.y, -halfHeight, halfHeight)
+        Map.anchoredPosition = new Vector2(
+            Mathf.Clamp(Map.anchoredPosition.x, -halfWidth, halfWidth),
+            Mathf.Clamp(Map.anchoredPosition.y, -halfHeight, halfHeight)
         );
     }
 
-
-    // ---------------------------------------------------------
-    // LAYER OPACITY
-    // ---------------------------------------------------------
-    void UpdateLayerOpacity()
+    void FadeLayers()
     {
-        // Normalize zoom so 1x = scaler.mapScale
-        float zoom = map.localScale.x / scaler.mapScale;
+        float zoom = Map.localScale.x / Scaler.MapScale;
+        Color c;
 
-        // -------------------------
-        // TEXT LAYER (5 → 10)
-        // -------------------------
+        // Fade Text Layer
+
         float textAlpha = 0f;
 
-        if (zoom >= 0.4f && zoom < 4f)
-            textAlpha = Mathf.InverseLerp(0.4f, 4f, zoom);
-        else if (zoom >= 4f)
-            textAlpha = 1f;
+        if (zoom >= 0.4f && zoom < 4f) { textAlpha = Mathf.InverseLerp(0.4f, 4f, zoom); }
+        else if (zoom >= 4f) { textAlpha = 1f; }
 
-        if (textLayer != null)
-        {
-            Color c = textLayer.color;
-            c.a = textAlpha;
-            textLayer.color = c;
-        }
+        c = textLayer.color;
+        c.a = textAlpha;
+        textLayer.color = c;
 
-        // -------------------------
-        // CITIES LAYER (10 → 15)
-        // -------------------------
+        // Fade City Layer
+
         float cityAlpha = 0f;
 
-        if (zoom >= 4f && zoom < 8f)
-            cityAlpha = Mathf.InverseLerp(4f, 8f, zoom);
-        else if (zoom >= 8f)
-            cityAlpha = 1f;
+        if (zoom >= 4f && zoom < 8f) { cityAlpha = Mathf.InverseLerp(4f, 8f, zoom); }
+        else if (zoom >= 8f) { cityAlpha = 1f; }
 
-        if (cityLayer != null)
-        {
-            Color c = cityLayer.color;
-            c.a = cityAlpha;
-            cityLayer.color = c;
-        }
+        c = cityLayer.color;
+        c.a = cityAlpha;
+        cityLayer.color = c;
     }
 
-    void HandleClick()
+    /*
+
+        Click function. This takes the map position and click,
+        and finds the color of the corresponding point on the map colors texture.
+
+    */
+
+    void ClickMap()
     {
         if (Mouse.current == null) return;
         if (!Mouse.current.leftButton.wasPressedThisFrame) return;
 
-        // Convert screen → local position relative to MAP
-        RectTransform mapRect = mapContent;
+        RectTransform mapRect = BaseMap;
         Canvas canvas = mapRect.GetComponentInParent<Canvas>();
         Camera eventCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
 
@@ -279,32 +252,27 @@ public class MapNavigation : MonoBehaviour
         float u = (localPoint.x - rect.x) / rect.width;
         float v = (localPoint.y - rect.y) / rect.height;
 
-        if (u < 0 || u > 1 || v < 0 || v > 1)
-            return; // clicked outside map
+        // clicked outside map
+        if (u < 0 || u > 1 || v < 0 || v > 1) { return; }
 
         // Convert UV → pixel
-        int x = (int)(u * colorMap.width);
-        int y = (int)(v * colorMap.height);
+        int x = (int)(u * ColorMap.width);
+        int y = (int)(v * ColorMap.height);
 
-        Color32 clickedColor = colorMap.GetPixel(x, y);
+        Color32 clickedColor = ColorMap.GetPixel(x, y);
 
         // Convert color → provinceID
-        if (!ColorMap.ColorToProvinceID.TryGetValue(clickedColor, out string provinceID))
-        {
-            Debug.LogWarning("Unknown province color: " + clickedColor);
-            return;
-        }
+        if (!MapColors.Colors.TryGetValue(clickedColor, out string provinceID)) { Debug.LogWarning("Unknown."); return; }
+        else { Debug.Log($"Clicked Color {clickedColor} → ProvinceID {provinceID}"); }
 
-        Debug.Log($"Clicked Color {clickedColor} → ProvinceID {provinceID}");
 
-        /* Retrieve Province object
-        Province p = ScenarioManager.Instance.GetProvinceByID(provinceID);
-        if (p == null)
-        {
-            Debug.LogWarning("Province not found: " + provinceID);
-            return;
-        }
+        // Province p = ScenarioManager.Instance.GetProvinceByID(provinceID);
+        // if (p == null)
+        // {
+        //     Debug.LogWarning("Province not found: " + provinceID);
+        //     return;
+        // }
 
-        //UIManager.Instance.ShowProvince(p); */
+        // UIManager.Instance.ShowProvince(p);
     }
 }

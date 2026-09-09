@@ -1,40 +1,41 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/*
+
+    Calculates height of viewport (canvas) and map (map border) and scales the map to fit the viewport.
+    Also scales the background to fit the viewport.
+    
+*/
+
 public class ResolutionScaler : MonoBehaviour
 {
-    public MapNavigation navigator;
+    public MapNavigation Navigator;
     
-    public RectTransform canvasRect;
-    public RectTransform mapBounds;
-    public RectTransform map;
-    public RectTransform back;
+    public RectTransform Canvas;
+    public RectTransform MapBorder;
+    public RectTransform Map;
+    public RectTransform Background;
 
-    public float mapScale;
-    public float backScale;
+    public float MapScale;
+    public float BackgroundScale;
 
-    void OnRectTransformDimensionsChange()
-    {
-        ApplyBaseScale();
-    }
+    void OnRectTransformDimensionsChange() { ApplyBaseScale(); }
 
-    void Awake()
-    {
-        ApplyBaseScale();
-    }
+    void Start() { ApplyBaseScale(); }
 
     void ApplyBaseScale()
     {
-        float canvasHeight = canvasRect.rect.height;
-        float mapHeight = mapBounds.rect.height;
-        float backHeight = back.rect.height;
+        float canvasHeight = Canvas.rect.height;
+        float mapHeight = MapBorder.rect.height;
+        float backHeight = Background.rect.height;
 
-        mapScale = canvasHeight / mapHeight;
-        backScale = canvasHeight / backHeight;
+        MapScale = canvasHeight / mapHeight;
+        BackgroundScale = canvasHeight / backHeight;
 
-        map.localScale = new Vector3(mapScale, mapScale, 1f);
-        back.localScale = new Vector3(backScale, backScale, 1f);
+        Map.localScale = new Vector3(MapScale, MapScale, 1f);
+        Background.localScale = new Vector3(BackgroundScale, BackgroundScale, 1f);
 
-        navigator.updateScale();
+        Navigator.updateScale();
     }
 }
