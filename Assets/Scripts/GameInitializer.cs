@@ -9,10 +9,6 @@ public class GameInitializer : MonoBehaviour
 
       // Load Text
       BuildingTextLoader.Load();
-      if (BuildingTextLoader.TextByScenario.TryGetValue("archaic_greece_650bc", out var group))
-      {
-          Debug.Log("Farms Name: " + group.Farms.name);
-          Debug.Log("Barracks Name: " + group.Barracks.name);
-      }
+      ProvinceTextLoader.Load();
     }
 }

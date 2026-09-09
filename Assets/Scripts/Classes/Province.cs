@@ -5,9 +5,10 @@ public class Province
 {
     // Identifiers
     public string ColorID;
-    public string Name;
-    public string PeriodName;
-    public string Pronunciation;
+    public string Name => ProvinceTextLoader.Provinces[ColorID].name;
+    public string PeriodName => ProvinceTextLoader.Provinces[ColorID].period_name;
+    public string Pronunciation => ProvinceTextLoader.Provinces[ColorID].pronunciation;
+    public string Description => ProvinceTextLoader.Provinces[ColorID].description;
 
     // Information
     public Faction Owner;

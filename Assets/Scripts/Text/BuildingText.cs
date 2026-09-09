@@ -3,12 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System;
 
-/*
-  Contains data structures and loader for building text descriptions 
-  in different scenarios.
-*/
-
-// Attributes for building text
 [Serializable]
 public struct BuildingText
 {
@@ -18,7 +12,6 @@ public struct BuildingText
   public string benefit2;
 }
 
-// Grouping of building texts for a scenario
 [Serializable]
 public struct BuildingTextGroup
 {
@@ -29,35 +22,32 @@ public struct BuildingTextGroup
   public BuildingText Victory;
 }
 
-// Entry for a specific scenario with ID
 [Serializable]
-public struct ScenarioTextEntry
+public struct BuildingTextWrapper
 {
-  public string id;
   public BuildingTextGroup buildings;
-}
-
-
-// Wrapper for all scenario text entries
-[Serializable]
-public struct ScenarioTextWrapper
-{
-  public ScenarioTextEntry[] scenarios;
 }
 
 public static class BuildingTextLoader
 {
-  public static Dictionary<string, BuildingTextGroup> TextByScenario { get; private set; }
+  public static BuildingTextGroup ScenarioBuildings { get; private set; }
 
   public static void Load()
   {
     string lang = SettingsManager.Language;
+    string scenarioId = ScenarioManager.Instance.ActiveScenarioID;
 
-    string path = Path.Combine(Application.dataPath, "Text", lang, "BuildingText.json");
+    string path = Path.Combine(
+        Application.dataPath,
+        "Text",
+        lang,
+        scenarioId,
+        "BuildingText.json"
+    );
 
     if (!File.Exists(path))
     {
-      Debug.LogError("BuildingText.json not found for language: " + lang);
+      Debug.LogError("BuildingText.json not found for scenario: " + scenarioId);
       return;
     }
 
@@ -67,13 +57,9 @@ public static class BuildingTextLoader
 
   private static void LoadFromJson(string json)
   {
-    ScenarioTextWrapper wrapper = JsonUtility.FromJson<ScenarioTextWrapper>(json);
+    BuildingTextWrapper wrapper = JsonUtility.FromJson<BuildingTextWrapper>(json);
+    BuildingTextLoader.ScenarioBuildings = wrapper.buildings;
 
-    TextByScenario = new Dictionary<string, BuildingTextGroup>();
-
-    foreach (var entry in wrapper.scenarios)
-      TextByScenario[entry.id] = entry.buildings;
-
-    Debug.Log("Building text loaded for language: " + SettingsManager.Language);
+    Debug.Log("Building text loaded for scenario: " + ScenarioManager.Instance.ActiveScenarioID);
   }
 }

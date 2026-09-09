@@ -20,9 +20,7 @@ public abstract class Building
 	{
 		get
 		{
-			string scenarioId = ScenarioManager.Instance.ActiveScenarioID;
-			var group = BuildingTextLoader.TextByScenario[scenarioId];
-
+			var group = BuildingTextLoader.ScenarioBuildings;
 			return ID switch
 			{
 				BuildingID.Farms => group.Farms,
