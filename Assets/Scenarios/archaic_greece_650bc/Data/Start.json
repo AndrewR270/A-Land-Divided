@@ -1,0 +1,80 @@
+{
+  "scenario": {
+    "scenario_id": "archaic_greece_650bc",
+    "scenario_key": "scenario_archaic_greece",
+    "currency_key": "currency_drachmae",
+    "victory_point_key": "vp_prestige",
+    "turn": 1,
+    "factions": [
+      {
+        "faction_id": "f_athens",
+        "faction_bonus": "fbonus_athens",
+        "color": "#0032a0",
+        "victory_points": 0,
+        "money": 500,
+        "province_ids": [
+          "p_athens"
+        ],
+        "diplomacy": {}
+      }
+    ],
+    "provinces": [
+      {
+        "province_id": "p_athens",
+        "bonus_key": "pbonus_athens",
+        "owner": "f_athens",
+        "population_home": 10,
+        "population_levied": 0,
+        "surplus": 1,
+        "stability": 100,
+        "buildings": {
+          "farm": 1,
+          "barracks": 0,
+          "market": 0,
+          "faith": 0,
+          "special": 0
+        },
+        "pending_construction": [],
+        "time_to_recruit": 0,
+        "time_to_replenish": 0,
+        "lost_contingents": 0,
+        "replenishment_counter": 0,
+        "is_starving": false
+      }
+    ],
+    "contingents": [
+      {
+        "unit_id": "athens_1",
+        "origin": "p_athens",
+        "unit_name": "unit_default",
+        "experience": 0,
+        "location": "p_athens",
+        "levied": false,
+        "is_exile": false
+      }
+    ],
+    "sea_regions": [
+      {
+        "sea_region_id": "s_gulf_of_corinth",
+        "factions": {
+          "f_athens": {
+            "fleets": 0,
+            "merchants": 0,
+            "army_at_sea": false,
+            "blockading": [],
+            "pending_recruitment_ships": [],
+            "pending_recruitment_merchants": []
+          },
+          "f_corinth": {
+            "fleets": 0,
+            "merchants": 0,
+            "army_at_sea": false,
+            "blockading": [],
+            "pending_recruitment_ships": [],
+            "pending_recruitment_merchants": []
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,50 +1,62 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
+using System.IO;
+using System;
+
+/*
+
+  Structs for building text entries, groups, and wrappers. 
+  These are used to load and manage building-related text data for different scenarios in the game.
+
+*/
 
 [Serializable]
-public struct BuildingText
+public struct BuildingTextEntry
 {
-  public string Name;
-  public string Description;
-  public string Benefit1;
-  public string Benefit2;
+  public string name;
+  public string description;
+  public string benefit1;
+  public string benefit2;
 }
 
 [Serializable]
 public struct BuildingTextGroup
 {
-  public BuildingText Farms;
-  public BuildingText Barracks;
-  public BuildingText Markets;
-  public BuildingText Port;
-  public BuildingText Victory;
+  public BuildingTextEntry Farms;
+  public BuildingTextEntry Barracks;
+  public BuildingTextEntry Markets;
+  public BuildingTextEntry Port;
+  public BuildingTextEntry Victory;
 }
 
 [Serializable]
-public struct ScenarioTextEntry
+public struct BuildingTextWrapper
 {
-  public int id;
   public BuildingTextGroup buildings;
 }
 
-[Serializable]
-public struct ScenarioTextWrapper
-{
-  public ScenarioTextEntry[] scenarios;
-}
+/*
 
-public static class BuildingTextLoader
-{
-  public static Dictionary<int, BuildingTextGroup> TextByScenario { get; private set; }
+  Loads from a JSON file located in the scenario's Text folder, based on the selected language.
+  Unpacks the JSON into a BuildingTextGroup for easy access to building text data.
 
-  public static void LoadFromJson(string json)
+*/
+
+public static class BuildingText
+{
+  public static BuildingTextGroup Text { get; private set; }
+
+  public static void Load()
   {
-    ScenarioTextWrapper wrapper = JsonUtility.FromJson<ScenarioTextWrapper>(json);
+    string path = Path.Combine(ScenarioManager.Instance.TextPath, "BuildingText.json");
+    if (!File.Exists(path)) { Debug.LogError("Missing BuildingText for scenario."); return; }
+    string json = File.ReadAllText(path);
+    LoadFromJson(json);
+  }
 
-    TextByScenario = new Dictionary<int, BuildingTextGroup>();
-
-    foreach (var entry in wrapper.scenarios)
-      TextByScenario[entry.id] = entry.buildings;
+  private static void LoadFromJson(string json)
+  {
+    Text = JsonUtility.FromJson<BuildingTextWrapper>(json).buildings;
+    Debug.Log("Building text loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
   }
 }

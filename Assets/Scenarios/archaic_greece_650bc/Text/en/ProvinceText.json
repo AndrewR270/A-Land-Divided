@@ -1,0 +1,18 @@
+{
+  "provinces": [
+    {
+      "id_province": "p_athens",
+      "name": "Athēnai",
+      "period_name": "ΑΘΗΝΑΙ",
+      "pronunciation": "ah-TEH-nai",
+      "description": "Athens was a powerful city-state in ancient Greece known for its culture, philosophy, and democracy."
+    },
+    {
+      "id_province": "p_eleusis",
+      "name": "Eleusis",
+      "period_name": "ΕΛΕΥΣΙΣ",
+      "pronunciation": "eh-LEH-oo-sis",
+      "description": "Eleusis was famous for the Eleusinian Mysteries, religious rites held in honor of Demeter and Persephone."
+    }
+  ]
+}

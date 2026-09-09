@@ -2,6 +2,63 @@
 
 A strategy game built upon the Unity Game Engine. You are a statesman aiming to unite the realm. One land, one culture, one people divided.
 
+## Data Schema
+
+```bash
+scenario:
+  id_scenario: string
+  turn: int
+
+  factions[]:
+    id_faction: string
+    color: string
+    victory_points: int
+    money: int
+    province_ids[]: string
+    diplomacy{ faction_id: "hostile" | "allied" }
+
+  provinces[]:
+    id_province: string
+    owner: string
+    population_home: int
+    population_levied: int
+    surplus: int
+    stability: int
+    buildings:
+      farm: int
+      barracks: int
+      market: int
+      victory: int
+      resource: int
+      port: int
+    pending_construction[]:
+      building_type: string
+      turns_remaining: int
+    pending_recruitment[]:
+      id_unit: string
+      turns_remaining: int
+    replenishment_counter: int
+    unit_id_counter: int
+
+  contingents[]:
+    id_unit: string
+    name_unit: string
+    origin: string
+    experience: int
+    location: string
+    levied: bool
+    is_exile: bool
+
+  sea_regions[]:
+    id_sea_region: string
+    factions{ faction_id }:
+      fleets: int
+      merchants: int
+      army_at_sea: bool
+      ships_in_queue: int
+      merchants_in_queue: int
+```
+
 ## Devlog
 
 **Prior to this repo:**
@@ -41,3 +98,23 @@ A strategy game built upon the Unity Game Engine. You are a statesman aiming to 
 - Created an *Assets/Text* folder - text is stored in .JSON files, not .cs files, to separate logic from data files.
 - Made **BuildingText.cs** file in the Scripts/Text folder to load JSON data based on scenario ID. **ScenarioManager.cs** now calls a helper function to get building text based on id, which is referenced by **Building.cs** to get a set of all building text for a scenario.
 - ScenarioID has an implementation for loading JSON, while BuildingID selects the specific building text entry in the scenario block.
+
+**9/5/25**
+- Added fading functionality to the map navigation script which hides labels and cities at certain zoom levels
+- Created initial plan for JSON file storage for scenario data, keys as strings, and no display values
+- Added background for test scenario as a prefab
+
+**9/6/26**
+- Added a rudimentary example JSON file for the save data shape - defined structure as factions, provinces, sea regions, units, with nested objects for each
+- Objects interconnect based on pointers to their related elements, string ids serve as identifiers
+
+**9/8/26**
+- Added save data schema mockup to README and a general example in the *Scenario/* folder.
+
+**9/9/26**
+- Added rudimentary settings file which saves to the Application.persistentDataPath, can control localization language.
+Defined Scenario modularity: all scenario specific assets, including text, now live under a scenario folder, accessed using the scenario id. Each scenario will have *Background/, Data/, Text/, and Textures/* folders.
+- Created **ColorMap.json** to store hex string to province mapping. Unpacked by **MapColors.cs.**
+- Added **ProvinceText.cs** for province name, pronunciation, and local name as well as description.
+- Adjusted texture assignment and background instantiation to work with different map sizes.
+- **Initializer.cs** loads first, controls settings and calls scenario id. **ScenarioManager.cs** updated to call the scenario JSON data loaders, will be expanded in the future.

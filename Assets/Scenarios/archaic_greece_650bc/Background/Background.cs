@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GreekBackground : MonoBehaviour
+public class Background : MonoBehaviour
 {
     [Header("Oval Wave Motion")]
     public RectTransform wave1;

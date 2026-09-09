@@ -1,14 +1,15 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
 public class Province
 {
     // Identifiers
-    public string ColorID;
-    public string Name;
-    public string PeriodName;
-    public string Pronunciation;
+    public string ProvinceID;
+
+    public string Name => ProvinceText.Text[ProvinceID].name;
+    public string PeriodName => ProvinceText.Text[ProvinceID].period_name;
+    public string Pronunciation => ProvinceText.Text[ProvinceID].pronunciation;
+    public string Description => ProvinceText.Text[ProvinceID].description;
 
     // Information
     public Faction Owner;
@@ -30,14 +31,9 @@ public class Province
     public int PortLevel;
     public int SpecialBuildingLevel;
 
-    private static readonly int[] costTiers = {0, 200, 400, 900, 1600, 2500, 3600};
-    private static readonly int[] timeTiers = {0, 2, 4, 6, 8, 10, 12};
-
-
     // Stability
-    public int Stability;       // 0–100
+    public int Stability;
 
     // Contingents raised from this province
     public List<Contingent> Contingents = new List<Contingent>();
-
 }

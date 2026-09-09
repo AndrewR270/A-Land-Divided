@@ -6,16 +6,17 @@ using System.Collections.Generic;
 public class ScenarioData : ScriptableObject
 {
     [Header("Identity")]
-    public int scenarioID;
+    public string scenarioID;
 
     [Header("Map Layers")]
-    public Texture2D baseMapImage;
-    public Texture2D highlightLayerImage;
-    public Texture2D cityLayerImage;
-    public Texture2D labelLayerImage;
+    public Texture2D mapBorders;
+    public Texture2D baseMap;
+    public Texture2D colorMap;
+    public Texture2D cityLayer;
+    public Texture2D labelLayer;
 
     [Header("Background Prefab")]
-    public GameObject backgroundPrefab;
+    public GameObject background;
 
     [Header("Metadata")]
     public Color[] factionColors;

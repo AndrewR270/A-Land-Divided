@@ -1,5 +1,12 @@
 using UnityEngine;
 
+/*
+
+	Accepted building types in the game, with unique benefits and upgrade paths.
+	An abstract class is used to define the common properties and methods for all building types.
+
+*/
+
 public enum BuildingID
 {
 	Farms,
@@ -11,250 +18,247 @@ public enum BuildingID
 
 public abstract class Building
 {
-
-	// Every building type must declare its ID
 	public abstract BuildingID ID { get; }
 
-	// Dynamic text resolved from JSON + ScenarioManager
-	public BuildingText Text
-	{
-		get
-		{
-			int scenarioId = ScenarioManager.Instance.ActiveScenarioID;
-			var group = BuildingTextLoader.TextByScenario[scenarioId];
-
-			return ID switch
-			{
-				BuildingID.Farms => group.Farms,
-				BuildingID.Barracks => group.Barracks,
-				BuildingID.Markets => group.Markets,
-				BuildingID.Port => group.Port,
-				BuildingID.Victory => group.Victory,
-				_ => default
-			};
-		}
-	}
-
-	// Convenience accessors
-	public string Name => Text.Name;
-	public string Description => Text.Description;
-
-	// Tier system
 	protected int TIER = 0;
 	public int Tier => TIER;
-
 	private const int MIN_TIER = 0;
 	private const int MAX_TIER = 6;
 
-	public void setTier(int tier)
-	{
-		TIER = Mathf.Clamp(tier, MIN_TIER, MAX_TIER);
-	}
+	public void setTier(int tier) { TIER = Mathf.Clamp(tier, MIN_TIER, MAX_TIER); }
 
-	public bool hasNextTier()
-	{
-		return TIER < MAX_TIER;
-	}
+	public bool hasNextTier() { return TIER < MAX_TIER; }
 
 	private static readonly int[] UpgradeCosts = { 200, 400, 900, 1600, 2500, 3600, 0 };
 	private static readonly int[] UpgradeTimes = { 2, 4, 6, 8, 10, 12, 0 };
 
 	public int UpgradeCost => UpgradeCosts[TIER];
 	public int UpgradeTime => UpgradeTimes[TIER];
+
+	public BuildingTextEntry Text {
+		get {
+			var text = BuildingText.Text;
+			return ID switch {
+				BuildingID.Farms => text.Farms,
+				BuildingID.Barracks => text.Barracks,
+				BuildingID.Markets => text.Markets,
+				BuildingID.Port => text.Port,
+				BuildingID.Victory => text.Victory,
+				_ => default
+			};
+		}
+	}
+
+	public string Name => Text.name;
+	public string Description => Text.description;
 }
 
+/*
 
-public struct FarmsTierStats
-{
+	Farm Buildings:
+	Surplus, Growth.
+
+*/
+
+public struct FarmTier {
 	public int Surplus;
 	public float Growth;
 
-	public FarmsTierStats(int surplus, float growth)
-	{
+	public FarmTier(int surplus, float growth) {
 		Surplus = surplus;
 		Growth = growth;
 	}
 }
 
-public class Farms : Building
-{
-	public static readonly FarmsTierStats[] stats = {
-		new FarmsTierStats(0, 0.0f),
-		new FarmsTierStats(1, 0.6f),
-		new FarmsTierStats(2, 0.5f),
-		new FarmsTierStats(3, 0.4f),
-		new FarmsTierStats(4, 0.4f),
-		new FarmsTierStats(6, 0.3f),
-		new FarmsTierStats(8, 0.3f),
-		new FarmsTierStats(0, 0.0f)
-	};
-
-	public int Surplus => stats[TIER].Surplus;
-	public float Growth => stats[TIER].Growth;
-
-	public int NextSurplus => stats[TIER + 1].Surplus;
-	public float NextGrowth => stats[TIER + 1].Growth;
-
+public class Farms : Building {
 	public override BuildingID ID => BuildingID.Farms;
 
-	public string getBenefits(int tier)
-	{
-		return $"<b>+{stats[tier].Surplus}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].Growth}</b>" + Text.Benefit2;
+	public static readonly FarmTier[] tiers = {
+		new FarmTier(0, 0.0f),
+		new FarmTier(1, 0.6f),
+		new FarmTier(2, 0.5f),
+		new FarmTier(3, 0.4f),
+		new FarmTier(4, 0.4f),
+		new FarmTier(6, 0.3f),
+		new FarmTier(8, 0.3f),
+		new FarmTier(0, 0.0f)
+	};
+
+	public int Surplus => tiers[TIER].Surplus;
+	public float Growth => tiers[TIER].Growth;
+
+	public int NextSurplus => tiers[TIER + 1].Surplus;
+	public float NextGrowth => tiers[TIER + 1].Growth;
+
+	public string benefits(int tier) {
+		return $"<b>+{tiers[tier].Surplus}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].Growth}</b>" + Text.benefit2;
 	}
 }
 
-public struct BarracksTierStats
-{
+/*
+
+	Barracks Buildings:
+	Replenish Time, Exp Gain.
+
+*/
+
+public struct BarracksTier {
 	public int ReplenishTime;
 	public float ExpGain;
 
-	public BarracksTierStats(int replenishTime, float expGain)
-	{
+	public BarracksTier(int replenishTime, float expGain) {
 		ReplenishTime = replenishTime;
 		ExpGain = expGain;
 	}
 }
 
-public class Barracks : Building
-{
-	public static readonly BarracksTierStats[] stats = {
-		new BarracksTierStats(10, 0.00f),
-		new BarracksTierStats(9, 0.05f),
-		new BarracksTierStats(8, 0.10f),
-		new BarracksTierStats(7, 0.15f),
-		new BarracksTierStats(6, 0.20f),
-		new BarracksTierStats(5, 0.25f),
-		new BarracksTierStats(4, 0.30f),
-		new BarracksTierStats(10, 0.00f)
-	};
-
-	public int ReplenishTime => stats[TIER].ReplenishTime;
-	public float ExpGain => stats[TIER].ExpGain;
-
-	public int NextReplenishTime => stats[TIER + 1].ReplenishTime;
-	public float NextExpGain => stats[TIER + 1].ExpGain;
-
+public class Barracks : Building {
 	public override BuildingID ID => BuildingID.Barracks;
 
-	public string getBenefits(int tier)
-	{
-		return $"<b>{stats[tier].ReplenishTime}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].ExpGain * 100}</b>" + Text.Benefit2;
+	public static readonly BarracksTier[] tiers = {
+		new BarracksTier(10, 0.00f),
+		new BarracksTier(9, 0.05f),
+		new BarracksTier(8, 0.10f),
+		new BarracksTier(7, 0.15f),
+		new BarracksTier(6, 0.20f),
+		new BarracksTier(5, 0.25f),
+		new BarracksTier(4, 0.30f),
+		new BarracksTier(10, 0.00f)
+	};
+
+	public int ReplenishTime => tiers[TIER].ReplenishTime;
+	public float ExpGain => tiers[TIER].ExpGain;
+
+	public int NextReplenishTime => tiers[TIER + 1].ReplenishTime;
+	public float NextExpGain => tiers[TIER + 1].ExpGain;
+
+	public string benefits(int tier) {
+		return $"<b>{tiers[tier].ReplenishTime}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].ExpGain * 100}</b>" + Text.benefit2;
 	}
 }
 
-public struct MarketsTierStats
-{
+/*
+
+	Markets Buildings:
+	Trade Bonus, Tax Bonus.
+
+*/
+
+public struct MarketsTier {
 	public float TradeBonus;
 	public int TaxBonus;
 
-	public MarketsTierStats(float tradeBonus, int taxBonus)
-	{
+	public MarketsTier(float tradeBonus, int taxBonus) {
 		TradeBonus = tradeBonus;
 		TaxBonus = taxBonus;
 	}
 }
 
-public class Markets : Building
-{
-	public static readonly MarketsTierStats[] stats = {
-		new MarketsTierStats(0.00f, 0),
-		new MarketsTierStats(0.02f, 1),
-		new MarketsTierStats(0.04f, 1),
-		new MarketsTierStats(0.06f, 2),
-		new MarketsTierStats(0.08f, 2),
-		new MarketsTierStats(0.10f, 3),
-		new MarketsTierStats(0.12f, 3),
-		new MarketsTierStats(0.00f, 0)
-	};
-
-	public float TradeBonus => stats[TIER].TradeBonus;
-	public int TaxBonus => stats[TIER].TaxBonus;
-
-	public float NextTradeBonus => stats[TIER + 1].TradeBonus;
-	public int NextTaxBonus => stats[TIER + 1].TaxBonus;
-
+public class Markets : Building {
 	public override BuildingID ID => BuildingID.Markets;
 
-	public string getBenefits(int tier)
-	{
-		return $"<b>{stats[tier].TradeBonus * 100}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].TaxBonus}</b>" + Text.Benefit2;
+	public static readonly MarketsTier[] tiers = {
+		new MarketsTier(0.00f, 0),
+		new MarketsTier(0.02f, 1),
+		new MarketsTier(0.04f, 1),
+		new MarketsTier(0.06f, 2),
+		new MarketsTier(0.08f, 2),
+		new MarketsTier(0.10f, 3),
+		new MarketsTier(0.12f, 3),
+		new MarketsTier(0.00f, 0)
+	};
+
+	public float TradeBonus => tiers[TIER].TradeBonus;
+	public int TaxBonus => tiers[TIER].TaxBonus;
+
+	public float NextTradeBonus => tiers[TIER + 1].TradeBonus;
+	public int NextTaxBonus => tiers[TIER + 1].TaxBonus;
+
+	public string benefits(int tier) {
+		return $"<b>{tiers[tier].TradeBonus * 100}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].TaxBonus}</b>" + Text.benefit2;
 	}
 }
 
-public struct PortTierStats
-{
+/*
+
+	Port Buildings:
+	Fleets Supported, Ship Cost.
+
+*/
+
+public struct PortTier {
 	public int FleetsSupported;
 	public int ShipCost;
 
-	public PortTierStats(int fleetsSupported, int shipCost)
-	{
+	public PortTier(int fleetsSupported, int shipCost) {
 		FleetsSupported = fleetsSupported;
 		ShipCost = shipCost;
 	}
 }
 
-public class Port : Building
-{
-	public static readonly PortTierStats[] stats = {
-		new PortTierStats(0, 0),
-		new PortTierStats(1, 200),
-		new PortTierStats(2, 180),
-		new PortTierStats(3, 160),
-		new PortTierStats(4, 140),
-		new PortTierStats(5, 120),
-		new PortTierStats(6, 100),
-		new PortTierStats(0, 0)
-	};
-
-	public int FleetsSupported => stats[TIER].FleetsSupported;
-	public int ShipCost => stats[TIER].ShipCost;
-
-	public int NextFleetsSupported => stats[TIER + 1].FleetsSupported;
-	public int NextShipCost => stats[TIER + 1].ShipCost;
-
+public class Port : Building {
 	public override BuildingID ID => BuildingID.Port;
 
-	public string getBenefits(int tier)
-	{
-		return $"<b>{stats[tier].FleetsSupported}</b>" + Text.Benefit1 + $"\n<b>{stats[tier].ShipCost}</b>" + Text.Benefit2;
+	public static readonly PortTier[] tiers = {
+		new PortTier(0, 0),
+		new PortTier(1, 200),
+		new PortTier(2, 180),
+		new PortTier(3, 160),
+		new PortTier(4, 140),
+		new PortTier(5, 120),
+		new PortTier(6, 100),
+		new PortTier(0, 0)
+	};
+
+	public int FleetsSupported => tiers[TIER].FleetsSupported;
+	public int ShipCost => tiers[TIER].ShipCost;
+
+	public int NextFleetsSupported => tiers[TIER + 1].FleetsSupported;
+	public int NextShipCost => tiers[TIER + 1].ShipCost;
+
+	public string benefits(int tier) {
+		return $"<b>{tiers[tier].FleetsSupported}</b>" + Text.benefit1 + $"\n<b>{tiers[tier].ShipCost}</b>" + Text.benefit2;
 	}
 }
 
-public struct VictoryTierStats
-{
+/*
+
+	Victory Buildings:
+	Victory Points, Stability Bonus.
+
+*/
+
+public struct VictoryTier {
 	public int VictoryPoints;
 	public float StabilityBonus;
 
-	public VictoryTierStats(int victoryPoints, float stabilityBonus)
-	{
+	public VictoryTier(int victoryPoints, float stabilityBonus) {
 		VictoryPoints = victoryPoints;
 		StabilityBonus = stabilityBonus;
 	}
 }
 
-public class Victory : Building
-{
-	public static readonly VictoryTierStats[] stats = {
-		new VictoryTierStats(0, 0.00f),
-		new VictoryTierStats(1, 0.10f),
-		new VictoryTierStats(2, 0.20f),
-		new VictoryTierStats(3, 0.30f),
-		new VictoryTierStats(4, 0.40f),
-		new VictoryTierStats(5, 0.50f),
-		new VictoryTierStats(6, 0.60f),
-		new VictoryTierStats(0, 0.00f)
-	};
-
-	public int VictoryPoints => stats[TIER].VictoryPoints;
-	public float StabilityBonus => stats[TIER].StabilityBonus;
-
-	public int NextVictoryPoints => stats[TIER + 1].VictoryPoints;
-	public float NextStabilityBonus => stats[TIER + 1].StabilityBonus;
-
+public class Victory : Building {
 	public override BuildingID ID => BuildingID.Victory;
 
-	public string getBenefits(int tier)
-	{
-		return $"<b>{stats[tier].VictoryPoints}</b>" + Text.Benefit1 + $"\n<b>+{stats[tier].StabilityBonus}</b>" + Text.Benefit2;
+	public static readonly VictoryTier[] tiers = {
+		new VictoryTier(0, 0.00f),
+		new VictoryTier(1, 0.10f),
+		new VictoryTier(2, 0.20f),
+		new VictoryTier(3, 0.30f),
+		new VictoryTier(4, 0.40f),
+		new VictoryTier(5, 0.50f),
+		new VictoryTier(6, 0.60f),
+		new VictoryTier(0, 0.00f)
+	};
+
+	public int VictoryPoints => tiers[TIER].VictoryPoints;
+	public float StabilityBonus => tiers[TIER].StabilityBonus;
+
+	public int NextVictoryPoints => tiers[TIER + 1].VictoryPoints;
+	public float NextStabilityBonus => tiers[TIER + 1].StabilityBonus;
+
+	public string benefits(int tier) {
+		return $"<b>{tiers[tier].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].StabilityBonus}</b>" + Text.benefit2;
 	}
 }
