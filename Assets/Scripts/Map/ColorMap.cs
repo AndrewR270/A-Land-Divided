@@ -21,7 +21,7 @@ public static class ColorMap
 
   public static void Load(string scenarioID)
   {
-    string path = Path.Combine(Application.dataPath, "Scenarios", scenarioID, "ColorMap.json");
+    string path = Path.Combine(Application.dataPath, "Scenarios", scenarioID, "Data", "ColorMap.json");
 
     if (!File.Exists(path))
     {

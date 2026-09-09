@@ -18,7 +18,7 @@ MonoBehaviour:
   colorMap: {fileID: 2800000, guid: f3ab0b5ef3cce844e9f2cb0f1d7e44af, type: 3}
   cityLayerImage: {fileID: 2800000, guid: bda0419d37326e447ba2d3eabfa3b190, type: 3}
   labelLayerImage: {fileID: 2800000, guid: c6db51035b0c22849bdc9a9720f7eb9f, type: 3}
-  backgroundPrefab: {fileID: 8610293909718376836, guid: 1af00bc157da0d342a89ac3da03b431e, type: 3}
+  backgroundPrefab: {fileID: 3671135945765894272, guid: 1af00bc157da0d342a89ac3da03b431e, type: 3}
   factionColors: []
   regionListJSON: {fileID: 0}
   DifficultyMultiplier: 0

@@ -39,9 +39,10 @@ public static class BuildingTextLoader
 
     string path = Path.Combine(
         Application.dataPath,
+        "Scenarios",
+        scenarioId,
         "Text",
         lang,
-        scenarioId,
         "BuildingText.json"
     );
 

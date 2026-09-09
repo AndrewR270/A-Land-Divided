@@ -30,9 +30,10 @@ public static class ProvinceTextLoader
 
     string path = Path.Combine(
         Application.dataPath,
+        "Scenarios",
+        scenarioId,
         "Text",
         lang,
-        scenarioId,
         "ProvinceText.json"
     );
 
