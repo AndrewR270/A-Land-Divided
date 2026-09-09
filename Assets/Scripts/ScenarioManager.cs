@@ -12,6 +12,8 @@ public class ScenarioManager : MonoBehaviour
 
   public string ActiveScenarioID => activeScenario.scenarioID;
 
+  public Texture2D ProvinceColorMap => activeScenario.colorMap;
+
   public RawImage baseMap;
   public RawImage highlightLayer;
   public RawImage cityLayer;
@@ -47,7 +49,26 @@ public class ScenarioManager : MonoBehaviour
 
     activeBackground = Instantiate(activeScenario.backgroundPrefab, background);
 
+    ColorMap.Load(ActiveScenarioID);
+
     BroadcastScenarioLoaded();
+  }
+
+  public Province GetProvinceByID(string id)
+  {
+
+      /* Land provinces
+      foreach (var p in activeScenario.Provinces)
+          if (p.ProvinceID == id)
+              return p;
+
+      foreach (var s in activeScenario.SeaProvinces)
+          if (s.ProvinceID == id)
+              return s;
+      */
+
+      Debug.LogError("Province ID not found: " + id);
+      return null;
   }
 
   void BroadcastScenarioLoaded()

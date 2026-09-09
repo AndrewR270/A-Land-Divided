@@ -34,6 +34,14 @@ public class MapNavigation : MonoBehaviour
     public RawImage textLayer;
     public RawImage cityLayer;
 
+    private Texture2D colorMap;
+
+    void Start()
+    {
+        colorMap = ScenarioManager.Instance.activeScenario.colorMap;
+    }
+
+
 
     // ---------------------------------------------------------
     // NEW: Resolution‑normalized base scale
@@ -56,6 +64,7 @@ public class MapNavigation : MonoBehaviour
         ApplyInertia();
         ClampMapPosition();
         UpdateLayerOpacity();
+        HandleClick();
     }
 
     // ---------------------------------------------------------
@@ -244,5 +253,57 @@ public class MapNavigation : MonoBehaviour
             c.a = cityAlpha;
             cityLayer.color = c;
         }
+    }
+
+    void HandleClick()
+    {
+        if (Mouse.current == null) return;
+        if (!Mouse.current.leftButton.wasPressedThisFrame) return;
+
+        // Convert screen → local position relative to MAP
+        RectTransform mapRect = map;
+        Canvas canvas = mapRect.GetComponentInParent<Canvas>();
+        Camera eventCamera = canvas.renderMode == RenderMode.ScreenSpaceOverlay ? null : canvas.worldCamera;
+
+        Vector2 localPoint;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            mapRect,
+            Mouse.current.position.ReadValue(),
+            eventCamera,
+            out localPoint
+        );
+
+        // Convert local → UV
+        Rect rect = mapRect.rect;
+        float u = (localPoint.x - rect.x) / rect.width;
+        float v = (localPoint.y - rect.y) / rect.height;
+
+        if (u < 0 || u > 1 || v < 0 || v > 1)
+            return; // clicked outside map
+
+        // Convert UV → pixel
+        int x = (int)(u * colorMap.width);
+        int y = (int)(v * colorMap.height);
+
+        Color32 clickedColor = colorMap.GetPixel(x, y);
+
+        // Convert color → provinceID
+        if (!ColorMap.ColorToProvinceID.TryGetValue(clickedColor, out string provinceID))
+        {
+            Debug.LogWarning("Unknown province color: " + clickedColor);
+            return;
+        }
+
+        Debug.Log($"Clicked Color {clickedColor} → ProvinceID {provinceID}");
+
+        /* Retrieve Province object
+        Province p = ScenarioManager.Instance.GetProvinceByID(provinceID);
+        if (p == null)
+        {
+            Debug.LogWarning("Province not found: " + provinceID);
+            return;
+        }
+
+        //UIManager.Instance.ShowProvince(p); */
     }
 }

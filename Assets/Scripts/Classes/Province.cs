@@ -4,11 +4,12 @@ using System.Collections.Generic;
 public class Province
 {
     // Identifiers
-    public string ColorID;
-    public string Name => ProvinceTextLoader.Provinces[ColorID].name;
-    public string PeriodName => ProvinceTextLoader.Provinces[ColorID].period_name;
-    public string Pronunciation => ProvinceTextLoader.Provinces[ColorID].pronunciation;
-    public string Description => ProvinceTextLoader.Provinces[ColorID].description;
+    public string ProvinceID;
+
+    public string Name => ProvinceTextLoader.Provinces[ProvinceID].name;
+    public string PeriodName => ProvinceTextLoader.Provinces[ProvinceID].period_name;
+    public string Pronunciation => ProvinceTextLoader.Provinces[ProvinceID].pronunciation;
+    public string Description => ProvinceTextLoader.Provinces[ProvinceID].description;
 
     // Information
     public Faction Owner;
