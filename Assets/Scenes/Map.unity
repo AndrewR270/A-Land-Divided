@@ -315,13 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faee1d16f156a8d44b0fbfb94b063088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapNavigation
-  map: {fileID: 1605419022}
-  mapBounds: {fileID: 1873460663}
-  mapContent: {fileID: 1293749907}
-  scaler: {fileID: 68660828}
+  Map: {fileID: 1605419022}
+  MapBorder: {fileID: 1873460663}
+  BaseMap: {fileID: 1293749907}
+  Scaler: {fileID: 68660828}
+  MIN_ZOOM: 0.8
+  MAX_ZOOM: 16
   zoomSpeed: 1.7
-  minZoom: 0.8
-  maxZoom: 15
   zoomLerpSpeed: 5
   panSpeed: 1
   keyPanSpeed: 1000
@@ -340,13 +340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61e08a924529e8342bc4aa1d09dcedde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapResolutionScaler
-  navigator: {fileID: 68660827}
+  Navigator: {fileID: 68660827}
   Canvas: {fileID: 68660826}
   MapBorder: {fileID: 1873460663}
   Map: {fileID: 1605419022}
   Background: {fileID: 6115614435981773562}
-  mapScale: 0
-  backScale: 0
+  MapScale: 0
+  BackgroundScale: 0
 --- !u!1 &457523001
 GameObject:
   m_ObjectHideFlags: 0

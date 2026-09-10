@@ -18,6 +18,8 @@ public class ScenarioManager : MonoBehaviour
   private Dictionary<string, ScenarioData> scenarios;
   public ScenarioData activeScenario;
 
+  public static event System.Action<ScenarioData> ScenarioLoaded;
+
   public string ScenarioID => activeScenario.scenarioID;
   public Texture2D ColorMap => activeScenario.colorMap;
 
@@ -70,6 +72,8 @@ public class ScenarioManager : MonoBehaviour
 
     if (activeBackground != null) { Destroy(activeBackground); }
     activeBackground = Instantiate(activeScenario.background, background);
+
+    ScenarioLoaded?.Invoke(activeScenario);
   }
 
   // public Province GetProvinceByID(string id)

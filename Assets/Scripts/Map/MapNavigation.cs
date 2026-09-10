@@ -43,9 +43,19 @@ public class MapNavigation : MonoBehaviour
 
     private Texture2D ColorMap;
 
-    void Start()
+    private void OnEnable()
     {
-        ColorMap = ScenarioManager.Instance.ColorMap;
+        ScenarioManager.ScenarioLoaded += OnScenarioLoaded;
+    }
+
+    private void OnDisable()
+    {
+        ScenarioManager.ScenarioLoaded -= OnScenarioLoaded;
+    }
+
+    public void OnScenarioLoaded(ScenarioData scenario)
+    {
+        ColorMap = scenario.colorMap;
     }
 
     public void updateScale() { 
@@ -260,6 +270,8 @@ public class MapNavigation : MonoBehaviour
         int y = (int)(v * ColorMap.height);
 
         Color32 clickedColor = ColorMap.GetPixel(x, y);
+
+        if (clickedColor.r == 0 && clickedColor.g == 0 && clickedColor.b == 0) return;
 
         // Convert color → provinceID
         if (!MapColors.Colors.TryGetValue(clickedColor, out string provinceID)) { Debug.LogWarning("Unknown."); return; }
