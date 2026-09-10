@@ -5,7 +5,6 @@
     "factions": [
       {
         "id_faction": "f_athens",
-        "color": "#0032a0",
         "victory_points": 0,
         "money": 500,
         "province_ids": ["p_athens", "p_eleusis"],
@@ -15,7 +14,6 @@
       },
       {
         "id_faction": "f_sparta",
-        "color": "#7a1f1f",
         "victory_points": 0,
         "money": 450,
         "province_ids": ["p_sparta"],

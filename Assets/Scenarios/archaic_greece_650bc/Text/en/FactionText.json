@@ -1,0 +1,334 @@
+{
+  "factions": [
+    {
+      "id_faction": "f_athens",
+      "name": "Athens",
+      "period_name": "ΑΘΕΝΑΙ",
+      "pronunciation": "ah-TEH-nai"
+    },
+    {
+      "id_faction": "f_eleusis",
+      "name": "Eleusis",
+      "period_name": "ΕΛΕΥΣΙΣ",
+      "pronunciation": "eh-LEH-oo-sis"
+    },
+    {
+      "id_faction": "f_thebes",
+      "name": "Thebes",
+      "period_name": "ΤΕΒΑΙ",
+      "pronunciation": "TEH-bai"
+    },
+    {
+      "id_faction": "f_orchomenos",
+      "name": "Orchomenos",
+      "period_name": "ϜΟΡΧΟΜΕΝΟΣ",
+      "pronunciation": "wor-kho-MEH-nos"
+    },
+    {
+      "id_faction": "f_plataea",
+      "name": "Plataea",
+      "period_name": "ΠΛΑΤΑΙΑΙ",
+      "pronunciation": "plah-TAI-ai"
+    },
+    {
+      "id_faction": "f_thespiae",
+      "name": "Thespiae",
+      "period_name": "ΤΕΣΠΙΑΙ",
+      "pronunciation": "TEHS-pee-ai"
+    },
+    {
+      "id_faction": "f_tanagra",
+      "name": "Tanagra",
+      "period_name": "ΤΑΝΑΓΡΑ",
+      "pronunciation": "TAH-nah-grah"
+    },
+    {
+      "id_faction": "f_krissa",
+      "name": "Krissa",
+      "period_name": "ΚΡΙΣΑ",
+      "pronunciation": "KREE-sah"
+    },
+    {
+      "id_faction": "f_elateia",
+      "name": "Elateia",
+      "period_name": "ΕΛΑΤΕΙΑ",
+      "pronunciation": "eh-lah-TEH-ah"
+    },
+    {
+      "id_faction": "f_opous",
+      "name": "Opous",
+      "period_name": "ΟΠΟΣ",
+      "pronunciation": "OH-poos"
+    },
+    {
+      "id_faction": "f_lamia",
+      "name": "Lamia",
+      "period_name": "ΛΑΜΙΑ",
+      "pronunciation": "LAH-mee-ah"
+    },
+    {
+      "id_faction": "f_larissa",
+      "name": "Larissa",
+      "period_name": "ΛΑΡΙΣΑ",
+      "pronunciation": "LAH-ree-sah"
+    },
+    {
+      "id_faction": "f_pherae",
+      "name": "Pherae",
+      "period_name": "ΦΕΡΑΙ",
+      "pronunciation": "p‑HEH-rai"
+    },
+    {
+      "id_faction": "f_pharsalos",
+      "name": "Pharsalos",
+      "period_name": "ϜΑΡΣΑΛΟΣ",
+      "pronunciation": "WAHR-sah-los"
+    },
+    {
+      "id_faction": "f_kalydon",
+      "name": "Kalydon",
+      "period_name": "ΚΑΛΥΔΟΝ",
+      "pronunciation": "KAH-lu-don"
+    },
+    {
+      "id_faction": "f_megara",
+      "name": "Megara",
+      "period_name": "ΜΕΓΑΡΑ",
+      "pronunciation": "MEH-gah-rah"
+    },
+    {
+      "id_faction": "f_sparta",
+      "name": "Sparta",
+      "period_name": "ϺΠΑΡΤΑ",
+      "pronunciation": "SPAR-tah"
+    },
+    {
+      "id_faction": "f_pylos",
+      "name": "Pylos",
+      "period_name": "ΠΥΛΟΣ",
+      "pronunciation": "PU-los"
+    },
+    {
+      "id_faction": "f_elis",
+      "name": "Elis",
+      "period_name": "ϜΑΛΙΣ",
+      "pronunciation": "WAH-lis"
+    },
+    {
+      "id_faction": "f_tegea",
+      "name": "Tegea",
+      "period_name": "ΤΕΓΕΑ",
+      "pronunciation": "TEH-geh-ah"
+    },
+    {
+      "id_faction": "f_mantineia",
+      "name": "Mantineia",
+      "period_name": "ΜΑΝΤΙΝΕΙΑ",
+      "pronunciation": "man-tee-NEH-ah"
+    },
+    {
+      "id_faction": "f_patrai",
+      "name": "Patrai",
+      "period_name": "ΠΑΤΡΑΙ",
+      "pronunciation": "PAH-trai"
+    },
+    {
+      "id_faction": "f_aigion",
+      "name": "Aigion",
+      "period_name": "ΑΙΓΙΟΝ",
+      "pronunciation": "AI-gee-on"
+    },
+    {
+      "id_faction": "f_corinth",
+      "name": "Corinth",
+      "period_name": "ϘΟΡΙΝΘΟΣ",
+      "pronunciation": "koh-RIN-th‑hos"
+    },
+    {
+      "id_faction": "f_sicyon",
+      "name": "Sicyon",
+      "period_name": "ϘΙΚΙΟΝ",
+      "pronunciation": "kee-KEE-on"
+    },
+    {
+      "id_faction": "f_argos",
+      "name": "Argos",
+      "period_name": "ΑΡΓΟΣ",
+      "pronunciation": "AR-gos"
+    },
+    {
+      "id_faction": "f_epidaurus",
+      "name": "Epidaurus",
+      "period_name": "ΕΠΙΔΑΥΡΟΣ",
+      "pronunciation": "eh-pee-DOW-ros"
+    },
+    {
+      "id_faction": "f_troezen",
+      "name": "Troezen",
+      "period_name": "ΤΡΟΙΖΗΝ",
+      "pronunciation": "TROI-zen"
+    },
+    {
+      "id_faction": "f_aegina",
+      "name": "Aegina",
+      "period_name": "ΑΙΓΙΝΑ",
+      "pronunciation": "AI-gee-nah"
+    },
+    {
+      "id_faction": "f_chalcis",
+      "name": "Chalcis",
+      "period_name": "ΧΑΛΚΙΣ",
+      "pronunciation": "k‑HAL-kis"
+    },
+    {
+      "id_faction": "f_eretria",
+      "name": "Eretria",
+      "period_name": "ΕΡΕΤΡΙΑ",
+      "pronunciation": "eh-REH-tree-ah"
+    },
+    {
+      "id_faction": "f_naxos",
+      "name": "Naxos",
+      "period_name": "ΝΑΞΟΣ",
+      "pronunciation": "NAK-sos"
+    },
+    {
+      "id_faction": "f_paros",
+      "name": "Paros",
+      "period_name": "ΠΑΡΟΣ",
+      "pronunciation": "PAH-ros"
+    },
+    {
+      "id_faction": "f_andros",
+      "name": "Andros",
+      "period_name": "ΑΝΔΡΟΣ",
+      "pronunciation": "AN-dros"
+    },
+    {
+      "id_faction": "f_tinos",
+      "name": "Tinos",
+      "period_name": "ΤΗΝΟΣ",
+      "pronunciation": "TAY-nos"
+    },
+    {
+      "id_faction": "f_thera",
+      "name": "Thera",
+      "period_name": "ΘΗΡΑ",
+      "pronunciation": "t-HEH-rah"
+    },
+    {
+      "id_faction": "f_melos",
+      "name": "Melos",
+      "period_name": "ΜΗΛΟΣ",
+      "pronunciation": "MEH-los"
+    },
+    {
+      "id_faction": "f_mytilene",
+      "name": "Mytilene",
+      "period_name": "ΜΥΤΙΛΗΝΑ",
+      "pronunciation": "mu-tee-LEH-nah"
+    },
+    {
+      "id_faction": "f_chios",
+      "name": "Chios",
+      "period_name": "ΧΙΟΣ",
+      "pronunciation": "k‑HEE-os"
+    },
+    {
+      "id_faction": "f_samos",
+      "name": "Samos",
+      "period_name": "ΣΑΜΟΣ",
+      "pronunciation": "SAH-mos"
+    },
+    {
+      "id_faction": "f_kos",
+      "name": "Kos",
+      "period_name": "ϘΟΣ",
+      "pronunciation": "KOS"
+    },
+    {
+      "id_faction": "f_knossos",
+      "name": "Knossos",
+      "period_name": "ΚΝΩΣΟΣ",
+      "pronunciation": "KNO-sos"
+    },
+    {
+      "id_faction": "f_gortyn",
+      "name": "Gortyn",
+      "period_name": "ΓΟΡΤΥΝ",
+      "pronunciation": "GOR-tun"
+    },
+    {
+      "id_faction": "f_phaistos",
+      "name": "Phaistos",
+      "period_name": "ΦΑΙΣΤΟΣ",
+      "pronunciation": "p‑HAI-stos"
+    },
+    {
+      "id_faction": "f_kydonia",
+      "name": "Kydonia",
+      "period_name": "ΧΥΔΟΝΙΑ",
+      "pronunciation": "k‑HU-doh-NEE-ah"
+    },
+    {
+      "id_faction": "f_kameiros",
+      "name": "Kameiros",
+      "period_name": "ΚΑΜΕΙΡΟΣ",
+      "pronunciation": "kah-MEH-ros"
+    },
+    {
+      "id_faction": "f_lindos",
+      "name": "Lindos",
+      "period_name": "ΛΙΝΔΟΣ",
+      "pronunciation": "LIN-dos"
+    },
+    {
+      "id_faction": "f_miletus",
+      "name": "Miletus",
+      "period_name": "ΜΙΛΗΤΟΣ",
+      "pronunciation": "mee-LEH-tos"
+    },
+    {
+      "id_faction": "f_ephesus",
+      "name": "Ephesus",
+      "period_name": "ΕΦΕΣΟΣ",
+      "pronunciation": "EHP-he-sos"
+    },
+    {
+      "id_faction": "f_smyrna",
+      "name": "Smyrna",
+      "period_name": "ΣΜΥΡΝΑ",
+      "pronunciation": "SMUR-nah"
+    },
+    {
+      "id_faction": "f_phocaea",
+      "name": "Phocaea",
+      "period_name": "ΦΩΚΑΙΑ",
+      "pronunciation": "p‑HAW-kai-ah"
+    },
+    {
+      "id_faction": "f_teos",
+      "name": "Teos",
+      "period_name": "ΤΗΟΣ",
+      "pronunciation": "t‑HEH-os"
+    },
+    {
+      "id_faction": "f_cyme",
+      "name": "Cyme",
+      "period_name": "ΚΥΜΑ",
+      "pronunciation": "KU-mah"
+    },
+    {
+      "id_faction": "f_halicarnassus",
+      "name": "Halicarnassus",
+      "period_name": "ΑΛΙΚΑΡΝΑΣΟΣ",
+      "pronunciation": "ah-lee-kar-NAS-sos"
+    },
+    {
+      "id_faction": "f_knidos",
+      "name": "Knidos",
+      "period_name": "ΧΝΙΔΟΣ",
+      "pronunciation": "k‑HNEE-dos"
+    }
+  ]
+}
