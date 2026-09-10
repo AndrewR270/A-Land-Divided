@@ -28,9 +28,8 @@ scenario:
       farm: int
       barracks: int
       market: int
-      victory: int
-      resource: int
       port: int
+      special: int
     pending_construction[]:
       building_type: string
       turns_remaining: int

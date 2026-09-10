@@ -13,7 +13,7 @@ public enum BuildingID
 	Barracks,
 	Markets,
 	Port,
-	Victory
+	Special
 }
 
 public abstract class Building
@@ -43,7 +43,7 @@ public abstract class Building
 				BuildingID.Barracks => text.Barracks,
 				BuildingID.Markets => text.Markets,
 				BuildingID.Port => text.Port,
-				BuildingID.Victory => text.Victory,
+				BuildingID.Special => text.Special,
 				_ => default
 			};
 		}
@@ -231,35 +231,35 @@ public class Port : Building {
 
 /*
 
-	Victory Buildings:
+	Special Buildings:
 	Victory Points, Stability Bonus.
 
 */
 
-public struct VictoryTier {
+public struct SpecialTier {
 	public int VictoryPoints;
 	public float StabilityBonus;
 
-	public VictoryTier(int victoryPoints, float stabilityBonus) {
+	public SpecialTier(int victoryPoints, float stabilityBonus) {
 		VictoryPoints = victoryPoints;
 		StabilityBonus = stabilityBonus;
 	}
 }
 
-public class Victory : Building {
-	public override BuildingID ID => BuildingID.Victory;
+public class Special : Building {
+	public override BuildingID ID => BuildingID.Special;
 
-	public Victory(int tier) { setTier(tier); }
+	public Special(int tier) { setTier(tier); }
 
-	public static readonly VictoryTier[] tiers = {
-		new VictoryTier(0, 0.00f),
-		new VictoryTier(1, 0.10f),
-		new VictoryTier(2, 0.20f),
-		new VictoryTier(3, 0.30f),
-		new VictoryTier(4, 0.40f),
-		new VictoryTier(5, 0.50f),
-		new VictoryTier(6, 0.60f),
-		new VictoryTier(0, 0.00f)
+	public static readonly SpecialTier[] tiers = {
+		new SpecialTier(0, 0.00f),
+		new SpecialTier(1, 0.10f),
+		new SpecialTier(2, 0.20f),
+		new SpecialTier(3, 0.30f),
+		new SpecialTier(4, 0.40f),
+		new SpecialTier(5, 0.50f),
+		new SpecialTier(6, 0.60f),
+		new SpecialTier(0, 0.00f)
 	};
 
 	public int VictoryPoints => tiers[TIER].VictoryPoints;
@@ -269,6 +269,6 @@ public class Victory : Building {
 	public float NextStabilityBonus => tiers[TIER + 1].StabilityBonus;
 
 	public string benefits() {
-		return $"<b>{tiers[TIER].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].StabilityBonus}</b>" + Text.benefit2;
+		return $"<b>+{tiers[TIER].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].StabilityBonus}</b>" + Text.benefit2;
 	}
 }
