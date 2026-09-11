@@ -121,4 +121,4 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 **9/10/26**
 - Added more data and text files to each Scenario folder to build out the scenario dependency list, added skeleton for bonuses
 - Added Faction Color mapping in **ColorsFaction.json** and **Adjacency.json** to hold adjacency lists for all provinces.
-- Expanded **FactionText.json**, **ProvinceText.json**, and **BuildingText.json** to hold scenario-specific flavor text descriptions, changed Victory building name to Special
+- Expanded **FactionText.json**, **ProvinceText.json**, and **BuildingText.json** to hold scenario-specific flavor text descriptions, changed Victory building name to Special, added **ScenarioText.json**.
