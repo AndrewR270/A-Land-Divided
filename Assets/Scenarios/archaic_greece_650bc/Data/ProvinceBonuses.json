@@ -10,7 +10,8 @@
       "fleets_supported": 0,
       "ship_cost": 0,
       "victory_points": 0,
-      "stability_bonus": 0
+      "stability_bonus": 0,
+      "exp_start": 0
     }
   ]
 }
