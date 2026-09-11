@@ -1,0 +1,17 @@
+{
+  "bonuses": [
+    {
+      "surplus": 0,
+      "growth": 0,
+      "replenish_time": 0,
+      "exp_gain": 0,
+      "trade_bonus": 0,
+      "tax_bonus": 0,
+      "fleets_supported": 0,
+      "ship_cost": 0,
+      "victory_points": 0,
+      "stability_bonus": 0,
+      "exp_start": 0
+    }
+  ]
+}

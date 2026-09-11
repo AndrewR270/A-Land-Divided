@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
     Calculates height of viewport (canvas) and map (map border) and scales the map to fit the viewport.
     Also scales the background to fit the viewport.
-    
+
 */
 
 public class ResolutionScaler : MonoBehaviour
@@ -22,7 +22,22 @@ public class ResolutionScaler : MonoBehaviour
 
     void OnRectTransformDimensionsChange() { ApplyBaseScale(); }
 
-    void Start() { ApplyBaseScale(); }
+   private void OnEnable()
+    {
+        ScenarioManager.ScenarioLoaded += OnScenarioLoaded;
+    }
+
+    private void OnDisable()
+    {
+        ScenarioManager.ScenarioLoaded -= OnScenarioLoaded;
+    }
+
+    private void OnScenarioLoaded(ScenarioData scenario)
+    {
+        // Now textures are loaded and SetNativeSize() has run
+        ApplyBaseScale();
+    }
+
 
     void ApplyBaseScale()
     {

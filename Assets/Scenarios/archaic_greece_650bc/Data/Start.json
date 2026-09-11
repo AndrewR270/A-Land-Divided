@@ -1,77 +1,151 @@
 {
   "scenario": {
-    "scenario_id": "archaic_greece_650bc",
-    "scenario_key": "scenario_archaic_greece",
-    "currency_key": "currency_drachmae",
-    "victory_point_key": "vp_prestige",
+    "id_scenario": "archaic_greece_650bc",
     "turn": 1,
     "factions": [
       {
-        "faction_id": "f_athens",
-        "faction_bonus": "fbonus_athens",
-        "color": "#0032a0",
+        "id_faction": "f_athens",
         "victory_points": 0,
         "money": 500,
-        "province_ids": [
-          "p_athens"
-        ],
-        "diplomacy": {}
+        "province_ids": ["p_athens", "p_eleusis"],
+        "diplomacy": {
+          "f_sparta": "hostile"
+        }
+      },
+      {
+        "id_faction": "f_sparta",
+        "victory_points": 0,
+        "money": 450,
+        "province_ids": ["p_sparta"],
+        "diplomacy": {
+          "f_athens": "hostile"
+        }
       }
     ],
+
     "provinces": [
       {
-        "province_id": "p_athens",
-        "bonus_key": "pbonus_athens",
+        "id_province": "p_athens",
+        "owner": "f_athens",
+        "population_home": 10,
+        "population_levied": 1,
+        "surplus": 0,
+        "stability": 100,
+        "buildings": {
+          "farm": 1,
+          "barracks": 1,
+          "market": 0,
+          "port": 0,
+          "special": 0
+        },
+        "pending_construction": [
+          {
+            "building_type": "market",
+            "turns_remaining": 3
+          }
+        ],
+        "pending_recruitment": [
+          { "id_unit": "u_athens_2", "turns_remaining": 1 },
+          { "id_unit": "u_athens_3", "turns_remaining": 2 }
+        ],
+        "replenishment_counter": 0,
+        "unit_id_counter": 4
+      },
+      {
+        "id_province": "p_eleusis",
         "owner": "f_athens",
         "population_home": 10,
         "population_levied": 0,
         "surplus": 1,
-        "stability": 100,
+        "stability": 95,
         "buildings": {
           "farm": 1,
           "barracks": 0,
           "market": 0,
-          "faith": 0,
+          "port": 0,
           "special": 0
         },
         "pending_construction": [],
-        "time_to_recruit": 0,
-        "time_to_replenish": 0,
-        "lost_contingents": 0,
+        "pending_recruitment": [],
         "replenishment_counter": 0,
-        "is_starving": false
+        "unit_id_counter": 1
+      },
+      {
+        "id_province": "p_sparta",
+        "owner": "f_sparta",
+
+        "population_home": 10,
+        "population_levied": 2,
+        "surplus": 1,
+        "stability": 100,
+
+        "buildings": {
+          "farm": 1,
+          "barracks": 2,
+          "market": 0,
+          "port": 0,
+          "special": 0
+        },
+        "pending_construction": [
+          {
+            "building_type": "barracks",
+            "turns_remaining": 4
+          }
+        ],
+        "pending_recruitment": [
+          { "id_unit": "u_sparta_3", "turns_remaining": 1 }
+        ],
+        "replenishment_counter": 2,
+        "unit_id_counter": 4
       }
     ],
+
     "contingents": [
       {
-        "unit_id": "athens_1",
+        "id_unit": "u_athens_1",
+        "name_unit": "unit_default",
         "origin": "p_athens",
-        "unit_name": "unit_default",
-        "experience": 0,
+        "experience": 1,
         "location": "p_athens",
+        "levied": true,
+        "is_exile": false
+      },
+      {
+        "id_unit": "u_sparta_1",
+        "name_unit": "unit_default",
+        "origin": "p_sparta",
+        "experience": 2,
+        "location": "p_sparta",
+        "levied": true,
+        "is_exile": false
+      },
+      {
+        "id_unit": "u_sparta_2",
+        "name_unit": "unit_default",
+        "origin": "p_sparta",
+        "experience": 0,
+        "location": "p_sparta",
         "levied": false,
         "is_exile": false
       }
     ],
     "sea_regions": [
       {
-        "sea_region_id": "s_gulf_of_corinth",
+        "id_sea_region": "s_gulf_of_corinth",
         "factions": {
           "f_athens": {
-            "fleets": 0,
+            "fleets": 1,
             "merchants": 0,
             "army_at_sea": false,
-            "blockading": [],
-            "pending_recruitment_ships": [],
-            "pending_recruitment_merchants": []
+            "ships_in_queue": 1,
+            "merchants_in_queue": 0
           },
-          "f_corinth": {
+          "f_sparta": {
             "fleets": 0,
-            "merchants": 0,
+            "merchants": 1,
             "army_at_sea": false,
-            "blockading": [],
-            "pending_recruitment_ships": [],
-            "pending_recruitment_merchants": []
+            "ships_in_queue": 0,
+            "merchants_in_queue": 2
           }
         }
       }

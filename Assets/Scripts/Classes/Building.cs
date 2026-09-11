@@ -13,7 +13,7 @@ public enum BuildingID
 	Barracks,
 	Markets,
 	Port,
-	Victory
+	Special
 }
 
 public abstract class Building
@@ -43,7 +43,7 @@ public abstract class Building
 				BuildingID.Barracks => text.Barracks,
 				BuildingID.Markets => text.Markets,
 				BuildingID.Port => text.Port,
-				BuildingID.Victory => text.Victory,
+				BuildingID.Special => text.Special,
 				_ => default
 			};
 		}
@@ -73,6 +73,8 @@ public struct FarmTier {
 public class Farms : Building {
 	public override BuildingID ID => BuildingID.Farms;
 
+	public Farms(int tier) { setTier(tier); }
+
 	public static readonly FarmTier[] tiers = {
 		new FarmTier(0, 0.0f),
 		new FarmTier(1, 0.6f),
@@ -84,14 +86,14 @@ public class Farms : Building {
 		new FarmTier(0, 0.0f)
 	};
 
-	public int Surplus => tiers[TIER].Surplus;
-	public float Growth => tiers[TIER].Growth;
+	public int surplus => tiers[TIER].Surplus;
+	public float growth => tiers[TIER].Growth;
 
-	public int NextSurplus => tiers[TIER + 1].Surplus;
-	public float NextGrowth => tiers[TIER + 1].Growth;
+	public int next_surplus => tiers[TIER + 1].Surplus;
+	public float next_growth => tiers[TIER + 1].Growth;
 
-	public string benefits(int tier) {
-		return $"<b>+{tiers[tier].Surplus}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].Growth}</b>" + Text.benefit2;
+	public string benefits() {
+		return $"<b>+{tiers[TIER].Surplus}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].Growth}</b>" + Text.benefit2;
 	}
 }
 
@@ -115,6 +117,8 @@ public struct BarracksTier {
 public class Barracks : Building {
 	public override BuildingID ID => BuildingID.Barracks;
 
+	public Barracks(int tier) { setTier(tier); }
+
 	public static readonly BarracksTier[] tiers = {
 		new BarracksTier(10, 0.00f),
 		new BarracksTier(9, 0.05f),
@@ -126,14 +130,14 @@ public class Barracks : Building {
 		new BarracksTier(10, 0.00f)
 	};
 
-	public int ReplenishTime => tiers[TIER].ReplenishTime;
-	public float ExpGain => tiers[TIER].ExpGain;
+	public int replenish_time => tiers[TIER].ReplenishTime;
+	public float exp_gain => tiers[TIER].ExpGain;
 
-	public int NextReplenishTime => tiers[TIER + 1].ReplenishTime;
-	public float NextExpGain => tiers[TIER + 1].ExpGain;
+	public int next_replenish_time => tiers[TIER + 1].ReplenishTime;
+	public float next_exp_gain => tiers[TIER + 1].ExpGain;
 
-	public string benefits(int tier) {
-		return $"<b>{tiers[tier].ReplenishTime}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].ExpGain * 100}</b>" + Text.benefit2;
+	public string benefits() {
+		return $"<b>{tiers[TIER].ReplenishTime}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].ExpGain * 100}</b>" + Text.benefit2;
 	}
 }
 
@@ -157,6 +161,8 @@ public struct MarketsTier {
 public class Markets : Building {
 	public override BuildingID ID => BuildingID.Markets;
 
+	public Markets(int tier) { setTier(tier); }
+
 	public static readonly MarketsTier[] tiers = {
 		new MarketsTier(0.00f, 0),
 		new MarketsTier(0.02f, 1),
@@ -168,14 +174,14 @@ public class Markets : Building {
 		new MarketsTier(0.00f, 0)
 	};
 
-	public float TradeBonus => tiers[TIER].TradeBonus;
-	public int TaxBonus => tiers[TIER].TaxBonus;
+	public float trade_bonus => tiers[TIER].TradeBonus;
+	public int tax_bonus => tiers[TIER].TaxBonus;
 
-	public float NextTradeBonus => tiers[TIER + 1].TradeBonus;
-	public int NextTaxBonus => tiers[TIER + 1].TaxBonus;
+	public float next_trade_bonus => tiers[TIER + 1].TradeBonus;
+	public int next_tax_bonus => tiers[TIER + 1].TaxBonus;
 
-	public string benefits(int tier) {
-		return $"<b>{tiers[tier].TradeBonus * 100}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].TaxBonus}</b>" + Text.benefit2;
+	public string benefits() {
+		return $"<b>{tiers[TIER].TradeBonus * 100}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].TaxBonus}</b>" + Text.benefit2;
 	}
 }
 
@@ -199,6 +205,8 @@ public struct PortTier {
 public class Port : Building {
 	public override BuildingID ID => BuildingID.Port;
 
+	public Port(int tier) { setTier(tier); }
+
 	public static readonly PortTier[] tiers = {
 		new PortTier(0, 0),
 		new PortTier(1, 200),
@@ -210,55 +218,57 @@ public class Port : Building {
 		new PortTier(0, 0)
 	};
 
-	public int FleetsSupported => tiers[TIER].FleetsSupported;
-	public int ShipCost => tiers[TIER].ShipCost;
+	public int fleets_supported => tiers[TIER].FleetsSupported;
+	public int ship_cost => tiers[TIER].ShipCost;
 
-	public int NextFleetsSupported => tiers[TIER + 1].FleetsSupported;
-	public int NextShipCost => tiers[TIER + 1].ShipCost;
+	public int next_fleets_supported => tiers[TIER + 1].FleetsSupported;
+	public int next_ship_cost => tiers[TIER + 1].ShipCost;
 
-	public string benefits(int tier) {
-		return $"<b>{tiers[tier].FleetsSupported}</b>" + Text.benefit1 + $"\n<b>{tiers[tier].ShipCost}</b>" + Text.benefit2;
+	public string benefits() {
+		return $"<b>{tiers[TIER].FleetsSupported}</b>" + Text.benefit1 + $"\n<b>{tiers[TIER].ShipCost}</b>" + Text.benefit2;
 	}
 }
 
 /*
 
-	Victory Buildings:
+	Special Buildings:
 	Victory Points, Stability Bonus.
 
 */
 
-public struct VictoryTier {
+public struct SpecialTier {
 	public int VictoryPoints;
 	public float StabilityBonus;
 
-	public VictoryTier(int victoryPoints, float stabilityBonus) {
+	public SpecialTier(int victoryPoints, float stabilityBonus) {
 		VictoryPoints = victoryPoints;
 		StabilityBonus = stabilityBonus;
 	}
 }
 
-public class Victory : Building {
-	public override BuildingID ID => BuildingID.Victory;
+public class Special : Building {
+	public override BuildingID ID => BuildingID.Special;
 
-	public static readonly VictoryTier[] tiers = {
-		new VictoryTier(0, 0.00f),
-		new VictoryTier(1, 0.10f),
-		new VictoryTier(2, 0.20f),
-		new VictoryTier(3, 0.30f),
-		new VictoryTier(4, 0.40f),
-		new VictoryTier(5, 0.50f),
-		new VictoryTier(6, 0.60f),
-		new VictoryTier(0, 0.00f)
+	public Special(int tier) { setTier(tier); }
+
+	public static readonly SpecialTier[] tiers = {
+		new SpecialTier(0, 0.00f),
+		new SpecialTier(1, 0.10f),
+		new SpecialTier(2, 0.20f),
+		new SpecialTier(3, 0.30f),
+		new SpecialTier(4, 0.40f),
+		new SpecialTier(5, 0.50f),
+		new SpecialTier(6, 0.60f),
+		new SpecialTier(0, 0.00f)
 	};
 
-	public int VictoryPoints => tiers[TIER].VictoryPoints;
-	public float StabilityBonus => tiers[TIER].StabilityBonus;
+	public int victory_points => tiers[TIER].VictoryPoints;
+	public float stability_bonus => tiers[TIER].StabilityBonus;
 
-	public int NextVictoryPoints => tiers[TIER + 1].VictoryPoints;
-	public float NextStabilityBonus => tiers[TIER + 1].StabilityBonus;
+	public int next_victory_points => tiers[TIER + 1].VictoryPoints;
+	public float next_stability_bonus => tiers[TIER + 1].StabilityBonus;
 
-	public string benefits(int tier) {
-		return $"<b>{tiers[tier].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{tiers[tier].StabilityBonus}</b>" + Text.benefit2;
+	public string benefits() {
+		return $"<b>+{tiers[TIER].VictoryPoints}</b>" + Text.benefit1 + $"\n<b>+{tiers[TIER].StabilityBonus}</b>" + Text.benefit2;
 	}
 }

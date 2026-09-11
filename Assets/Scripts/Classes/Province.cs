@@ -25,11 +25,12 @@ public class Province
     public float GrowthRate;
 
     // Buildings
-    public int FarmLevel;
-    public int BarracksLevel;
-    public int MarketLevel;
-    public int PortLevel;
-    public int SpecialBuildingLevel;
+    public Farms Farms = new Farms(0);
+    public Barracks Barracks = new Barracks(0);
+    public Markets Markets = new Markets(0);
+    public Port Port = new Port(0);
+    public Special Special = new Special(0);
+
 
     // Stability
     public int Stability;
