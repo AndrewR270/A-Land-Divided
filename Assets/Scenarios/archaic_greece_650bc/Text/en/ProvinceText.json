@@ -5,7 +5,7 @@
       "name": "Athens",
       "period_name": "ΑΘΕΝΑΙ",
       "pronunciation": "ah-TEH-nai",
-      "description": "By 650 BC Athens clustered beneath the Acropolis, where early shrines and the old Mycenaean fortification still shaped the hill’s silhouette. The settlement’s demes stretched across Attica, tied together by shared cults and pottery workshops whose styles already hinted at future artistic prominence."
+      "description": "By 650 BC Athens clustered beneath the Acropolis, where early shrines and the old Mycenaean fortification still shaped the hill's silhouette. The settlement's demes stretched across Attica, tied together by shared cults and pottery workshops whose styles already hinted at future artistic prominence."
     },
     {
       "id_province": "p_eleusis",
@@ -19,14 +19,14 @@
       "name": "Thebes",
       "period_name": "ΤΕΒΑΙ",
       "pronunciation": "TEH-bai",
-      "description": "Thebes grew around the Kadmeia, a citadel with Bronze Age roots linked to legendary Cadmus. By 650 BC its fertile plain supported dense settlement, and excavations reveal early fortifications and cult sites that anchored Boeotia’s largest urban center."
+      "description": "Thebes grew around the Kadmeia, a citadel with Bronze Age roots linked to legendary Cadmus. By 650 BC its fertile plain supported dense settlement, and excavations reveal early fortifications and cult sites that anchored Boeotia's largest urban center."
     },
     {
       "id_province": "p_orchomenos",
       "name": "Orchomenos",
       "period_name": "ϜΟΡΧΟΜΕΝΟΣ",
       "pronunciation": "wor-kho-MEH-nos",
-      "description": "Orchomenos sat near the former basin of Lake Copais, once home to the famed Bronze Age ‘Minyan’ culture. Terracing and irrigation shaped its farmland, and local myths tied the settlement to ancient wealth and early engineering feats."
+      "description": "Orchomenos sat near the former basin of Lake Copais, once home to the famed Bronze Age ‘Minyan' culture. Terracing and irrigation shaped its farmland, and local myths tied the settlement to ancient wealth and early engineering feats."
     },
     {
       "id_province": "p_plataea",
@@ -47,7 +47,7 @@
       "name": "Tanagra",
       "period_name": "ΤΑΝΑΓΡΑ",
       "pronunciation": "TAH-nah-grah",
-      "description": "Tanagra’s settlements lined the routes between Attica and Boeotia. Known later for its figurines, early Tanagra already showed signs of distinctive craftsmanship. Its hills and passes created a landscape shaped by movement and exchange."
+      "description": "Tanagra's settlements lined the routes between Attica and Boeotia. Known later for its figurines, early Tanagra already showed signs of distinctive craftsmanship. Its hills and passes created a landscape shaped by movement and exchange."
     },
     {
       "id_province": "p_krissa",
@@ -82,14 +82,14 @@
       "name": "Larissa",
       "period_name": "ΛΑΡΙΣΑ",
       "pronunciation": "LAH-ree-sah",
-      "description": "Larissa sat on rich Thessalian plains famed for horse‑breeding since the Bronze Age. Excavations reveal continuous habitation near the riverbanks, with early tumuli and sanctuaries marking its role as a regional center."
+      "description": "Larissa sat on rich Thessalian plains famed for horse-breeding since the Bronze Age. Excavations reveal continuous habitation near the riverbanks, with early tumuli and sanctuaries marking its role as a regional center."
     },
     {
       "id_province": "p_pherae",
       "name": "Pherae",
       "period_name": "ΦΕΡΑΙ",
-      "pronunciation": "p‑HEH-rai",
-      "description": "Pherae developed along fertile Thessalian land, with early shrines and farmsteads forming a prosperous rural landscape. Archaeology shows terracing, orchards, and horse‑breeding traditions that predate its later prominence."
+      "pronunciation": "p-HEH-rai",
+      "description": "Pherae developed along fertile Thessalian land, with early shrines and farmsteads forming a prosperous rural landscape. Archaeology shows terracing, orchards, and horse-breeding traditions that predate its later prominence."
     },
     {
       "id_province": "p_pharsalos",
@@ -103,7 +103,7 @@
       "name": "Kalydon",
       "period_name": "ΚΑΛΥΔΟΝ",
       "pronunciation": "KAH-lu-don",
-      "description": "Kalydon’s rugged Aetolian terrain preserved shrines linked to the mythic boar hunt. In 650 BC scattered hill settlements relied on herding and small cultivated patches, reflecting a landscape of independence and isolation."
+      "description": "Kalydon's rugged Aetolian terrain preserved shrines linked to the mythic boar hunt. In 650 BC scattered hill settlements relied on herding and small cultivated patches, reflecting a landscape of independence and isolation."
     },
     {
       "id_province": "p_megara",
@@ -131,7 +131,7 @@
       "name": "Elis",
       "period_name": "ϜΑΛΙΣ",
       "pronunciation": "WAH-lis",
-      "description": "Elis occupied fertile western plains, with Olympia’s ancient sanctuary shaping seasonal rhythms. Excavations show early athletic grounds and rural settlements tied to riverbanks and orchards, forming one of the Peloponnese’s most abundant landscapes."
+      "description": "Elis occupied fertile western plains, with Olympia's ancient sanctuary shaping seasonal rhythms. Excavations show early athletic grounds and rural settlements tied to riverbanks and orchards, forming one of the Peloponnese's most abundant landscapes."
     },
     {
       "id_province": "p_tegea",
@@ -152,35 +152,35 @@
       "name": "Patrai",
       "period_name": "ΠΑΤΡΑΙ",
       "pronunciation": "PAH-trai",
-      "description": "Patrai’s coastal settlements lined the Gulf of Corinth, with fertile lowlands supporting orchards and grain. Early harbor activity and local shrines reveal a community shaped by both agriculture and maritime exchange."
+      "description": "Patrai's coastal settlements lined the Gulf of Corinth, with fertile lowlands supporting orchards and grain. Early harbor activity and local shrines reveal a community shaped by both agriculture and maritime exchange."
     },
     {
       "id_province": "p_aigion",
       "name": "Aigion",
       "period_name": "ΑΙΓΙΟΝ",
       "pronunciation": "AI-gee-on",
-      "description": "Aigion’s coastal plain supported orchards and grain fields, while early meeting sites tied to the Achaean League show its regional importance. Archaeology reveals a blend of rural abundance and active harbor life."
+      "description": "Aigion's coastal plain supported orchards and grain fields, while early meeting sites tied to the Achaean League show its regional importance. Archaeology reveals a blend of rural abundance and active harbor life."
     },
     {
       "id_province": "p_corinth",
       "name": "Corinth",
       "period_name": "ϘΟΡΙΝΘΟΣ",
-      "pronunciation": "koh-RIN-th‑hos",
-      "description": "Corinth straddled its Isthmus, with twin harbors at Lechaion and Kenchreai linking two seas. Early ship sheds and pottery workshops reveal a technologically innovative settlement, later credited with developing the trireme’s precursor forms."
+      "pronunciation": "koh-RIN-th-hos",
+      "description": "Corinth straddled its Isthmus, with twin harbors at Lechaion and Kenchreai linking two seas. Early ship sheds and pottery workshops reveal a technologically innovative settlement, later credited with developing the trireme's precursor forms."
     },
     {
       "id_province": "p_sicyon",
       "name": "Sicyon",
       "period_name": "ϘΙΚΙΟΝ",
       "pronunciation": "kee-KEE-on",
-      "description": "Sicyon’s plain held early workshops famed for distinctive pottery styles that predated its later artistic renown. By 650 BC its settlements clustered near springs and low hills, with archaeological traces of Geometric sanctuaries revealing a community already marked by strong local craftsmanship."
+      "description": "Sicyon's plain held early workshops famed for distinctive pottery styles that predated its later artistic renown. By 650 BC its settlements clustered near springs and low hills, with archaeological traces of Geometric sanctuaries revealing a community already marked by strong local craftsmanship."
     },
     {
       "id_province": "p_argos",
       "name": "Argos",
       "period_name": "ΑΡΓΟΣ",
       "pronunciation": "AR-gos",
-      "description": "Argos dominated one of Greece’s richest plains, dotted with Mycenaean ruins like the old Larisa citadel. By 650 BC terraced fields and ancient burial mounds shaped the landscape, while early cult sites such as Mycenae tied the settlement to heroic traditions stretching back to the Bronze Age."
+      "description": "Argos dominated one of Greece's richest plains, dotted with Mycenaean ruins like the old Larisa citadel. By 650 BC terraced fields and ancient burial mounds shaped the landscape, while early cult sites such as Mycenae tied the settlement to heroic traditions stretching back to the Bronze Age."
     },
     {
       "id_province": "p_epidaurus",
@@ -194,20 +194,20 @@
       "name": "Troezen",
       "period_name": "ΤΡΟΙΖΗΝ",
       "pronunciation": "TROI-zen",
-      "description": "Troezen’s fertile coastal plain preserved early cults tied to Hippolytus and ancient local myths. Terraced vineyards and sheltered inlets supported rural life. Geometric-era shrines anchored the settlement’s identity along the Argolid shore."
+      "description": "Troezen's fertile coastal plain preserved early cults tied to Hippolytus and ancient local myths. Terraced vineyards and sheltered inlets supported rural life. Geometric-era shrines anchored the settlement's identity along the Argolid shore."
     },
     {
       "id_province": "p_aegina",
       "name": "Aegina",
       "period_name": "ΑΙΓΙΝΑ",
       "pronunciation": "AI-gee-nah",
-      "description": "Aegina’s rocky terrain held early sanctuaries, including the precursor to the later Temple of Aphaia. By 650 BC its harbors bustled with pottery and trade, and limited farmland forced reliance on maritime exchange, shaping a landscape defined by ships more than fields."
+      "description": "Aegina's rocky terrain held early sanctuaries, including the precursor to the later Temple of Aphaia. By 650 BC its harbors bustled with pottery and trade, and limited farmland forced reliance on maritime exchange, shaping a landscape defined by ships more than fields."
     },
     {
       "id_province": "p_chalcis",
       "name": "Chalcis",
       "period_name": "ΧΑΛΚΙΣ",
-      "pronunciation": "k‑HAL-kis",
+      "pronunciation": "k-HAL-kis",
       "description": "Chalcis controlled the Euripus Strait, where strong tidal currents shaped its harbors. Early fortifications and workshops reveal a settlement tied to metalworking and maritime movement, with fertile pockets inland supporting grain and vine cultivation."
     },
     {
@@ -215,175 +215,175 @@
       "name": "Eretria",
       "period_name": "ΕΡΕΤΡΙΑ",
       "pronunciation": "eh-REH-tree-ah",
-      "description": "Eretria’s coastal plain held early temples and cemeteries showing rich Geometric-era activity. By 650 BC its harbors linked Euboea to the Cyclades, while inland fields supported grain and orchards. Archaeology reveals a community shaped equally by craftsmanship and seafaring."
+      "description": "Eretria's coastal plain held early temples and cemeteries showing rich Geometric-era activity. By 650 BC its harbors linked Euboea to the Cyclades, while inland fields supported grain and orchards. Archaeology reveals a community shaped equally by craftsmanship and seafaring."
     },
     {
       "id_province": "p_naxos",
       "name": "Naxos",
       "period_name": "ΝΑΞΟΣ",
       "pronunciation": "NAK-sos",
-      "description": "Naxos’s marble quarries and fertile valleys supported both artisans and farmers. Early sanctuaries, including those tied to Dionysian cults, dotted the hillsides. By 650 BC its villages blended quarrying, pottery, and agriculture, forming one of the Cyclades’ most culturally active landscapes."
+      "description": "Naxos's marble quarries and fertile valleys supported both artisans and farmers. Early sanctuaries, including those tied to Dionysian cults, dotted the hillsides. By 650 BC its villages blended quarrying, pottery, and agriculture, forming one of the Cyclades' most culturally active landscapes."
     },
     {
       "id_province": "p_paros",
       "name": "Paros",
       "period_name": "ΠΑΡΟΣ",
       "pronunciation": "PAH-ros",
-      "description": "Paros’s famed marble beds were already exploited in 650 BC, with quarry marks visible in early extraction sites. Fertile pockets supported orchards and grain, while coastal inlets anchored small harbors. The island’s terrain fused artistic resources with productive farmland."
+      "description": "Paros's famed marble beds were already exploited in 650 BC, with quarry marks visible in early extraction sites. Fertile pockets supported orchards and grain, while coastal inlets anchored small harbors. The island's terrain fused artistic resources with productive farmland."
     },
     {
       "id_province": "p_andros",
       "name": "Andros",
       "period_name": "ΑΝΔΡΟΣ",
       "pronunciation": "AN-dros",
-      "description": "Andros’s abundant springs and terraced slopes supported dense rural settlement. Archaeological remains show early shrines and fortified hilltops, while its harbors connected the island to Euboea and the Cyclades. The landscape blended reliable water sources with active maritime routes."
+      "description": "Andros's abundant springs and terraced slopes supported dense rural settlement. Archaeological remains show early shrines and fortified hilltops, while its harbors connected the island to Euboea and the Cyclades. The landscape blended reliable water sources with active maritime routes."
     },
     {
       "id_province": "p_tinos",
       "name": "Tinos",
       "period_name": "ΤΗΝΟΣ",
       "pronunciation": "TAY-nos",
-      "description": "Tinos’s rugged hills and narrow plains held early rural sanctuaries and terraced farms. By 650 BC its coastal settlements relied on maritime routes linking central Cycladic islands, while archaeological traces show modest but continuous habitation across the rocky interior."
+      "description": "Tinos's rugged hills and narrow plains held early rural sanctuaries and terraced farms. By 650 BC its coastal settlements relied on maritime routes linking central Cycladic islands, while archaeological traces show modest but continuous habitation across the rocky interior."
     },
     {
       "id_province": "p_thera",
       "name": "Thera",
       "period_name": "ΘΗΡΑ",
       "pronunciation": "t-HEH-rah",
-      "description": "Thera’s volcanic cliffs preserved remnants of earlier Mycenaean settlement, later recolonized by Dorian settlers. Terraced fields carved into ash-rich soil supported vines, while sheltered bays anchored maritime life. Its dramatic geology shaped every aspect of habitation."
+      "description": "Thera's volcanic cliffs preserved remnants of earlier Mycenaean settlement, later recolonized by Dorian settlers. Terraced fields carved into ash-rich soil supported vines, while sheltered bays anchored maritime life. Its dramatic geology shaped every aspect of habitation."
     },
     {
       "id_province": "p_melos",
       "name": "Melos",
       "period_name": "ΜΗΛΟΣ",
       "pronunciation": "MEH-los",
-      "description": "Melos’s volcanic terrain held obsidian sources used since the Neolithic, with later Dorian settlers building farms around fertile pockets. By 650 BC its harbors supported fishing and trade, while inland terraces reveal long-standing agricultural adaptation to rugged land."
+      "description": "Melos's volcanic terrain held obsidian sources used since the Neolithic, with later Dorian settlers building farms around fertile pockets. By 650 BC its harbors supported fishing and trade, while inland terraces reveal long-standing agricultural adaptation to rugged land."
     },
     {
       "id_province": "p_mytilene",
       "name": "Mytilene",
       "period_name": "ΜΥΤΙΛΗΝΑ",
       "pronunciation": "mu-tee-LEH-nah",
-      "description": "Mytilene’s twin harbors and fertile hinterland supported early urban growth. Excavations show Geometric-era fortifications and sanctuaries, while inland plains produced grain and olives. Its landscape combined strong maritime infrastructure with productive farmland."
+      "description": "Mytilene's twin harbors and fertile hinterland supported early urban growth. Excavations show Geometric-era fortifications and sanctuaries, while inland plains produced grain and olives. Its landscape combined strong maritime infrastructure with productive farmland."
     },
     {
       "id_province": "p_chios",
       "name": "Chios",
       "period_name": "ΧΙΟΣ",
-      "pronunciation": "k‑HEE-os",
-      "description": "Chios’s vineyards and rugged hills shaped early settlement patterns. Archaeology reveals fortified hamlets and pottery workshops, while its harbors connected the island to Anatolia. The landscape blended agricultural specialization—especially wine—with active maritime exchange."
+      "pronunciation": "k-HEE-os",
+      "description": "Chios's vineyards and rugged hills shaped early settlement patterns. Archaeology reveals fortified hamlets and pottery workshops, while its harbors connected the island to Anatolia. The landscape blended agricultural specialization—especially wine—with active maritime exchange."
     },
     {
       "id_province": "p_samos",
       "name": "Samos",
       "period_name": "ΣΑΜΟΣ",
       "pronunciation": "SAH-mos",
-      "description": "Samos’s fertile plains and steep hillsides supported early terracing and vine cultivation. The Heraion’s ancient sanctuary anchored religious life, while harbors linked the island to Anatolia. By 650 BC its landscape showed both agricultural richness and cross-regional connectivity."
+      "description": "Samos's fertile plains and steep hillsides supported early terracing and vine cultivation. The Heraion's ancient sanctuary anchored religious life, while harbors linked the island to Anatolia. By 650 BC its landscape showed both agricultural richness and cross-regional connectivity."
     },
     {
       "id_province": "p_kos",
       "name": "Kos",
       "period_name": "ϘΟΣ",
       "pronunciation": "KOS",
-      "description": "Kos’s fertile plain near the Asklepieion held early medical cult activity and dense rural settlement. Terraced hills and sheltered harbors supported grain, orchards, and trade. Archaeological layers reveal a landscape shaped by both agriculture and early healing traditions."
+      "description": "Kos's fertile plain near the Asklepieion held early medical cult activity and dense rural settlement. Terraced hills and sheltered harbors supported grain, orchards, and trade. Archaeological layers reveal a landscape shaped by both agriculture and early healing traditions."
     },
     {
       "id_province": "p_knossos",
       "name": "Knossos",
       "period_name": "ΚΝΩΣΟΣ",
       "pronunciation": "KNO-sos",
-      "description": "Knossos’s valley preserved remnants of the great Minoan palace, whose collapsed halls still marked the terrain. By 650 BC farms and shrines surrounded the ruins, blending everyday agriculture with deep cultural memory tied to Bronze Age grandeur."
+      "description": "Knossos's valley preserved remnants of the great Minoan palace, whose collapsed halls still marked the terrain. By 650 BC farms and shrines surrounded the ruins, blending everyday agriculture with deep cultural memory tied to Bronze Age grandeur."
     },
     {
       "id_province": "p_gortyn",
       "name": "Gortyn",
       "period_name": "ΓΟΡΤΥΝ",
       "pronunciation": "GOR-tun",
-      "description": "Gortyn’s plain held early civic buildings and sanctuaries that foreshadowed its later law code. Fertile fields and riverbanks supported dense rural life, while archaeological traces show organized settlement planning emerging by the Archaic period."
+      "description": "Gortyn's plain held early civic buildings and sanctuaries that foreshadowed its later law code. Fertile fields and riverbanks supported dense rural life, while archaeological traces show organized settlement planning emerging by the Archaic period."
     },
     {
       "id_province": "p_phaistos",
       "name": "Phaistos",
       "period_name": "ΦΑΙΣΤΟΣ",
-      "pronunciation": "p‑HAI-stos",
+      "pronunciation": "p-HAI-stos",
       "description": "Phaistos overlooked the ruins of its ancient Minoan palace, with terraced fields spreading across the southern Cretan plain. By 650 BC rural settlements clustered near springs and old cult sites, blending agriculture with enduring mythic associations."
     },
     {
       "id_province": "p_kydonia",
       "name": "Kydonia",
       "period_name": "ΧΥΔΟΝΙΑ",
-      "pronunciation": "k‑HU-doh-NEE-ah",
-      "description": "Kydonia’s coastal plain held early fortifications and pottery workshops, while inland hills supported orchards and grain. Archaeology shows long-standing maritime links with mainland Greece, giving the settlement a landscape shaped by both farming and seafaring."
+      "pronunciation": "k-HU-doh-NEE-ah",
+      "description": "Kydonia's coastal plain held early fortifications and pottery workshops, while inland hills supported orchards and grain. Archaeology shows long-standing maritime links with mainland Greece, giving the settlement a landscape shaped by both farming and seafaring."
     },
     {
       "id_province": "p_kameiros",
       "name": "Kameiros",
       "period_name": "ΚΑΜΕΙΡΟΣ",
       "pronunciation": "kah-MEH-ros",
-      "description": "Kameiros’s orderly grid of early houses and wells reflects structured Dorian planning. Fertile plains and coastal access supported grain and orchards, while archaeological remains show shrines and communal buildings anchoring the settlement’s identity."
+      "description": "Kameiros's orderly grid of early houses and wells reflects structured Dorian planning. Fertile plains and coastal access supported grain and orchards, while archaeological remains show shrines and communal buildings anchoring the settlement's identity."
     },
     {
       "id_province": "p_lindos",
       "name": "Lindos",
       "period_name": "ΛΙΝΔΟΣ",
       "pronunciation": "LIN-dos",
-      "description": "Lindos’s acropolis held ancient cults to Athena Lindia, with early stairways and terraces carved into the cliffs. Fertile pockets supported vines and grain, while its harbor connected Rhodes to the wider Aegean. The landscape fused sacred height with maritime reach."
+      "description": "Lindos's acropolis held ancient cults to Athena Lindia, with early stairways and terraces carved into the cliffs. Fertile pockets supported vines and grain, while its harbor connected Rhodes to the wider Aegean. The landscape fused sacred height with maritime reach."
     },
     {
       "id_province": "p_miletus",
       "name": "Miletus",
       "period_name": "ΜΙΛΗΤΟΣ",
       "pronunciation": "mee-LEH-tos",
-      "description": "Miletus’s river plain and harbors supported early urban planning visible in archaeological grids. Sanctuaries and workshops lined the coast, while inland fields produced grain and orchards. Its landscape blended fertile farmland with strong maritime infrastructure."
+      "description": "Miletus's river plain and harbors supported early urban planning visible in archaeological grids. Sanctuaries and workshops lined the coast, while inland fields produced grain and orchards. Its landscape blended fertile farmland with strong maritime infrastructure."
     },
     {
       "id_province": "p_ephesus",
       "name": "Ephesus",
       "period_name": "ΕΦΕΣΟΣ",
       "pronunciation": "EHP-he-sos",
-      "description": "Ephesus’s Cayster plain held early settlements near the proto‑Artemision, whose foundations date centuries before the Classical temple. Harbors and orchards shaped daily life, while archaeological layers reveal a landscape tied to both ritual and trade."
+      "description": "Ephesus's Cayster plain held early settlements near the proto-Artemision, whose foundations date centuries before the Classical temple. Harbors and orchards shaped daily life, while archaeological layers reveal a landscape tied to both ritual and trade."
     },
     {
       "id_province": "p_smyrna",
       "name": "Smyrna",
       "period_name": "ΣΜΥΡΝΑ",
       "pronunciation": "SMUR-nah",
-      "description": "Smyrna’s gulf sheltered early harbors and fortified hilltops, with fertile lowlands supporting grain and olives. Excavations show organized street layouts emerging by the Archaic period, blending maritime exchange with stable rural production."
+      "description": "Smyrna's gulf sheltered early harbors and fortified hilltops, with fertile lowlands supporting grain and olives. Excavations show organized street layouts emerging by the Archaic period, blending maritime exchange with stable rural production."
     },
     {
       "id_province": "p_phocaea",
       "name": "Phocaea",
       "period_name": "ΦΩΚΑΙΑ",
-      "pronunciation": "p‑HAW-kai-ah",
-      "description": "Phocaea’s rocky coast held early shipyards and fortified promontories suited to long-distance voyaging. Narrow plains supported orchards and grain, while archaeological traces show a community oriented toward exploration and maritime craft."
+      "pronunciation": "p-HAW-kai-ah",
+      "description": "Phocaea's rocky coast held early shipyards and fortified promontories suited to long-distance voyaging. Narrow plains supported orchards and grain, while archaeological traces show a community oriented toward exploration and maritime craft."
     },
     {
       "id_province": "p_teos",
       "name": "Teos",
       "period_name": "ΤΗΟΣ",
-      "pronunciation": "t‑HEH-os",
-      "description": "Teos’s gentle hills and coastal plain held early sanctuaries tied to Dionysian cults. Terraced vineyards and pottery workshops shaped rural life, while harbors connected the settlement to Ionian artistic networks."
+      "pronunciation": "t-HEH-os",
+      "description": "Teos's gentle hills and coastal plain held early sanctuaries tied to Dionysian cults. Terraced vineyards and pottery workshops shaped rural life, while harbors connected the settlement to Ionian artistic networks."
     },
     {
       "id_province": "p_cyme",
       "name": "Cyme",
       "period_name": "ΚΥΜΑ",
       "pronunciation": "KU-mah",
-      "description": "Cyme’s Aeolian plain supported grain and vines, while its harbor linked the settlement to early western colonization. Archaeological layers show Geometric-era fortifications and rural shrines, forming a landscape tied to both agriculture and outward expansion."
+      "description": "Cyme's Aeolian plain supported grain and vines, while its harbor linked the settlement to early western colonization. Archaeological layers show Geometric-era fortifications and rural shrines, forming a landscape tied to both agriculture and outward expansion."
     },
     {
       "id_province": "p_halicarnassus",
       "name": "Halicarnassus",
       "period_name": "ΑΛΙΚΑΡΝΑΣΟΣ",
       "pronunciation": "ah-lee-kar-NAS-sos",
-      "description": "Halicarnassus’s fortified hills and sheltered coves reveal a mixed Carian-Greek settlement. Early inscriptions and pottery show cultural blending, while inland terraces supported orchards and grain. Its landscape fused rugged defense with maritime access."
+      "description": "Halicarnassus's fortified hills and sheltered coves reveal a mixed Carian-Greek settlement. Early inscriptions and pottery show cultural blending, while inland terraces supported orchards and grain. Its landscape fused rugged defense with maritime access."
     },
     {
       "id_province": "p_knidos",
       "name": "Knidos",
       "period_name": "ΧΝΙΔΟΣ",
-      "pronunciation": "k‑HNEE-dos",
-      "description": "Knidos’s peninsula held early astronomical sites and terraced farms overlooking twin harbors. Archaeology reveals planned streets and sanctuaries, while its rocky terrain forced reliance on maritime trade. The landscape blended scientific curiosity with seafaring life."
+      "pronunciation": "k-HNEE-dos",
+      "description": "Knidos's peninsula held early astronomical sites and terraced farms overlooking twin harbors. Archaeology reveals planned streets and sanctuaries, while its rocky terrain forced reliance on maritime trade. The landscape blended scientific curiosity with seafaring life."
     }
   ],
   "sea_regions": [

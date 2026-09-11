@@ -5,7 +5,7 @@
       "name": "Athens",
       "period_name": "ΑΘΕΝΑΙ",
       "pronunciation": "ah-TEH-nai",
-      "description": "Among the Greeks, the Athenians of 650 BC were known for restless politics and competing aristocratic clans. Their artisans and potters were gaining influence, hinting at future economic strength. Though still modest in power, they carried the early tensions and intellectual curiosity that would later reshape their city’s destiny."
+      "description": "Among the Greeks, the Athenians of 650 BC were known for restless politics and competing aristocratic clans. Their artisans and potters were gaining influence, hinting at future economic strength. Though still modest in power, they carried the early tensions and intellectual curiosity that would later reshape their city's destiny."
     },
     {
       "id_faction": "f_eleusis",
@@ -54,7 +54,7 @@
       "name": "Krissa",
       "period_name": "ΚΡΙΣΑ",
       "pronunciation": "KREE-sah",
-      "description": "The Krissans held the gateway to Delphi, giving them influence over sacred travel and pilgrimage. By 650 BC they asserted authority over the sacred plain, provoking friction with the Delphians. Their identity fused regional pride with the economic and ritual significance of guarding the oracle’s approach."
+      "description": "The Krissans held the gateway to Delphi, giving them influence over sacred travel and pilgrimage. By 650 BC they asserted authority over the sacred plain, provoking friction with the Delphians. Their identity fused regional pride with the economic and ritual significance of guarding the oracle's approach."
     },
     {
       "id_faction": "f_elateia",
@@ -75,7 +75,7 @@
       "name": "Lamia",
       "period_name": "ΛΑΜΙΑ",
       "pronunciation": "LAH-mee-ah",
-      "description": "The Lamians occupied a gateway between north and south, shaping their outlook around movement and access. By 650 BC they relied on horse‑breeding, agriculture, and coastal connections to assert regional relevance. Their identity blended aristocratic heritage with strategic awareness."
+      "description": "The Lamians occupied a gateway between north and south, shaping their outlook around movement and access. By 650 BC they relied on horse-breeding, agriculture, and coastal connections to assert regional relevance. Their identity blended aristocratic heritage with strategic awareness."
     },
     {
       "id_faction": "f_larissa",
@@ -88,8 +88,8 @@
       "id_faction": "f_pherae",
       "name": "Pherae",
       "period_name": "ΦΕΡΑΙ",
-      "pronunciation": "p‑HEH-rai",
-      "description": "Ambition drove the Pheraeans, who sought greater influence within Thessaly. Around 650 BC they invested in cavalry traditions and agricultural expansion, challenging Larissa’s dominance. Their identity reflected rising confidence and competitive aristocratic spirit."
+      "pronunciation": "p-HEH-rai",
+      "description": "Ambition drove the Pheraeans, who sought greater influence within Thessaly. Around 650 BC they invested in cavalry traditions and agricultural expansion, challenging Larissa's dominance. Their identity reflected rising confidence and competitive aristocratic spirit."
     },
     {
       "id_faction": "f_pharsalos",
@@ -110,7 +110,7 @@
       "name": "Megara",
       "period_name": "ΜΕΓΑΡΑ",
       "pronunciation": "MEH-gah-rah",
-      "description": "The Megarians were energetic colonizers and traders, founding settlements from Sicily to the Black Sea. In 650 BC they balanced rivalry with Athens against ambitions abroad. Their identity blended maritime enterprise, civic competitiveness, and outward‑looking ambition."
+      "description": "The Megarians were energetic colonizers and traders, founding settlements from Sicily to the Black Sea. In 650 BC they balanced rivalry with Athens against ambitions abroad. Their identity blended maritime enterprise, civic competitiveness, and outward-looking ambition."
     },
     {
       "id_faction": "f_sparta",
@@ -165,7 +165,7 @@
       "id_faction": "f_corinth",
       "name": "Corinth",
       "period_name": "ϘΟΡΙΝΘΟΣ",
-      "pronunciation": "koh-RIN-th‑hos",
+      "pronunciation": "koh-RIN-th-hos",
       "description": "The Corinthians were dynamic Greeks renowned for naval strength, craftsmanship, and early colonization. Around 650 BC they expanded influence across the western Mediterranean while cultivating artistic innovation. Their identity blended commercial ambition with cultural sophistication."
     },
     {
@@ -180,7 +180,7 @@
       "name": "Argos",
       "period_name": "ΑΡΓΟΣ",
       "pronunciation": "AR-gos",
-      "description": "The Argives were major Peloponnesians and long‑standing rivals of Sparta. In 650 BC they cultivated strong hoplite traditions, aristocratic heritage, and cultural vitality. Their identity centered on resisting Spartan influence and preserving regional prominence."
+      "description": "The Argives were major Peloponnesians and long-standing rivals of Sparta. In 650 BC they cultivated strong hoplite traditions, aristocratic heritage, and cultural vitality. Their identity centered on resisting Spartan influence and preserving regional prominence."
     },
     {
       "id_faction": "f_epidaurus",
@@ -207,8 +207,8 @@
       "id_faction": "f_chalcis",
       "name": "Chalcis",
       "period_name": "ΧΑΛΚΙΣ",
-      "pronunciation": "k‑HAL-kis",
-      "description": "The Chalcidians were major Euboeans engaged in the Lelantine War and early colonization. In 650 BC they projected influence through naval strength and overseas settlements. Their identity blended aristocratic tradition with outward‑looking ambition."
+      "pronunciation": "k-HAL-kis",
+      "description": "The Chalcidians were major Euboeans engaged in the Lelantine War and early colonization. In 650 BC they projected influence through naval strength and overseas settlements. Their identity blended aristocratic tradition with outward-looking ambition."
     },
     {
       "id_faction": "f_eretria",
@@ -270,15 +270,15 @@
       "id_faction": "f_chios",
       "name": "Chios",
       "period_name": "ΧΙΟΣ",
-      "pronunciation": "k‑HEE-os",
-      "description": "To other Ionians, the Chians embodied refinement—famous for their wine, wealthy estates, and old aristocratic families. By 650 BC they commanded confident maritime networks reaching Anatolia and the Cyclades. Their identity rested on continuity, commercial sophistication, and a cultural polish that made Chios one of the Aegean’s most stable island powers."
+      "pronunciation": "k-HEE-os",
+      "description": "To other Ionians, the Chians embodied refinement—famous for their wine, wealthy estates, and old aristocratic families. By 650 BC they commanded confident maritime networks reaching Anatolia and the Cyclades. Their identity rested on continuity, commercial sophistication, and a cultural polish that made Chios one of the Aegean's most stable island powers."
     },
     {
       "id_faction": "f_samos",
       "name": "Samos",
       "period_name": "ΣΑΜΟΣ",
       "pronunciation": "SAH-mos",
-      "description": "Few Ionian peoples experimented as boldly as the Samians. Around 650 BC they were testing new political forms, expanding their naval reach, and absorbing influences from nearby Anatolia. Their identity blended innovation, seafaring confidence, and a rising sense of destiny that would soon reshape their island’s fortunes."
+      "description": "Few Ionian peoples experimented as boldly as the Samians. Around 650 BC they were testing new political forms, expanding their naval reach, and absorbing influences from nearby Anatolia. Their identity blended innovation, seafaring confidence, and a rising sense of destiny that would soon reshape their island's fortunes."
     },
     {
       "id_faction": "f_kos",
@@ -292,7 +292,7 @@
       "name": "Knossos",
       "period_name": "ΚΝΩΣΟΣ",
       "pronunciation": "KNO-sos",
-      "description": "Ancient memory weighed heavily on the Knossians, who lived among remnants of Crete’s Bronze Age palaces. In 650 BC they blended ritual continuity with practical agricultural wealth, engaging other Cretan communities from a position of cultural prestige. Their identity fused mythic inheritance with everyday stability."
+      "description": "Ancient memory weighed heavily on the Knossians, who lived among remnants of Crete's Bronze Age palaces. In 650 BC they blended ritual continuity with practical agricultural wealth, engaging other Cretan communities from a position of cultural prestige. Their identity fused mythic inheritance with everyday stability."
     },
     {
       "id_faction": "f_gortyn",
@@ -305,14 +305,14 @@
       "id_faction": "f_phaistos",
       "name": "Phaistos",
       "period_name": "ΦΑΙΣΤΟΣ",
-      "pronunciation": "p‑HAI-stos",
+      "pronunciation": "p-HAI-stos",
       "description": "The Phaistians lived in the shadow of myth, their identity tied to ancient stories and long agricultural continuity. In 650 BC they maintained autonomy through local alliances and traditions rooted in venerable sites. Their outlook blended historical pride with a steady, unhurried role in Cretan politics."
     },
     {
       "id_faction": "f_kydonia",
       "name": "Kydonia",
       "period_name": "ΧΥΔΟΝΙΑ",
-      "pronunciation": "k‑HU-doh-NEE-ah",
+      "pronunciation": "k-HU-doh-NEE-ah",
       "description": "To mainland Greeks, the Kydonians were known as hardy western Cretans shaped by the sea. In 650 BC they cultivated active maritime ties with both Crete and Greece, valuing independence and nautical skill. Their identity reflected coastal resilience and a willingness to engage widely across the Aegean."
     },
     {
@@ -334,14 +334,14 @@
       "name": "Miletus",
       "period_name": "ΜΙΛΗΤΟΣ",
       "pronunciation": "mee-LEH-tos",
-      "description": "The Milesians were restless innovators—colonizers, thinkers, and sailors. By 650 BC they were founding distant settlements, probing philosophical questions, and commanding Ionian trade routes. Their identity fused commercial ambition with intellectual daring, making Miletus the era’s most influential Ionian powerhouse."
+      "description": "The Milesians were restless innovators—colonizers, thinkers, and sailors. By 650 BC they were founding distant settlements, probing philosophical questions, and commanding Ionian trade routes. Their identity fused commercial ambition with intellectual daring, making Miletus the era's most influential Ionian powerhouse."
     },
     {
       "id_faction": "f_ephesus",
       "name": "Ephesus",
       "period_name": "ΕΦΕΣΟΣ",
       "pronunciation": "EHP-he-sos",
-      "description": "The Ephesians lived in the orbit of Artemis’s great sanctuary, which shaped their cultural prestige. In 650 BC they balanced religious authority with bustling commerce along Anatolian routes. Their identity emphasized ritual refinement, stable governance, and a cosmopolitan outlook rooted in their temple’s fame."
+      "description": "The Ephesians lived in the orbit of Artemis's great sanctuary, which shaped their cultural prestige. In 650 BC they balanced religious authority with bustling commerce along Anatolian routes. Their identity emphasized ritual refinement, stable governance, and a cosmopolitan outlook rooted in their temple's fame."
     },
     {
       "id_faction": "f_smyrna",
@@ -354,14 +354,14 @@
       "id_faction": "f_phocaea",
       "name": "Phocaea",
       "period_name": "ΦΩΚΑΙΑ",
-      "pronunciation": "p‑HAW-kai-ah",
-      "description": "The Phocaeans were the great explorers of the Ionian world. In 650 BC they embraced long‑distance voyaging, founding western colonies like Massalia and seeking opportunity far beyond familiar waters. Their identity rested on daring navigation, commercial reach, and a cultural openness rare among Greek cities."
+      "pronunciation": "p-HAW-kai-ah",
+      "description": "The Phocaeans were the great explorers of the Ionian world. In 650 BC they embraced long-distance voyaging, founding western colonies like Massalia and seeking opportunity far beyond familiar waters. Their identity rested on daring navigation, commercial reach, and a cultural openness rare among Greek cities."
     },
     {
       "id_faction": "f_teos",
       "name": "Teos",
       "period_name": "ΤΗΟΣ",
-      "pronunciation": "t‑HEH-os",
+      "pronunciation": "t-HEH-os",
       "description": "Music and poetry colored Teian life, giving the people a reputation for artistic refinement. Around 650 BC they maintained strong ties with neighboring Ionian cities while preserving local autonomy. Their identity blended creative tradition with steady participation in maritime networks."
     },
     {
@@ -369,7 +369,7 @@
       "name": "Cyme",
       "period_name": "ΚΥΜΑ",
       "pronunciation": "KU-mah",
-      "description": "The Cymeans led the Aeolian cities, known for early colonization and plainspoken humor noted by ancient writers. In 650 BC they balanced agricultural steadiness with maritime expansion, maintaining cohesion across the Aeolian world. Their identity mixed tradition, modesty, and outward‑looking ambition."
+      "description": "The Cymeans led the Aeolian cities, known for early colonization and plainspoken humor noted by ancient writers. In 650 BC they balanced agricultural steadiness with maritime expansion, maintaining cohesion across the Aeolian world. Their identity mixed tradition, modesty, and outward-looking ambition."
     },
     {
       "id_faction": "f_halicarnassus",
@@ -382,8 +382,8 @@
       "id_faction": "f_knidos",
       "name": "Knidos",
       "period_name": "ΧΝΙΔΟΣ",
-      "pronunciation": "k‑HNEE-dos",
-      "description": "Scientific curiosity and seafaring skill distinguished the Knidians. By 650 BC they leveraged their peninsula’s position to command maritime routes and maintain ties with other Dorian communities. Their identity blended intellectual reputation with nautical strength, giving Knidos a unique place in the Carian world."
+      "pronunciation": "k-HNEE-dos",
+      "description": "Scientific curiosity and seafaring skill distinguished the Knidians. By 650 BC they leveraged their peninsula's position to command maritime routes and maintain ties with other Dorian communities. Their identity blended intellectual reputation with nautical strength, giving Knidos a unique place in the Carian world."
     }
   ]
 }

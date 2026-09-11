@@ -35,7 +35,7 @@ public static class MapColors
 
   public static void Load()
   {
-    string path = Path.Combine(ScenarioManager.Instance.DataPath, "ColorsProvince.json");
+    string path = Path.Combine(ScenarioManager.Instance.DataPath, "ProvinceColors.json");
     if (!File.Exists(path)) { Debug.LogError("Missing Color Map for scenario."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
