@@ -1,0 +1,334 @@
+{
+  "bonuses": [
+    {
+      "id_faction": "f_athens",
+      "name": "Aristocratic Rivalries",
+      "benefit1": "+10% bonus on all trade income from artisanal organization",
+      "benefit2": "-8 stability in every province due to clan disputes"
+    },
+    {
+      "id_faction": "f_eleusis",
+      "name": "Keepers of the Mysteries",
+      "benefit1": "+0.1 population growth per surplus from sacred agricultural rites",
+      "benefit2": "-1 tax revenue per population from sanctuary sacrifices"
+    },
+    {
+      "id_faction": "f_thebes",
+      "name": "Boeotian Warfare",
+      "benefit1": "+10% experience chance for all contingents from warrior tradition",
+      "benefit2": "-0.1 population growth per surplus due to army consumption"
+    },
+    {
+      "id_faction": "f_orchomenos",
+      "name": "Minyan Legacy",
+      "benefit1": "+1 tax revenue per population from Minyan aristocratic heritage",
+      "benefit2": "+0.1 population growth per surplus from drainage systems and irrigation"
+    },
+    {
+      "id_faction": "f_plataea",
+      "name": "Border Negotiation",
+      "benefit1": "+8 stability in every province due to diplomatic skill",
+      "benefit2": "-1 tax revenue per population from alliance debts"
+    },
+    {
+      "id_faction": "f_thespiae",
+      "name": "Thespian Passion",
+      "benefit1": "+0.1 population growth per surplus from festivals of Eros",
+      "benefit2": "+5% experience chance for all contingents from expansionism"
+    },
+    {
+      "id_faction": "f_tanagra",
+      "name": "Poemandria",
+      "benefit1": "+5% experience chance for all contingents from border defense",
+      "benefit2": "+5 stability in every province from founding myth of Poemander and Tanagra"
+    },
+    {
+      "id_faction": "f_krissa",
+      "name": "Friends of the Pilgrims",
+      "benefit1": "+10 stability in every province due to Delphic pilgrimages",
+      "benefit2": "-1 tax revenue per population from ritual obligation"
+    },
+    {
+      "id_faction": "f_elateia",
+      "name": "Guardians of the Pass",
+      "benefit1": "+5 stability in every province from defensive tradition",
+      "benefit2": "+5% bonus on all trade income from managing overland trade"
+    },
+    {
+      "id_faction": "f_opous",
+      "name": "Opuntian Lokris",
+      "benefit1": "+5% experience chance for all contingents from rugged warrior culture",
+      "benefit2": "+5% bonus on all trade income from maritime networks"
+    },
+    {
+      "id_faction": "f_lamia",
+      "name": "Crossroads of the North",
+      "benefit1": "+5% experience chance for all contingents from martial prowess",
+      "benefit2": "-20 cost to build a fleet or merchant for devotion to Poseidon"
+    },
+    {
+      "id_faction": "f_larissa",
+      "name": "Thessalian Aristocracy",
+      "benefit1": "+1 tax revenue per population from noble estate rents",
+      "benefit2": "+5% experience chance for all contingents from cavalry tradition"
+    },
+    {
+      "id_faction": "f_pherae",
+      "name": "Legacy of Jason",
+      "benefit1": "+5% bonus on all trade income due to heroic maritime prestige",
+      "benefit2": "+5% experience chance for all contingents from Argonaut legacy"
+    },
+    {
+      "id_faction": "f_pharsalos",
+      "name": "Myrmidon Heritage",
+      "benefit1": "+5% experience chance for all contingents from mythic legacy",
+      "benefit2": "+5 stability in every province from heroic ancestral pride"
+    },
+    {
+      "id_faction": "f_kalydon",
+      "name": "Aetolian Freedom",
+      "benefit1": "+5% experience chance for all contingents due to hunting tradition",
+      "benefit2": "-1 tax revenue per population from decentralized tribal governance"
+    },
+    {
+      "id_faction": "f_megara",
+      "name": "Proud Independence",
+      "benefit1": "-20 cost to build a fleet or merchant for Saronic harbors",
+      "benefit2": "-1 turns to replenish a contingent from constant mobilization"
+    },
+    {
+      "id_faction": "f_sparta",
+      "name": "Laconic Discipline",
+      "benefit1": "+10% experience chance for all contingents due to the Spartan agoge",
+      "benefit2": "-0.1 population growth per surplus due to social control"
+    },
+    {
+      "id_faction": "f_pylos",
+      "name": "Sandy Pylos",
+      "benefit1": "+5% bonus on all trade income from sheltered Messenian harbors",
+      "benefit2": "-20 cost to build a fleet or merchant"
+    },
+    {
+      "id_faction": "f_elis",
+      "name": "Dorian Austerity",
+      "benefit1": "+0.1 population growth per surplus due to rural living",
+      "benefit2": "+5 stability in every province for guardianship of Olympia"
+    },
+    {
+      "id_faction": "f_tegea",
+      "name": "Arcadian Mercenaries",
+      "benefit1": "-2 turns to replenish a contingent from mercenary availability",
+      "benefit2": "+5% experience chance for all contingents from hoplite-for-hire tradition"
+    },
+    {
+      "id_faction": "f_mantineia",
+      "name": "Mycenean Survivors",
+      "benefit1": "+5% bonus on all trade income from planned civic markets",
+      "benefit2": "+5 stability in every province from devotion to Poseidon Ippios"
+    },
+    {
+      "id_faction": "f_patrai",
+      "name": "Gulf Traders",
+      "benefit1": "+10% bonus on all trade income from Corinthian Gulf commerce",
+      "benefit2": "-1 tax revenue per population for maintenance of coastal defenses"
+    },
+    {
+      "id_faction": "f_aigion",
+      "name": "Grand Visions",
+      "benefit1": "+8 stability in every province for league building",
+      "benefit2": "+1 tax revenue per population from efficient taxation"
+    },
+    {
+      "id_faction": "f_corinth",
+      "name": "Benevolent Tyranny",
+      "benefit1": "+10% bonus on all trade income from state policy",
+      "benefit2": "+5 stability in every province from building projects"
+    },
+    {
+      "id_faction": "f_sicyon",
+      "name": "Rule of Orthagoras",
+      "benefit1": "+0.1 population growth per surplus due to farmer support",
+      "benefit2": "-1 tax revenue per population for noble persecution"
+    },
+    {
+      "id_faction": "f_argos",
+      "name": "Stern and Strong",
+      "benefit1": "+8% experience chance for all contingents due to Argive expansion",
+      "benefit2": "-5 stability in every province from authoritative rule"
+    },
+    {
+      "id_faction": "f_epidaurus",
+      "name": "Healers of Greece",
+      "benefit1": "+0.1 population growth per surplus due to medicinal knowledge",
+      "benefit2": "-5% experience chance for all contingents for lack of militarism"
+    },
+    {
+      "id_faction": "f_troezen",
+      "name": "Thesean Connection",
+      "benefit1": "+5% experience chance for all contingents as the birthplace of Theseus",
+      "benefit2": "-20 cost to build a fleet or merchant due to maritime myths"
+    },
+    {
+      "id_faction": "f_aegina",
+      "name": "Coin Strikers",
+      "benefit1": "+1 tax revenue per population from minting electrum staters",
+      "benefit2": "+5% bonus on all trade income from exporting coinage"
+    },
+    {
+      "id_faction": "f_chalcis",
+      "name": "Adventurer Tradition",
+      "benefit1": "+8% bonus on all trade income from extensive seafaring",
+      "benefit2": "+5 stability in every province for spread of Chalkidic writing"
+    },
+    {
+      "id_faction": "f_eretria",
+      "name": "Civic Ambition",
+      "benefit1": "+5% experience chance for all contingents due to Lelantine warfare",
+      "benefit2": "+5 stability in every province from diplomatic prowess"
+    },
+    {
+      "id_faction": "f_naxos",
+      "name": "Island of Dionysos",
+      "benefit1": "+5% bonus on all trade income from viticulture expertise",
+      "benefit2": "+0.1 population growth per surplus from patron festivals to Dionysos"
+    },
+    {
+      "id_faction": "f_paros",
+      "name": "Peaceful Sentiments",
+      "benefit1": "+0.1 population growth per surplus from Cabarnian rituals of Demeter",
+      "benefit2": "+5 stability in every province from poetic tradition of Archilochus"
+    },
+    {
+      "id_faction": "f_andros",
+      "name": "Fortified Ports",
+      "benefit1": "+5 stability in every province from bastion fortifications",
+      "benefit2": "-20 cost to build a fleet or merchant"
+    },
+    {
+      "id_faction": "f_tinos",
+      "name": "Insular Nature",
+      "benefit1": "+1 tax revenue per population from offerings to the Delian Sanctuary",
+      "benefit2": "-5 stability in every province from isolationism"
+    },
+    {
+      "id_faction": "f_thera",
+      "name": "Volcanic Colonizers",
+      "benefit1": "+5% experience chance for all contingents from Dorian warrior culture",
+      "benefit2": "-1 tax revenue per population for remote location of Thera"
+    },
+    {
+      "id_faction": "f_melos",
+      "name": "Myrtoan Monopoly",
+      "benefit1": "+5% experience chance for all contingents from Dorian migration heritage",
+      "benefit2": "+5% bonus on all trade income from internal obsidian, sulfur, and alum trade"
+    },
+    {
+      "id_faction": "f_mytilene",
+      "name": "Internal Competition",
+      "benefit1": "+5% experience chance for all contingents from noble rivalries",
+      "benefit2": "-5 stability in every province from factional aristocratic strife"
+    },
+    {
+      "id_faction": "f_chios",
+      "name": "Wisdom of the Sphinx",
+      "benefit1": "+5 stability in every province from wine exports",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_samos",
+      "name": "Ionian Sailors",
+      "benefit1": "-20 cost to build a fleet or merchant from thalassocratic policy",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_kos",
+      "name": "Doric Refoundation",
+      "benefit1": "+0.1 population growth per surplus from immigration",
+      "benefit2": "-5 stability in every province due to recent founding"
+    },
+    {
+      "id_faction": "f_knossos",
+      "name": "Keepers of the Labyrinth",
+      "benefit1": "+5 stability in every province from ancient Minoan continuity",
+      "benefit2": "+5% bonus on all trade income from craftsmanship tradition"
+    },
+    {
+      "id_faction": "f_gortyn",
+      "name": "Lawgivers of Crete",
+      "benefit1": "+1 tax revenue per population from early civic law codes",
+      "benefit2": "+5 stability in every province from respected legal tradition"
+    },
+    {
+      "id_faction": "f_phaistos",
+      "name": "Touched by the Gods",
+      "benefit1": "+0.1 population growth per surplus from worship of Rhea, mother of the gods",
+      "benefit2": "+5 stability in every province from worship of Leto, mother of Apollo"
+    },
+    {
+      "id_faction": "f_kydonia",
+      "name": "Western Mariners",
+      "benefit1": "+5% bonus on all trade income from western Cretan sea routes",
+      "benefit2": "+5% experience chance for all contingents from coastal raiding tradition"
+    },
+    {
+      "id_faction": "f_kameiros",
+      "name": "Dorian Hexapolis",
+      "benefit1": "+0.1 population growth per surplus from strong internal trade",
+      "benefit2": "+5 stability in every province from cooperation among Dorian islanders"
+    },
+    {
+      "id_faction": "f_lindos",
+      "name": "Blessed of the Gods",
+      "benefit1": "+5% experience chance for all contingents from heroic traditions of Danaus",
+      "benefit2": "+5 stability in every province from sacred devotion to Athena Lindia"
+    },
+    {
+      "id_faction": "f_miletus",
+      "name": "Aegean Thinkers",
+      "benefit1": "+0.1 population growth per surplus from Milesian science and philosophy",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_ephesus",
+      "name": "Guardians of Artemis",
+      "benefit1": "+8 stability in every province from prestige of Artemis Ephesia cult",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_smyrna",
+      "name": "Home of Homeros",
+      "benefit1": "+5 stability in every province from cultural renown of Homeros",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_phocaea",
+      "name": "Sailor Blood",
+      "benefit1": "-40 cost to build a fleet or merchant",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_teos",
+      "name": "Multiculturalism",
+      "benefit1": "+5 stability in every province from Aeolian, Ionian, and Minyan admixture",
+      "benefit2": "+5% bonus on all trade income from Ionian League membership"
+    },
+    {
+      "id_faction": "f_cyme",
+      "name": "Aeolian Sovereignty",
+      "benefit1": "+1 tax revenue per population from early Aeolian civic organization",
+      "benefit2": "+5% experience chance for all contingents from Amazon founding legends"
+    },
+    {
+      "id_faction": "f_halicarnassus",
+      "name": "Carian Fusion",
+      "benefit1": "+5% experience chance for all contingents from Carian–Dorian warrior culture",
+      "benefit2": "+5 stability in every province from syncretic civic identity"
+    },
+    {
+      "id_faction": "f_knidos",
+      "name": "Intellectual Curiosity",
+      "benefit1": "-30 cost to build a fleet or merchant from astronomic knowledge",
+      "benefit2": "+5 stability in every province from historic tradition"
+    }
+  ]
+}

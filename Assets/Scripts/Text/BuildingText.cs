@@ -26,7 +26,7 @@ public struct BuildingTextGroup
   public BuildingTextEntry Barracks;
   public BuildingTextEntry Markets;
   public BuildingTextEntry Port;
-  public BuildingTextEntry Special;
+  public BuildingTextEntry Prestige;
 }
 
 [Serializable]

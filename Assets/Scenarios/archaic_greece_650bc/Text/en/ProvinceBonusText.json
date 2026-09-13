@@ -1,0 +1,334 @@
+{
+  "bonuses": [
+    {
+      "id_province": "p_athens",
+      "name": "Attic Demes",
+      "benefit1": "+5% bonus on local trade income from pottery",
+      "benefit2": "+0.1 population growth per surplus from deme system"
+    },
+    {
+      "id_province": "p_eleusis",
+      "name": "Sanctuary of Demeter",
+      "benefit1": "+1 Authority per turn from Eleusinian Mysteries",
+      "benefit2": "+5 stability in this province from sacred cult activity"
+    },
+    {
+      "id_province": "p_thebes",
+      "name": "Land of the Kadmeia",
+      "benefit1": "+1 food surplus from fertile farmland",
+      "benefit2": "+8 stability in this province from strong defensive foundations"
+    },
+    {
+      "id_province": "p_orchomenos",
+      "name": "Lake Kopais",
+      "benefit1": "+5% bonus on all trade income from horse rearing",
+      "benefit2": "-5 stability in this province from seasonal flooding"
+    },
+    {
+      "id_province": "p_plataea",
+      "name": "Gargaphia Springs",
+      "benefit1": "+0.1 population growth per surplus from good water supply",
+      "benefit2": "+5 stability in this province from worship of the Naiads"
+    },
+    {
+      "id_province": "p_thespiae",
+      "name": "Artistry and Music",
+      "benefit1": "+5% bonus on local trade income from geometric pottery",
+      "benefit2": "+5 stability in this province from contests of the Muses"
+    },
+    {
+      "id_province": "p_tanagra",
+      "name": "Port of Aulis",
+      "benefit1": "+1 fleets available to build from Trojan War legacy",
+      "benefit2": "-20 cost to build a fleet or merchant"
+    },
+    {
+      "id_province": "p_krissa",
+      "name": "Sacred Delphi",
+      "benefit1": "+1 Authority per turn from the Oracle of Delphi",
+      "benefit2": "+5% bonus on local trade income from port of Kirrha"
+    },
+    {
+      "id_province": "p_elateia",
+      "name": "Kephissos Valley",
+      "benefit1": "+0.1 population growth per surplus from productive land",
+      "benefit2": "+5% bonus on local trade income from grain surplus"
+    },
+    {
+      "id_province": "p_opous",
+      "name": "Birthplace of Patroclus",
+      "benefit1": "+5 stability in this province from legendary connection",
+      "benefit2": "+5% experience chance for originating contingents from mythic pride"
+    },
+    {
+      "id_province": "p_lamia",
+      "name": "Land of Thermopylae",
+      "benefit1": "+0.1 population growth per surplus from fertile Spercheios valley",
+      "benefit2": "+1 fleets available to build from natural harbors"
+    },
+    {
+      "id_province": "p_larissa",
+      "name": "Serene Land",
+      "benefit1": "+1 food surplus from rich grazing land",
+      "benefit2": "+5 stability in this province from worship of the nymphs"
+    },
+    {
+      "id_province": "p_pherae",
+      "name": "Myth of the Argo",
+      "benefit1": "+1 fleets available to build from ancient shipyards",
+      "benefit2": "-20 cost to build a fleet or merchant from eager sailors"
+    },
+    {
+      "id_province": "p_pharsalos",
+      "name": "Home of Achilles",
+      "benefit1": "+5% experience chance for originating contingents in honor of Achilles",
+      "benefit2": "-1 turns to replenish a contingent from warrior ethos"
+    },
+    {
+      "id_province": "p_kalydon",
+      "name": "Boar Hunters",
+      "benefit1": "+5% bonus on local trade income from hides and pelts",
+      "benefit2": "+0.1 population growth per surplus from game hunting"
+    },
+    {
+      "id_province": "p_megara",
+      "name": "Wealth of the Isthmus",
+      "benefit1": "+10% bonus on local trade income from clay and marble",
+      "benefit2": "+1 tax revenue per population from colonies at Chalcedon and Byzantium"
+    },
+    {
+      "id_province": "p_sparta",
+      "name": "Valley of Lacedaimon",
+      "benefit1": "+1 food surplus from controlled agrarian labor",
+      "benefit2": "+5% experience chance for originating contingents to control helots"
+    },
+    {
+      "id_province": "p_pylos",
+      "name": "Palace of Nestor",
+      "benefit1": "+5% bonus on local trade income from artistic tradition",
+      "benefit2": "+5 stability in this province due to ancient glory"
+    },
+    {
+      "id_province": "p_elis",
+      "name": "Olympian Sanctuary",
+      "benefit1": "+1 Authority for the sacred prestige of the Olympics",
+      "benefit2": "+8 stability in this province from pan-Hellenic festival gatherings"
+    },
+    {
+      "id_province": "p_tegea",
+      "name": "Alea Basin",
+      "benefit1": "+1 food surplus from enclosed Arcadian basin fields",
+      "benefit2": "+0.1 population growth per surplus from worship of Pan"
+    },
+    {
+      "id_province": "p_mantineia",
+      "name": "Tied to the Land",
+      "benefit1": "+0.1 population growth per surplus from local springs",
+      "benefit2": "+5 stability in this province from priestesses of Artemis"
+    },
+    {
+      "id_province": "p_patrai",
+      "name": "City of Three Villages",
+      "benefit1": "+0.1 population growth per surplus from land at Aroe",
+      "benefit2": "+8 stability in this province from cults at Antheia and Messatis"
+    },
+    {
+      "id_province": "p_aigion",
+      "name": "Devotees of Zeus",
+      "benefit1": "+5% experience chance for originating contingents from athleticism",
+      "benefit2": "+5 stability in this province from local ceremonies"
+    },
+    {
+      "id_province": "p_corinth",
+      "name": "Colonial Mastery",
+      "benefit1": "+1 food surplus from colonies at Syracuse, Corcyra, and Epidamnus",
+      "benefit2": "-0.1 population growth per surplus due to settler emigration"
+    },
+    {
+      "id_province": "p_sicyon",
+      "name": "Patron of the Arts",
+      "benefit1": "+5% bonus on local trade income from sculpting ability",
+      "benefit2": "+5 stability in this province due to poetic flourishing"
+    },
+    {
+      "id_province": "p_argos",
+      "name": "Captain of Industry",
+      "benefit1": "+8% bonus on local trade income from iron and tanning workshops",
+      "benefit2": "+1 tax revenue per population from standard weights and measures"
+    },
+    {
+      "id_province": "p_epidaurus",
+      "name": "Sanctuary of Asklepios",
+      "benefit1": "+1 Authority per turn from famous healing rites",
+      "benefit2": "+5 stability in this province from local myths of Asklepios"
+    },
+    {
+      "id_province": "p_troezen",
+      "name": "Communal Pride",
+      "benefit1": "+5% bonus on local trade income from colony at Sybaris",
+      "benefit2": "+5 stability in this province from Pegasus spring site"
+    },
+    {
+      "id_province": "p_aegina",
+      "name": "Might of Aeacus",
+      "benefit1": "+1 fleets available to build from maritime tradition",
+      "benefit2": "+8 stability in this province from the festival of Aeacea"
+    },
+    {
+      "id_province": "p_chalcis",
+      "name": "Mother City",
+      "benefit1": "+1 tax revenue per population from colonies at Pithekousai and Cumae",
+      "benefit2": "+0.1 population growth per surplus from colonies at Naxos, Zancle and Rhegion"
+    },
+    {
+      "id_province": "p_eretria",
+      "name": "Trader Roots",
+      "benefit1": "+10% bonus on local trade income from Cycladic connections",
+      "benefit2": "+1 fleets available to build from maritime tradition"
+    },
+    {
+      "id_province": "p_naxos",
+      "name": "Mountain Industry",
+      "benefit1": "+5% bonus on local trade income from corundite stone mines",
+      "benefit2": "+5 stability in this province from presence of the Cave of Young Zeus"
+    },
+    {
+      "id_province": "p_paros",
+      "name": "Marble Isle",
+      "benefit1": "+15% bonus on local trade income from export of Parian marble",
+      "benefit2": "+1 tax revenue per population from quarry tariffs"
+    },
+    {
+      "id_province": "p_andros",
+      "name": "Chalcidice Expeditions",
+      "benefit1": "0.1 population growth per surplus from colonies at Acanthus and Stageira",
+      "benefit2": "+1 fleets available to build from maritime tradition"
+    },
+    {
+      "id_province": "p_tinos",
+      "name": "Holy Delos Island",
+      "benefit1": "+1 Authority per turn as the birthplace of Apollo",
+      "benefit2": "+5 stability in this province from priestesses of Artemis"
+    },
+    {
+      "id_province": "p_thera",
+      "name": "Kalliste Volcano",
+      "benefit1": "+1 food surplus from rich volcanic soil",
+      "benefit2": "+5% bonus on local trade income from pumice stone"
+    },
+    {
+      "id_province": "p_melos",
+      "name": "Obsidian Hills",
+      "benefit1": "+10% bonus on local trade income from export of Obsidian",
+      "benefit2": "+1 tax revenue per population from obsidian workshops"
+    },
+    {
+      "id_province": "p_mytilene",
+      "name": "Two Ports",
+      "benefit1": "+1 fleets available to build from dual harbor system",
+      "benefit2": "+8% bonus on local trade income from maritime traffic"
+    },
+    {
+      "id_province": "p_chios",
+      "name": "Chian Wine",
+      "benefit1": "+1 food surplus from fertile vine-covered slopes",
+      "benefit2": "+10% bonus on local trade income from premium wine production"
+    },
+    {
+      "id_province": "p_samos",
+      "name": "Heraion of Samos",
+      "benefit1": "+1 Authority per turn from the great Heraion sanctuary",
+      "benefit2": "+5 stability in this province from ritual prestige"
+    },
+    {
+      "id_province": "p_kos",
+      "name": "Koan Superstition",
+      "benefit1": "+0.1 population growth per surplus from medical tradition",
+      "benefit2": "+8 stability in this province from ancient cults of Hemera and Helios"
+    },
+    {
+      "id_province": "p_knossos",
+      "name": "Valley of King Minos",
+      "benefit1": "+1 food surplus from fertile lowland fields around the palace complex",
+      "benefit2": "+8% bonus on local trade income from olive oil, wine, and wool"
+    },
+    {
+      "id_province": "p_gortyn",
+      "name": "Civic Identity",
+      "benefit1": "+0.1 population growth per surplus from orderly civic life",
+      "benefit2": "+5% experience chance for originating contingents due to Dorian culture"
+    },
+    {
+      "id_province": "p_phaistos",
+      "name": "The Messaran Plain",
+      "benefit1": "+1 food surplus from rural agricultural living",
+      "benefit2": "+5 stability in this province from ancient palace prestige"
+    },
+    {
+      "id_province": "p_kydonia",
+      "name": "Flourishing Ports",
+      "benefit1": "+1 fleets available to build from natural western harbors",
+      "benefit2": "+5% bonus on local trade income from pottery and perfume"
+    },
+    {
+      "id_province": "p_kameiros",
+      "name": "Three-Tiered City",
+      "benefit1": "+5% bonus on local trade income from structured civic markets",
+      "benefit2": "+5 stability in this province from fortified acropolis"
+    },
+    {
+      "id_province": "p_lindos",
+      "name": "Sanctuary of Athena Lindia",
+      "benefit1": "+1 Authority per turn from the cliffside sanctuary of Athena Lindia",
+      "benefit2": "+5 stability in this province from myth of the founder Lindos"
+    },
+    {
+      "id_province": "p_miletus",
+      "name": "Panionium Sanctuary",
+      "benefit1": "+1 Authority per turn from the central sanctuary of the Ionians",
+      "benefit2": "+8 stability in this province from Panionia games of Poseidon Helikonios"
+    },
+    {
+      "id_province": "p_ephesus",
+      "name": "Sanctuary of Artemis",
+      "benefit1": "+1 Authority per turn from the sacred Artemision",
+      "benefit2": "+1 tax revenue per population from offerings to the goddess"
+    },
+    {
+      "id_province": "p_smyrna",
+      "name": "Eastern Frontier",
+      "benefit1": "+8% experience chance for originating contingents from wars with Lydia",
+      "benefit2": "+0.1 population growth per surplus from fertile Hermus valley"
+    },
+    {
+      "id_province": "p_phocaea",
+      "name": "New Horizons",
+      "benefit1": "+1 fleets available to build from western colonial interests",
+      "benefit2": "+5% bonus on local trade income from excellent natural harbors"
+    },
+    {
+      "id_province": "p_teos",
+      "name": "Fine Living",
+      "benefit1": "+0.1 population growth per surplus from Dionysian viticulture",
+      "benefit2": "+5 stability in this province from poetry tradition"
+    },
+    {
+      "id_province": "p_cyme",
+      "name": "An Honest People",
+      "benefit1": "+5 stability in this province from negotiations with Lydia",
+      "benefit2": "-5% bonus on local trade income from lack of tax on shipping"
+    },
+    {
+      "id_province": "p_halicarnassus",
+      "name": "Well Connected",
+      "benefit1": "+5% bonus on local trade income from Carian stoneworking",
+      "benefit2": "+0.1 population growth per surplus due to immigration from Argos and Troezen"
+    },
+    {
+      "id_province": "p_knidos",
+      "name": "Triopon Cape",
+      "benefit1": "+8% bonus on local trade income from cape‑based maritime routes",
+      "benefit2": "+5 stability in this province from natural defensive nature"
+    }
+  ]
+}

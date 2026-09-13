@@ -36,7 +36,7 @@
           "barracks": 1,
           "market": 0,
           "port": 0,
-          "special": 0
+          "prestige": 0
         },
         "pending_construction": [
           {
@@ -63,7 +63,7 @@
           "barracks": 0,
           "market": 0,
           "port": 0,
-          "special": 0
+          "prestige": 0
         },
         "pending_construction": [],
         "pending_recruitment": [],
@@ -84,7 +84,7 @@
           "barracks": 2,
           "market": 0,
           "port": 0,
-          "special": 0
+          "prestige": 0
         },
         "pending_construction": [
           {
