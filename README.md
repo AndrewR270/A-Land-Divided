@@ -122,3 +122,7 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 - Added more data and text files to each Scenario folder to build out the scenario dependency list, added skeleton for bonuses
 - Added Faction Color mapping in **ColorsFaction.json** and **Adjacency.json** to hold adjacency lists for all provinces.
 - Expanded **FactionText.json**, **ProvinceText.json**, and **BuildingText.json** to hold scenario-specific flavor text descriptions, changed Victory building name to Special, added **ScenarioText.json**.
+
+**9/12/26**
+- Decided upon dual trait system - 2 bonuses for each faction, 2 for each province, with trait code in data objects.
+- Added 55 faction traits and 55 province traits for the Archaic Greece scenario, with explanatory text for cultural and historical flavor; this model will be applied to further scenarios with reduced scale for maintainability.
