@@ -29,7 +29,7 @@ public class Province
     public Barracks Barracks = new Barracks(0);
     public Markets Markets = new Markets(0);
     public Port Port = new Port(0);
-    public Special Special = new Special(0);
+    public Prestige Prestige = new Prestige(0);
 
 
     // Stability

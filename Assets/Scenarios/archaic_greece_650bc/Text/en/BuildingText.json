@@ -9,25 +9,25 @@
     "Barracks": {
       "name": "Barracks",
       "description": "A Hoploteria was a muster yard, where citizens drilled in phalanx discipline and maintained the warrior ethos. In early Greek communities, military service was heavily tied to political rights.",
-      "benefit1": " turns to replenish a unit",
-      "benefit2": "% experience chance for originating units"
+      "benefit1": " turns to replenish a contingent",
+      "benefit2": "% experience chance for all contingents from this province"
     },
     "Markets": {
       "name": "Markets",
       "description": "Agorai were civic squares where traders, craftsmen, and citizens gathered, serving as centers of exchange, public debate, and social life.",
-      "benefit1": "% bonus on all trade income",
+      "benefit1": "% bonus on local trade income",
       "benefit2": " tax revenue per population"
     },
     "Port": {
       "name": "Port",
       "description": "A Limen is a coastal harbor that supports shipwrights, merchants, and fishermen, linking this province to Aegean trade networks and fleet construction.",
       "benefit1": " fleets available to build",
-      "benefit2": " to build a fleet or merchant"
+      "benefit2": " cost to build a fleet or merchant"
     },
-    "Special": {
-      "name": "Special",
+    "Prestige": {
+      "name": "Prestige",
       "description": "Hiera were sacred precincts where communities honored local gods, held festivals, and reinforced shared identity through ritual, myth, and offerings central to civic cohesion.",
-      "benefit1": " Prestige per turn",
+      "benefit1": " Authority per turn",
       "benefit2": " % added stability in this province"
     }
   }

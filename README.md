@@ -29,7 +29,7 @@ scenario:
       barracks: int
       market: int
       port: int
-      special: int
+      prestige: int
     pending_construction[]:
       building_type: string
       turns_remaining: int

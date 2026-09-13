@@ -13,7 +13,7 @@ public enum BuildingID
 	Barracks,
 	Markets,
 	Port,
-	Special
+	Prestige
 }
 
 public abstract class Building
@@ -43,7 +43,7 @@ public abstract class Building
 				BuildingID.Barracks => text.Barracks,
 				BuildingID.Markets => text.Markets,
 				BuildingID.Port => text.Port,
-				BuildingID.Special => text.Special,
+				BuildingID.Prestige => text.Prestige,
 				_ => default
 			};
 		}
@@ -208,7 +208,7 @@ public class Port : Building {
 	public Port(int tier) { setTier(tier); }
 
 	public static readonly PortTier[] tiers = {
-		new PortTier(0, 0),
+		new PortTier(0, 200),
 		new PortTier(1, 200),
 		new PortTier(2, 180),
 		new PortTier(3, 160),
@@ -231,35 +231,35 @@ public class Port : Building {
 
 /*
 
-	Special Buildings:
+	Prestige Buildings:
 	Victory Points, Stability Bonus.
 
 */
 
-public struct SpecialTier {
+public struct PrestigeTier {
 	public int VictoryPoints;
-	public float StabilityBonus;
+	public int StabilityBonus;
 
-	public SpecialTier(int victoryPoints, float stabilityBonus) {
+	public PrestigeTier(int victoryPoints, int stabilityBonus) {
 		VictoryPoints = victoryPoints;
 		StabilityBonus = stabilityBonus;
 	}
 }
 
-public class Special : Building {
-	public override BuildingID ID => BuildingID.Special;
+public class Prestige : Building {
+	public override BuildingID ID => BuildingID.Prestige;
 
-	public Special(int tier) { setTier(tier); }
+	public Prestige(int tier) { setTier(tier); }
 
-	public static readonly SpecialTier[] tiers = {
-		new SpecialTier(0, 0.00f),
-		new SpecialTier(1, 0.10f),
-		new SpecialTier(2, 0.20f),
-		new SpecialTier(3, 0.30f),
-		new SpecialTier(4, 0.40f),
-		new SpecialTier(5, 0.50f),
-		new SpecialTier(6, 0.60f),
-		new SpecialTier(0, 0.00f)
+	public static readonly PrestigeTier[] tiers = {
+		new PrestigeTier(0, 0),
+		new PrestigeTier(1, 5),
+		new PrestigeTier(2, 10),
+		new PrestigeTier(3, 15),
+		new PrestigeTier(4, 20),
+		new PrestigeTier(5, 25),
+		new PrestigeTier(6, 30),
+		new PrestigeTier(0, 0)
 	};
 
 	public int victory_points => tiers[TIER].VictoryPoints;
