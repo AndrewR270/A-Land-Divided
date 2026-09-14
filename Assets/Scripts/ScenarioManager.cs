@@ -65,8 +65,9 @@ public class ScenarioManager : MonoBehaviour
 
     // Load Scenario JSON data
     
-    BonusRegistry.Load();
+    FactionColors.Load();
     ProvinceColors.Load();
+    BonusRegistry.Load();
 
     ScenarioTextLoader.Load();
     FactionText.Load();
