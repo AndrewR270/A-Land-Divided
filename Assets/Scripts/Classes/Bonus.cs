@@ -1,8 +1,9 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Bonuses
+public class Bonus
 {
+    // Numerical effects
     public int surplus;
     public float growth;
     public int replenish_time;
@@ -13,4 +14,9 @@ public class Bonuses
     public int ship_cost;
     public int victory_points;
     public int stability_bonus;
+
+    // Text fields
+    public string name;
+    public string benefit1;
+    public string benefit2;
 }

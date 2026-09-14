@@ -1,7 +1,7 @@
 {
   "bonuses": [
     {
-      "id_faction": "f_athens",
+      "id": "f_athens",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -14,7 +14,7 @@
       "stability_bonus": -8
     },
     {
-      "id_faction": "f_eleusis",
+      "id": "f_eleusis",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -27,7 +27,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_thebes",
+      "id": "f_thebes",
       "surplus": 0,
       "growth": -0.1,
       "replenish_time": 0,
@@ -40,7 +40,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_orchomenos",
+      "id": "f_orchomenos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -53,7 +53,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_plataea",
+      "id": "f_plataea",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -66,7 +66,7 @@
       "stability_bonus": 8
     },
     {
-      "id_faction": "f_thespiae",
+      "id": "f_thespiae",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -79,7 +79,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_tanagra",
+      "id": "f_tanagra",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -92,7 +92,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_krissa",
+      "id": "f_krissa",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -105,7 +105,7 @@
       "stability_bonus": 10
     },
     {
-      "id_faction": "f_elateia",
+      "id": "f_elateia",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -118,7 +118,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_opous",
+      "id": "f_opous",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -131,7 +131,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_lamia",
+      "id": "f_lamia",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -144,7 +144,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_larissa",
+      "id": "f_larissa",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -157,7 +157,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_pherae",
+      "id": "f_pherae",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -170,7 +170,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_pharsalos",
+      "id": "f_pharsalos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -183,7 +183,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_kalydon",
+      "id": "f_kalydon",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -196,7 +196,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_megara",
+      "id": "f_megara",
       "surplus": 0,
       "growth": 0,
       "replenish_time": -1,
@@ -209,7 +209,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_sparta",
+      "id": "f_sparta",
       "surplus": 0,
       "growth": -0.1,
       "replenish_time": 0,
@@ -222,7 +222,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_pylos",
+      "id": "f_pylos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -235,7 +235,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_elis",
+      "id": "f_elis",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -248,7 +248,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_tegea",
+      "id": "f_tegea",
       "surplus": 0,
       "growth": 0,
       "replenish_time": -2,
@@ -261,7 +261,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_mantineia",
+      "id": "f_mantineia",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -274,7 +274,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_patrai",
+      "id": "f_patrai",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -287,7 +287,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_aigion",
+      "id": "f_aigion",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -300,7 +300,7 @@
       "stability_bonus": 8
     },
     {
-      "id_faction": "f_corinth",
+      "id": "f_corinth",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -313,7 +313,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_sicyon",
+      "id": "f_sicyon",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -326,7 +326,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_argos",
+      "id": "f_argos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -339,7 +339,7 @@
       "stability_bonus": -5
     },
     {
-      "id_faction": "f_epidaurus",
+      "id": "f_epidaurus",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -352,7 +352,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_troezen",
+      "id": "f_troezen",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -365,7 +365,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_aegina",
+      "id": "f_aegina",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -378,7 +378,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_chalcis",
+      "id": "f_chalcis",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -391,7 +391,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_eretria",
+      "id": "f_eretria",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -404,7 +404,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_naxos",
+      "id": "f_naxos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -417,7 +417,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_paros",
+      "id": "f_paros",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -430,7 +430,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_andros",
+      "id": "f_andros",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -443,7 +443,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_tinos",
+      "id": "f_tinos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -456,7 +456,7 @@
       "stability_bonus": -5
     },
     {
-      "id_faction": "f_thera",
+      "id": "f_thera",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -469,7 +469,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_melos",
+      "id": "f_melos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -482,7 +482,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_mytilene",
+      "id": "f_mytilene",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -495,7 +495,7 @@
       "stability_bonus": -5
     },
     {
-      "id_faction": "f_chios",
+      "id": "f_chios",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -508,7 +508,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_samos",
+      "id": "f_samos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -521,7 +521,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_kos",
+      "id": "f_kos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -534,7 +534,7 @@
       "stability_bonus": -5
     },
     {
-      "id_faction": "f_knossos",
+      "id": "f_knossos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -547,7 +547,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_gortyn",
+      "id": "f_gortyn",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -560,7 +560,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_phaistos",
+      "id": "f_phaistos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -573,7 +573,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_kydonia",
+      "id": "f_kydonia",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -586,7 +586,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_kameiros",
+      "id": "f_kameiros",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -599,7 +599,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_lindos",
+      "id": "f_lindos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -612,7 +612,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_miletus",
+      "id": "f_miletus",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -625,7 +625,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_ephesus",
+      "id": "f_ephesus",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -638,7 +638,7 @@
       "stability_bonus": 8
     },
     {
-      "id_faction": "f_smyrna",
+      "id": "f_smyrna",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -651,7 +651,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_phocaea",
+      "id": "f_phocaea",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -664,7 +664,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_teos",
+      "id": "f_teos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -677,7 +677,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_cyme",
+      "id": "f_cyme",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -690,7 +690,7 @@
       "stability_bonus": 0
     },
     {
-      "id_faction": "f_halicarnassus",
+      "id": "f_halicarnassus",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -703,7 +703,7 @@
       "stability_bonus": 5
     },
     {
-      "id_faction": "f_knidos",
+      "id": "f_knidos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,

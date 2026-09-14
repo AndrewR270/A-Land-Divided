@@ -14,7 +14,14 @@ public class Province
     // Information
     public Faction Owner;
     public List<string> Adjacent;
-    public Bonuses ProvinceBonuses;
+
+    // Bonuses
+    public Bonus ProvinceBonuses => BonusRegistry.Bonuses[ProvinceID];
+    public string BonusName => ProvinceBonuses.name;
+    public string BonusBenefit1 => ProvinceBonuses.benefit1;
+    public string BonusBenefit2 => ProvinceBonuses.benefit2;
+
+
 
     // Population
     public int HomePopulation;
