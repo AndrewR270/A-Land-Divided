@@ -45,9 +45,11 @@ public class ScenarioManager : MonoBehaviour
   private GameObject ActiveBackground;
 
   /*
+
     Scenario Instance, Data Loading, and Lookup methods.
     These essentially declare a static accessible instance for the scenario,
     as well as unpack stored JSON data.
+
   */
 
   void Awake()
@@ -67,9 +69,10 @@ public class ScenarioManager : MonoBehaviour
     ProvinceColors.Load();
 
     ScenarioTextLoader.Load();
+    FactionText.Load();
+    ProvinceText.Load();
     BonusText.Load();
     BuildingText.Load();
-    ProvinceText.Load();
 
     // Apply visual elements for the scenario map
 
