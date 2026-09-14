@@ -14,7 +14,7 @@ public class Province
     // Information
     public Faction Owner;
     public List<string> Adjacent;
-    public Resource ProvinceResource;
+    public Bonuses ProvinceBonuses;
 
     // Population
     public int HomePopulation;

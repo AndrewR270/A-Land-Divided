@@ -1,0 +1,16 @@
+using UnityEngine;
+
+[System.Serializable]
+public class Bonuses
+{
+    public int surplus;
+    public float growth;
+    public int replenish_time;
+    public float exp_gain;
+    public float trade_bonus;
+    public int tax_bonus;
+    public int fleets_supported;
+    public int ship_cost;
+    public int victory_points;
+    public int stability_bonus;
+}
