@@ -21,16 +21,16 @@ public struct BonusEntry
 [Serializable]
 public struct BonusWrapper { public List<BonusEntry> bonuses; }
 
-public static class BonusRegistry
+public static class Bonuses
 {
-  public static Dictionary<string, BonusSet> Bonuses = new Dictionary<string, BonusSet>();
+  public static Dictionary<string, BonusSet> BonusSets = new Dictionary<string, BonusSet>();
 
   // Call Load function for both Bonus Files
   public static void Load()
   {
     LoadBonusFile("FactionBonuses.json");
     LoadBonusFile("ProvinceBonuses.json");
-    Debug.Log("Loaded BonusRegistry.");
+    Debug.Log("Loaded Bonuses.");
   }
 
   // Load files and pass data into JSON loading functions
@@ -46,6 +46,6 @@ public static class BonusRegistry
   private static void LoadFromJson(string json)
   {
     BonusWrapper wrapper = JsonUtility.FromJson<BonusWrapper>(json);
-    foreach (var entry in wrapper.bonuses) { Bonuses[entry.id] = entry.bonus; }
+    foreach (var entry in wrapper.bonuses) { BonusSets[entry.id] = entry.bonus; }
   }
 }

@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 public class Province
 {
+    // Identifiers
     public string ProvinceID;
-    public List<string> Adjacent;
+    public List<string> Adjacent => Adjacency.Lookup[ProvinceID];
 
     // Province Text
     public string Name => ProvinceText.Text[ProvinceID].name;
@@ -13,7 +14,7 @@ public class Province
     public string Description => ProvinceText.Text[ProvinceID].description;
 
     // Province Bonuses & Bonus Text
-    public BonusSet ProvinceBonuses => BonusRegistry.Bonuses[ProvinceID];
+    public BonusSet ProvinceBonuses => Bonuses.BonusSets[ProvinceID];
     public string BonusName => ProvinceBonuses.name;
     public string BonusBenefit1 => ProvinceBonuses.benefit1;
     public string BonusBenefit2 => ProvinceBonuses.benefit2;

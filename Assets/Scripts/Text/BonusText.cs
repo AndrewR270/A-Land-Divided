@@ -30,7 +30,7 @@ public static class BonusText
   {
     LoadFile("FactionBonusText.json");
     LoadFile("ProvinceBonusText.json");
-    Debug.Log("Loaded BonusRegistry text.");
+    Debug.Log("Loaded Bonuses text.");
   }
 
   // Load files and pass data into JSON loading functions
@@ -48,7 +48,7 @@ public static class BonusText
     BonusTextWrapper wrapper = JsonUtility.FromJson<BonusTextWrapper>(json);
     foreach (var entry in wrapper.bonuses)
     {
-      if (BonusRegistry.Bonuses.TryGetValue(entry.id, out BonusSet bonus))
+      if (Bonuses.BonusSets.TryGetValue(entry.id, out BonusSet bonus))
       {
         bonus.name = entry.name;
         bonus.benefit1 = entry.benefit1;
