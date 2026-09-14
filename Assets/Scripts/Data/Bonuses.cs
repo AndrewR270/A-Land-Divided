@@ -30,7 +30,7 @@ public static class Bonuses
   {
     LoadBonusFile("FactionBonuses.json");
     LoadBonusFile("ProvinceBonuses.json");
-    Debug.Log("Loaded Bonuses.");
+    Debug.Log("Loaded Bonuses for " + ScenarioManager.Instance.ScenarioID);
   }
 
   // Load files and pass data into JSON loading functions

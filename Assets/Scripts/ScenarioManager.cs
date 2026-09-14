@@ -37,7 +37,7 @@ public class ScenarioManager : MonoBehaviour
 
   public RawImage MapBorders;
   public RawImage BaseMap;
-  public RawImage Highlight;
+  public RawImage HighlightLayer;
   public RawImage CityLayer;
   public RawImage LabelLayer;
 
@@ -85,7 +85,7 @@ public class ScenarioManager : MonoBehaviour
 
     MapBorders.SetNativeSize();
     BaseMap.SetNativeSize();
-    Highlight.SetNativeSize();
+    HighlightLayer.SetNativeSize();
     CityLayer.SetNativeSize();
     LabelLayer.SetNativeSize();
 

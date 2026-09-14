@@ -1,3 +1,6 @@
+using UnityEngine;
+using System.Collections.Generic;
+
 public class Faction
 {
     // Identifiers
@@ -12,10 +15,10 @@ public class Faction
     public string Description => FactionText.Text[ID].description;
 
     // Bonuses
-    public Bonus Bonuses => BonusRegistry.Bonuses[ID];
-    public string BonusName => BonusText.Text[ID].name;
-    public string BonusBenefit1 => BonusText.Text[ID].benefit1;
-    public string BonusBenefit2 => BonusText.Text[ID].benefit2;
+    public BonusSet FactionBonuses => Bonuses.BonusSets[ID];
+    public string BonusName => FactionBonuses.name;
+    public string BonusBenefit1 => FactionBonuses.benefit1;
+    public string BonusBenefit2 => FactionBonuses.benefit2;
 
     // Variable Data
     public int VictoryPoints;
