@@ -126,3 +126,7 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 **9/12/26**
 - Decided upon dual trait system - 2 bonuses for each faction, 2 for each province, with trait code in data objects.
 - Added 55 faction traits and 55 province traits for the Archaic Greece scenario, with explanatory text for cultural and historical flavor; this model will be applied to further scenarios with reduced scale for maintainability.
+
+**9/13/26**
+- Reorganized Resource.cs into **Bonuses.cs**, creating a public class of all bonus fields for application with factions & provinces.
+- Added a comprehensive, "blank slate" **Start.json**, lists all factions, provinces, and sea regions; only filled fields are starting money and provinces for factions, and start population of 10 and tier 1 farms for all provinces. Surplus field removed from save data as that can be calculated programatically. Surprise wars need 1 turn before commencing to prevent 0 contingent blitzing cheat on game start.

@@ -1,154 +1,412 @@
 {
   "scenario": {
-    "id_scenario": "archaic_greece_650bc",
+    "id_scenario": "blank_scenario",
     "turn": 1,
+
     "factions": [
-      {
-        "id_faction": "f_athens",
-        "victory_points": 0,
-        "money": 500,
-        "province_ids": ["p_athens", "p_eleusis"],
-        "diplomacy": {
-          "f_sparta": "hostile"
-        }
-      },
-      {
-        "id_faction": "f_sparta",
-        "victory_points": 0,
-        "money": 450,
-        "province_ids": ["p_sparta"],
-        "diplomacy": {
-          "f_athens": "hostile"
-        }
-      }
+      { "id_faction": "f_athens", "victory_points": 0, "money": 500, "province_ids": ["p_athens"], "diplomacy": {} },
+      { "id_faction": "f_eleusis", "victory_points": 0, "money": 500, "province_ids": ["p_eleusis"], "diplomacy": {} },
+      { "id_faction": "f_thebes", "victory_points": 0, "money": 500, "province_ids": ["p_thebes"], "diplomacy": {} },
+      { "id_faction": "f_orchomenos", "victory_points": 0, "money": 500, "province_ids": ["p_orchomenos"], "diplomacy": {} },
+      { "id_faction": "f_plataea", "victory_points": 0, "money": 500, "province_ids": ["p_plataea"], "diplomacy": {} },
+      { "id_faction": "f_thespiae", "victory_points": 0, "money": 500, "province_ids": ["p_thespiae"], "diplomacy": {} },
+      { "id_faction": "f_tanagra", "victory_points": 0, "money": 500, "province_ids": ["p_tanagra"], "diplomacy": {} },
+      { "id_faction": "f_krissa", "victory_points": 0, "money": 500, "province_ids": ["p_krissa"], "diplomacy": {} },
+      { "id_faction": "f_elateia", "victory_points": 0, "money": 500, "province_ids": ["p_elateia"], "diplomacy": {} },
+      { "id_faction": "f_opous", "victory_points": 0, "money": 500, "province_ids": ["p_opous"], "diplomacy": {} },
+      { "id_faction": "f_lamia", "victory_points": 0, "money": 500, "province_ids": ["p_lamia"], "diplomacy": {} },
+      { "id_faction": "f_larissa", "victory_points": 0, "money": 500, "province_ids": ["p_larissa"], "diplomacy": {} },
+      { "id_faction": "f_pherae", "victory_points": 0, "money": 500, "province_ids": ["p_pherae"], "diplomacy": {} },
+      { "id_faction": "f_pharsalos", "victory_points": 0, "money": 500, "province_ids": ["p_pharsalos"], "diplomacy": {} },
+      { "id_faction": "f_kalydon", "victory_points": 0, "money": 500, "province_ids": ["p_kalydon"], "diplomacy": {} },
+      { "id_faction": "f_megara", "victory_points": 0, "money": 500, "province_ids": ["p_megara"], "diplomacy": {} },
+      { "id_faction": "f_sparta", "victory_points": 0, "money": 500, "province_ids": ["p_sparta"], "diplomacy": {} },
+      { "id_faction": "f_pylos", "victory_points": 0, "money": 500, "province_ids": ["p_pylos"], "diplomacy": {} },
+      { "id_faction": "f_elis", "victory_points": 0, "money": 500, "province_ids": ["p_elis"], "diplomacy": {} },
+      { "id_faction": "f_tegea", "victory_points": 0, "money": 500, "province_ids": ["p_tegea"], "diplomacy": {} },
+      { "id_faction": "f_mantineia", "victory_points": 0, "money": 500, "province_ids": ["p_mantineia"], "diplomacy": {} },
+      { "id_faction": "f_patrai", "victory_points": 0, "money": 500, "province_ids": ["p_patrai"], "diplomacy": {} },
+      { "id_faction": "f_aigion", "victory_points": 0, "money": 500, "province_ids": ["p_aigion"], "diplomacy": {} },
+      { "id_faction": "f_corinth", "victory_points": 0, "money": 500, "province_ids": ["p_corinth"], "diplomacy": {} },
+      { "id_faction": "f_sicyon", "victory_points": 0, "money": 500, "province_ids": ["p_sicyon"], "diplomacy": {} },
+      { "id_faction": "f_argos", "victory_points": 0, "money": 500, "province_ids": ["p_argos"], "diplomacy": {} },
+      { "id_faction": "f_epidaurus", "victory_points": 0, "money": 500, "province_ids": ["p_epidaurus"], "diplomacy": {} },
+      { "id_faction": "f_troezen", "victory_points": 0, "money": 500, "province_ids": ["p_troezen"], "diplomacy": {} },
+      { "id_faction": "f_aegina", "victory_points": 0, "money": 500, "province_ids": ["p_aegina"], "diplomacy": {} },
+      { "id_faction": "f_chalcis", "victory_points": 0, "money": 500, "province_ids": ["p_chalcis"], "diplomacy": {} },
+      { "id_faction": "f_eretria", "victory_points": 0, "money": 500, "province_ids": ["p_eretria"], "diplomacy": {} },
+      { "id_faction": "f_naxos", "victory_points": 0, "money": 500, "province_ids": ["p_naxos"], "diplomacy": {} },
+      { "id_faction": "f_paros", "victory_points": 0, "money": 500, "province_ids": ["p_paros"], "diplomacy": {} },
+      { "id_faction": "f_andros", "victory_points": 0, "money": 500, "province_ids": ["p_andros"], "diplomacy": {} },
+      { "id_faction": "f_tinos", "victory_points": 0, "money": 500, "province_ids": ["p_tinos"], "diplomacy": {} },
+      { "id_faction": "f_thera", "victory_points": 0, "money": 500, "province_ids": ["p_thera"], "diplomacy": {} },
+      { "id_faction": "f_melos", "victory_points": 0, "money": 500, "province_ids": ["p_melos"], "diplomacy": {} },
+      { "id_faction": "f_mytilene", "victory_points": 0, "money": 500, "province_ids": ["p_mytilene"], "diplomacy": {} },
+      { "id_faction": "f_chios", "victory_points": 0, "money": 500, "province_ids": ["p_chios"], "diplomacy": {} },
+      { "id_faction": "f_samos", "victory_points": 0, "money": 500, "province_ids": ["p_samos"], "diplomacy": {} },
+      { "id_faction": "f_kos", "victory_points": 0, "money": 500, "province_ids": ["p_kos"], "diplomacy": {} },
+      { "id_faction": "f_knossos", "victory_points": 0, "money": 500, "province_ids": ["p_knossos"], "diplomacy": {} },
+      { "id_faction": "f_gortyn", "victory_points": 0, "money": 500, "province_ids": ["p_gortyn"], "diplomacy": {} },
+      { "id_faction": "f_phaistos", "victory_points": 0, "money": 500, "province_ids": ["p_phaistos"], "diplomacy": {} },
+      { "id_faction": "f_kydonia", "victory_points": 0, "money": 500, "province_ids": ["p_kydonia"], "diplomacy": {} },
+      { "id_faction": "f_kameiros", "victory_points": 0, "money": 500, "province_ids": ["p_kameiros"], "diplomacy": {} },
+      { "id_faction": "f_lindos", "victory_points": 0, "money": 500, "province_ids": ["p_lindos"], "diplomacy": {} },
+      { "id_faction": "f_miletus", "victory_points": 0, "money": 500, "province_ids": ["p_miletus"], "diplomacy": {} },
+      { "id_faction": "f_ephesus", "victory_points": 0, "money": 500, "province_ids": ["p_ephesus"], "diplomacy": {} },
+      { "id_faction": "f_smyrna", "victory_points": 0, "money": 500, "province_ids": ["p_smyrna"], "diplomacy": {} },
+      { "id_faction": "f_phocaea", "victory_points": 0, "money": 500, "province_ids": ["p_phocaea"], "diplomacy": {} },
+      { "id_faction": "f_teos", "victory_points": 0, "money": 500, "province_ids": ["p_teos"], "diplomacy": {} },
+      { "id_faction": "f_cyme", "victory_points": 0, "money": 500, "province_ids": ["p_cyme"], "diplomacy": {} },
+      { "id_faction": "f_halicarnassus", "victory_points": 0, "money": 500, "province_ids": ["p_halicarnassus"], "diplomacy": {} },
+      { "id_faction": "f_knidos", "victory_points": 0, "money": 500, "province_ids": ["p_knidos"], "diplomacy": {} }
     ],
 
     "provinces": [
-      {
-        "id_province": "p_athens",
-        "owner": "f_athens",
-        "population_home": 10,
-        "population_levied": 1,
-        "surplus": 0,
-        "stability": 100,
-        "buildings": {
-          "farm": 1,
-          "barracks": 1,
-          "market": 0,
-          "port": 0,
-          "prestige": 0
-        },
-        "pending_construction": [
-          {
-            "building_type": "market",
-            "turns_remaining": 3
-          }
-        ],
-        "pending_recruitment": [
-          { "id_unit": "u_athens_2", "turns_remaining": 1 },
-          { "id_unit": "u_athens_3", "turns_remaining": 2 }
-        ],
-        "replenishment_counter": 0,
-        "unit_id_counter": 4
+      { "id_province": "p_athens", "owner": "f_athens",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
       },
-      {
-        "id_province": "p_eleusis",
-        "owner": "f_athens",
-        "population_home": 10,
-        "population_levied": 0,
-        "surplus": 1,
-        "stability": 95,
-        "buildings": {
-          "farm": 1,
-          "barracks": 0,
-          "market": 0,
-          "port": 0,
-          "prestige": 0
-        },
-        "pending_construction": [],
-        "pending_recruitment": [],
-        "replenishment_counter": 0,
-        "unit_id_counter": 1
+      { "id_province": "p_eleusis", "owner": "f_eleusis",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
       },
-      {
-        "id_province": "p_sparta",
-        "owner": "f_sparta",
-
-        "population_home": 10,
-        "population_levied": 2,
-        "surplus": 1,
-        "stability": 100,
-
-        "buildings": {
-          "farm": 1,
-          "barracks": 2,
-          "market": 0,
-          "port": 0,
-          "prestige": 0
-        },
-        "pending_construction": [
-          {
-            "building_type": "barracks",
-            "turns_remaining": 4
-          }
-        ],
-        "pending_recruitment": [
-          { "id_unit": "u_sparta_3", "turns_remaining": 1 }
-        ],
-        "replenishment_counter": 2,
-        "unit_id_counter": 4
+      { "id_province": "p_thebes", "owner": "f_thebes",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_orchomenos", "owner": "f_orchomenos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_plataea", "owner": "f_plataea",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_thespiae", "owner": "f_thespiae",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_tanagra", "owner": "f_tanagra",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_krissa", "owner": "f_krissa",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_elateia", "owner": "f_elateia",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_opous", "owner": "f_opous",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_lamia", "owner": "f_lamia",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_larissa", "owner": "f_larissa",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_pherae", "owner": "f_pherae",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_pharsalos", "owner": "f_pharsalos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_kalydon", "owner": "f_kalydon",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_megara", "owner": "f_megara",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_sparta", "owner": "f_sparta",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_pylos", "owner": "f_pylos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_elis", "owner": "f_elis",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_tegea", "owner": "f_tegea",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_mantineia", "owner": "f_mantineia",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_patrai", "owner": "f_patrai",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_aigion", "owner": "f_aigion",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_corinth", "owner": "f_corinth",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_sicyon", "owner": "f_sicyon",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_argos", "owner": "f_argos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_epidaurus", "owner": "f_epidaurus",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_troezen", "owner": "f_troezen",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_aegina", "owner": "f_aegina",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_chalcis", "owner": "f_chalcis",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_eretria", "owner": "f_eretria",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_naxos", "owner": "f_naxos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+      { "id_province": "p_paros", "owner": "f_paros",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0 
+      },
+            { "id_province": "p_andros", "owner": "f_andros",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_tinos", "owner": "f_tinos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_thera", "owner": "f_thera",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_melos", "owner": "f_melos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_mytilene", "owner": "f_mytilene",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_chios", "owner": "f_chios",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_samos", "owner": "f_samos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_kos", "owner": "f_kos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_knossos", "owner": "f_knossos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_gortyn", "owner": "f_gortyn",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_phaistos", "owner": "f_phaistos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_kydonia", "owner": "f_kydonia",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_kameiros", "owner": "f_kameiros",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_lindos", "owner": "f_lindos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_miletus", "owner": "f_miletus",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_ephesus", "owner": "f_ephesus",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_smyrna", "owner": "f_smyrna",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_phocaea", "owner": "f_phocaea",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_teos", "owner": "f_teos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_cyme", "owner": "f_cyme",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_halicarnassus", "owner": "f_halicarnassus",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
+      },
+      { "id_province": "p_knidos", "owner": "f_knidos",
+        "population_home": 10, "population_levied": 0, "stability": 0,
+        "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
+        "pending_construction": [], "pending_recruitment": [],
+        "replenishment_counter": 0, "unit_id_counter": 0
       }
     ],
 
-    "contingents": [
-      {
-        "id_unit": "u_athens_1",
-        "name_unit": "unit_default",
-        "origin": "p_athens",
-        "experience": 1,
-        "location": "p_athens",
-        "levied": true,
-        "is_exile": false
-      },
-      {
-        "id_unit": "u_sparta_1",
-        "name_unit": "unit_default",
-        "origin": "p_sparta",
-        "experience": 2,
-        "location": "p_sparta",
-        "levied": true,
-        "is_exile": false
-      },
-      {
-        "id_unit": "u_sparta_2",
-        "name_unit": "unit_default",
-        "origin": "p_sparta",
-        "experience": 0,
-        "location": "p_sparta",
-        "levied": false,
-        "is_exile": false
-      }
-    ],
+    "contingents": [],
+
     "sea_regions": [
-      {
-        "id_sea_region": "s_gulf_of_corinth",
-        "factions": {
-          "f_athens": {
-            "fleets": 1,
-            "merchants": 0,
-            "army_at_sea": false,
-            "ships_in_queue": 1,
-            "merchants_in_queue": 0
-          },
-          "f_sparta": {
-            "fleets": 0,
-            "merchants": 1,
-            "army_at_sea": false,
-            "ships_in_queue": 0,
-            "merchants_in_queue": 2
-          }
-        }
-      }
+      { "id_sea_region": "s_gulf_of_corinth", "factions": {} },
+      { "id_sea_region": "s_ionian_sea", "factions": {} },
+      { "id_sea_region": "s_sea_of_crete", "factions": {} },
+      { "id_sea_region": "s_myrtoan_sea", "factions": {} },
+      { "id_sea_region": "s_southern_aegean", "factions": {} },
+      { "id_sea_region": "s_sea_of_the_cyclades", "factions": {} },
+      { "id_sea_region": "s_rhodian_sea", "factions": {} },
+      { "id_sea_region": "s_icarian_sea", "factions": {} },
+      { "id_sea_region": "s_aeolian_sea", "factions": {} },
+      { "id_sea_region": "s_northern_aegean", "factions": {} }
     ]
   }
 }
