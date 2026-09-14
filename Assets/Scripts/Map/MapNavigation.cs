@@ -53,9 +53,9 @@ public class MapNavigation : MonoBehaviour
         ScenarioManager.ScenarioLoaded -= OnScenarioLoaded;
     }
 
-    public void OnScenarioLoaded(ScenarioData scenario)
+    public void OnScenarioLoaded(ScenarioAsset scenario)
     {
-        ColorMap = scenario.colorMap;
+        ColorMap = scenario.ColorMap;
     }
 
     public void updateScale() { 

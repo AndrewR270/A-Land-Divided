@@ -14,16 +14,16 @@ public class ScenarioManager : MonoBehaviour
 {
   public static ScenarioManager Instance { get; private set; }
 
+  // Scenario Asset
+
+  public ScenarioAsset[] scenarioData;
+  private Dictionary<string, ScenarioAsset> scenarios;
+  public ScenarioAsset activeScenario;
+  public static event System.Action<ScenarioAsset> ScenarioLoaded;
+
   // Scenario Information
 
-  public ScenarioData[] scenarioData;
-  private Dictionary<string, ScenarioData> scenarios;
-  public ScenarioData activeScenario;
-
-  public static event System.Action<ScenarioData> ScenarioLoaded;
-
   public string ScenarioID => activeScenario.scenarioID;
-  public Texture2D ColorMap => activeScenario.colorMap;
 
   public ScenarioText ScenarioText { get; set; }
 
@@ -35,14 +35,14 @@ public class ScenarioManager : MonoBehaviour
 
   // Visual elements for the scenario map
 
-  public RawImage mapBorders;
-  public RawImage baseMap;
-  public RawImage highlight;
-  public RawImage cityLayer;
-  public RawImage labelLayer;
+  public RawImage MapBorders;
+  public RawImage BaseMap;
+  public RawImage Highlight;
+  public RawImage CityLayer;
+  public RawImage LabelLayer;
 
-  public Transform background;
-  private GameObject activeBackground;
+  public Transform Background;
+  private GameObject ActiveBackground;
 
   /*
     Scenario Instance, Data Loading, and Lookup methods.
@@ -53,7 +53,7 @@ public class ScenarioManager : MonoBehaviour
   void Awake()
   {
     Instance = this;
-    scenarios = new Dictionary<string, ScenarioData>();
+    scenarios = new Dictionary<string, ScenarioAsset>();
     foreach (var s in scenarioData) { scenarios[s.scenarioID] = s; }
   }
 
@@ -73,34 +73,20 @@ public class ScenarioManager : MonoBehaviour
 
     // Apply visual elements for the scenario map
 
-    mapBorders.texture = activeScenario.mapBorders;
-    baseMap.texture = activeScenario.baseMap;
-    cityLayer.texture = activeScenario.cityLayer;
-    labelLayer.texture = activeScenario.labelLayer;
+    MapBorders.texture = activeScenario.MapBorders;
+    BaseMap.texture = activeScenario.BaseMap;
+    CityLayer.texture = activeScenario.CityLayer;
+    LabelLayer.texture = activeScenario.LabelLayer;
 
-    mapBorders.SetNativeSize();
-    baseMap.SetNativeSize();
-    highlight.SetNativeSize();
-    cityLayer.SetNativeSize();
-    labelLayer.SetNativeSize();
+    MapBorders.SetNativeSize();
+    BaseMap.SetNativeSize();
+    Highlight.SetNativeSize();
+    CityLayer.SetNativeSize();
+    LabelLayer.SetNativeSize();
 
-    if (activeBackground != null) { Destroy(activeBackground); }
-    activeBackground = Instantiate(activeScenario.background, background);
+    if (ActiveBackground != null) { Destroy(ActiveBackground); }
+    ActiveBackground = Instantiate(activeScenario.Background, Background);
 
     ScenarioLoaded?.Invoke(activeScenario);
   }
-
-  // public Province GetProvinceByID(string id)
-  // {
-  //   foreach (var p in activeScenario.Provinces)
-  //     if (p.ProvinceID == id)
-  //       return p;
-
-  //   foreach (var s in activeScenario.SeaProvinces)
-  //     if (s.ProvinceID == id)
-  //       return s;
-
-  //   Debug.LogError("Province ID not found: " + id);
-  //   return null;
-  // }
 }
