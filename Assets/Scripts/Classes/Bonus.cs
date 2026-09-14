@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Bonus
+public class BonusSet
 {
     // Numerical effects
     public int surplus;

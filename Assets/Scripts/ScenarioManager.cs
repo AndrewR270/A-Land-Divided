@@ -14,6 +14,8 @@ public class ScenarioManager : MonoBehaviour
 {
   public static ScenarioManager Instance { get; private set; }
 
+  // Scenario Information
+
   public ScenarioData[] scenarioData;
   private Dictionary<string, ScenarioData> scenarios;
   public ScenarioData activeScenario;
@@ -40,6 +42,12 @@ public class ScenarioManager : MonoBehaviour
   public Transform background;
   private GameObject activeBackground;
 
+  /*
+    Scenario Instance, Data Loading, and Lookup methods.
+    These essentially declare a static accessible instance for the scenario,
+    as well as unpack stored JSON data.
+  */
+
   void Awake()
   {
     Instance = this;
@@ -53,7 +61,10 @@ public class ScenarioManager : MonoBehaviour
 
     // Load Scenario JSON data
     
-    MapColors.Load();
+    BonusRegistry.Load();
+    ProvinceColors.Load();
+
+    BonusText.Load();
     BuildingText.Load();
     ProvinceText.Load();
 
@@ -63,12 +74,12 @@ public class ScenarioManager : MonoBehaviour
     baseMap.texture = activeScenario.baseMap;
     cityLayer.texture = activeScenario.cityLayer;
     labelLayer.texture = activeScenario.labelLayer;
+
     mapBorders.SetNativeSize();
     baseMap.SetNativeSize();
     highlight.SetNativeSize();
     cityLayer.SetNativeSize();
     labelLayer.SetNativeSize();
-
 
     if (activeBackground != null) { Destroy(activeBackground); }
     activeBackground = Instantiate(activeScenario.background, background);

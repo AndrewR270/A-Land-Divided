@@ -30,10 +30,7 @@ public struct BuildingTextGroup
 }
 
 [Serializable]
-public struct BuildingTextWrapper
-{
-  public BuildingTextGroup buildings;
-}
+public struct BuildingTextWrapper { public BuildingTextGroup buildings; }
 
 /*
 

@@ -21,10 +21,7 @@ public struct ProvinceTextEntry
 }
 
 [Serializable]
-public struct ProvinceTextWrapper
-{
-  public ProvinceTextEntry[] provinces;
-}
+public struct ProvinceTextWrapper { public ProvinceTextEntry[] provinces; }
 
 /*
 
