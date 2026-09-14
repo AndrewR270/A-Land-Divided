@@ -4,17 +4,17 @@ using System.Collections.Generic;
 public class Province
 {
     // Identifiers
-    public string ProvinceID;
-    public List<string> Adjacent => Adjacency.Lookup[ProvinceID];
+    public string ID { get; private set; }
+    public List<string> Adjacent => Adjacency.Lookup[ID];
 
     // Province Text
-    public string Name => ProvinceText.Text[ProvinceID].name;
-    public string PeriodName => ProvinceText.Text[ProvinceID].period_name;
-    public string Pronunciation => ProvinceText.Text[ProvinceID].pronunciation;
-    public string Description => ProvinceText.Text[ProvinceID].description;
+    public string Name => ProvinceText.Text[ID].name;
+    public string PeriodName => ProvinceText.Text[ID].period_name;
+    public string Pronunciation => ProvinceText.Text[ID].pronunciation;
+    public string Description => ProvinceText.Text[ID].description;
 
     // Province Bonuses & Bonus Text
-    public BonusSet ProvinceBonuses => Bonuses.BonusSets[ProvinceID];
+    public BonusSet ProvinceBonuses => Bonuses.BonusSets[ID];
     public string BonusName => ProvinceBonuses.name;
     public string BonusBenefit1 => ProvinceBonuses.benefit1;
     public string BonusBenefit2 => ProvinceBonuses.benefit2;
@@ -38,4 +38,6 @@ public class Province
 
     // Contingents
     public List<Contingent> Contingents = new List<Contingent>();
+
+    public Province(string id) { ID = id; }
 }
