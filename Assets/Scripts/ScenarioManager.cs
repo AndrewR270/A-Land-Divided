@@ -25,6 +25,8 @@ public class ScenarioManager : MonoBehaviour
   public string ScenarioID => activeScenario.scenarioID;
   public Texture2D ColorMap => activeScenario.colorMap;
 
+  public ScenarioText ScenarioText { get; set; }
+
   // Asset filepaths
 
   public string ScenarioPath => Path.Combine(Application.dataPath, "Scenarios", ScenarioID);
@@ -64,6 +66,7 @@ public class ScenarioManager : MonoBehaviour
     BonusRegistry.Load();
     ProvinceColors.Load();
 
+    ScenarioTextLoader.Load();
     BonusText.Load();
     BuildingText.Load();
     ProvinceText.Load();

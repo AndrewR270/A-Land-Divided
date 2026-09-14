@@ -33,7 +33,7 @@ public static class ProvinceColors
   public static void Load()
   {
     string path = Path.Combine(ScenarioManager.Instance.DataPath, "ProvinceColors.json");
-    if (!File.Exists(path)) { Debug.LogError("Missing Color Map for scenario."); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing ProvinceColors.json."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }
@@ -48,7 +48,7 @@ public static class ProvinceColors
       ColorUtility.TryParseHtmlString(entry.color, out c);
       Colors[(Color32)c] = entry.id_province;
     }
-    Debug.Log("Color map loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
+    Debug.Log("Loaded Province Colors for " + ScenarioManager.Instance.ScenarioID);
   }
 
 }

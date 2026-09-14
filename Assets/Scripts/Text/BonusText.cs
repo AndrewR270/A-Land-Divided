@@ -30,14 +30,14 @@ public static class BonusText
   {
     LoadFile("FactionBonusText.json");
     LoadFile("ProvinceBonusText.json");
-    Debug.Log("Loaded all bonus text into unified BonusRegistry.");
+    Debug.Log("Loaded BonusRegistry text.");
   }
 
   // Load files and pass data into JSON loading functions
   private static void LoadFile(string filename)
   {
     string path = Path.Combine(ScenarioManager.Instance.TextPath, filename);
-    if (!File.Exists(path)) { Debug.LogError("Missing bonus text file: " + filename); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing " + filename + "."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }

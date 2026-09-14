@@ -30,14 +30,14 @@ public static class BonusRegistry
   {
     LoadBonusFile("FactionBonuses.json");
     LoadBonusFile("ProvinceBonuses.json");
-    Debug.Log("Loaded all bonuses into unified BonusRegistry.");
+    Debug.Log("Loaded BonusRegistry.");
   }
 
   // Load files and pass data into JSON loading functions
   private static void LoadBonusFile(string filename)
   {
     string path = Path.Combine(ScenarioManager.Instance.DataPath, filename);
-    if (!File.Exists(path)) { Debug.LogError("Missing bonus file: " + filename); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing " + filename + "."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }

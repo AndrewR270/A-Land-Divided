@@ -46,7 +46,7 @@ public static class BuildingText
   public static void Load()
   {
     string path = Path.Combine(ScenarioManager.Instance.TextPath, "BuildingText.json");
-    if (!File.Exists(path)) { Debug.LogError("Missing BuildingText for scenario."); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing BuildingText.json."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }
@@ -54,6 +54,6 @@ public static class BuildingText
   private static void LoadFromJson(string json)
   {
     Text = JsonUtility.FromJson<BuildingTextWrapper>(json).buildings;
-    Debug.Log("Building text loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
+    Debug.Log("Building text loaded for " + ScenarioManager.Instance.ScenarioID);
   }
 }
