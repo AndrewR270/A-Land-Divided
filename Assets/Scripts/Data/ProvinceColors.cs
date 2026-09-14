@@ -10,17 +10,14 @@ using System.IO;
 */
 
 [System.Serializable]
-public struct MapColorEntry
+public struct ProvinceColorEntry
 {
   public string color;
   public string id_province;
 }
 
 [System.Serializable]
-public struct MapColorWrapper
-{
-  public MapColorEntry[] mappings;
-}
+public struct ProvinceColorWrapper { public ProvinceColorEntry[] colors; }
 
 /*
 
@@ -29,29 +26,29 @@ public struct MapColorWrapper
     
 */
 
-public static class MapColors
+public static class ProvinceColors
 {
   public static Dictionary<Color32, string> Colors { get; private set; }
 
   public static void Load()
   {
     string path = Path.Combine(ScenarioManager.Instance.DataPath, "ProvinceColors.json");
-    if (!File.Exists(path)) { Debug.LogError("Missing Color Map for scenario."); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing ProvinceColors.json."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }
 
   private static void LoadFromJson(string json)
   {
-    MapColorWrapper wrapper = JsonUtility.FromJson<MapColorWrapper>(json);
+    ProvinceColorWrapper wrapper = JsonUtility.FromJson<ProvinceColorWrapper>(json);
     Colors = new Dictionary<Color32, string>();
-    foreach (var entry in wrapper.mappings)
+    foreach (var entry in wrapper.colors)
     {
       Color c; 
       ColorUtility.TryParseHtmlString(entry.color, out c);
       Colors[(Color32)c] = entry.id_province;
     }
-    Debug.Log("Color map loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
+    Debug.Log("Loaded Province Colors for " + ScenarioManager.Instance.ScenarioID);
   }
 
 }

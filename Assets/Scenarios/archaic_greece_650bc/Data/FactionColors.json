@@ -1,5 +1,5 @@
 {
-  "mappings": [
+  "colors": [
     { "id_faction": "f_athens", "color": "#0032a0" },
     { "id_faction": "f_eleusis", "color": "#411e5f" },
     { "id_faction": "f_thebes", "color": "#a0002d" },

@@ -1,5 +1,5 @@
 {
-  "mappings": [
+  "colors": [
     { "color": "#0032a0", "id_province": "p_athens" },
     { "color": "#411e5f", "id_province": "p_eleusis" },
     { "color": "#a0002d", "id_province": "p_thebes" },

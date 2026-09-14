@@ -130,3 +130,9 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 **9/13/26**
 - Reorganized Resource.cs into **Bonuses.cs**, creating a public class of all bonus fields for application with factions & provinces.
 - Added a comprehensive, "blank slate" **Start.json**, lists all factions, provinces, and sea regions; only filled fields are starting money and provinces for factions, and start population of 10 and tier 1 farms for all provinces. Surplus field removed from save data as that can be calculated programatically. Surprise wars need 1 turn before commencing to prevent 0 contingent blitzing cheat on game start.
+
+**9/14/26**
+- Separated scenario JSON loader files into *Data/* and *Text/* folders in *Scripts/*.
+- Added unified bonus loaders for objects and text since data shape is identical: **Data/Bonuses.cs** constructs lookup dictionary of bonus objects with ids as keys which preserves faction and province identity with f_ and p_. Text fields added to Bonus objects in renamed **Bonus.cs**.
+- Added scenario text loader, faction text loader, faction colors loader, and adjacency loader. The latter stores string IDs, which is optimal architecture as adjacency does not change and includes both Provinces and Sea Regions.
+- Updated **Province.cs** and **Faction.cs** to use new data. To prevent race conditions when loading, variables are not directly assigned but use expression-bodied members as implicit getters for the data once loaded. ScenarioData renamed ScenarioAsset, as it primarily stores texture references, and data will likely be stored in ScenarioManager instead.

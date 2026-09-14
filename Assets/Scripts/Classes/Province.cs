@@ -4,25 +4,26 @@ using System.Collections.Generic;
 public class Province
 {
     // Identifiers
-    public string ProvinceID;
+    public string ID { get; private set; }
+    public List<string> Adjacent => Adjacency.Lookup[ID];
 
-    public string Name => ProvinceText.Text[ProvinceID].name;
-    public string PeriodName => ProvinceText.Text[ProvinceID].period_name;
-    public string Pronunciation => ProvinceText.Text[ProvinceID].pronunciation;
-    public string Description => ProvinceText.Text[ProvinceID].description;
+    // Province Text
+    public string Name => ProvinceText.Text[ID].name;
+    public string PeriodName => ProvinceText.Text[ID].period_name;
+    public string Pronunciation => ProvinceText.Text[ID].pronunciation;
+    public string Description => ProvinceText.Text[ID].description;
 
-    // Information
+    // Province Bonuses & Bonus Text
+    public BonusSet ProvinceBonuses => Bonuses.BonusSets[ID];
+    public string BonusName => ProvinceBonuses.name;
+    public string BonusBenefit1 => ProvinceBonuses.benefit1;
+    public string BonusBenefit2 => ProvinceBonuses.benefit2;
+
+    // Variable Data
     public Faction Owner;
-    public List<string> Adjacent;
-    public Bonuses ProvinceBonuses;
-
-    // Population
     public int HomePopulation;
     public int LeviedPopulation;
-
-    // Food & Growth
-    public int Surplus;
-    public float GrowthRate;
+    public int Stability;
 
     // Buildings
     public Farms Farms = new Farms(0);
@@ -31,10 +32,12 @@ public class Province
     public Port Port = new Port(0);
     public Prestige Prestige = new Prestige(0);
 
+    // Derived
+    public int Surplus;
+    public float GrowthRate;
 
-    // Stability
-    public int Stability;
-
-    // Contingents raised from this province
+    // Contingents
     public List<Contingent> Contingents = new List<Contingent>();
+
+    public Province(string id) { ID = id; }
 }

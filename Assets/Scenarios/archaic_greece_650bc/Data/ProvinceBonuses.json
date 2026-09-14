@@ -1,7 +1,7 @@
 {
   "bonuses": [
     {
-      "id_province": "p_athens",
+      "id": "p_athens",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -14,7 +14,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_eleusis",
+      "id": "p_eleusis",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -27,7 +27,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_thebes",
+      "id": "p_thebes",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -40,7 +40,7 @@
       "stability_bonus": 8
     },
     {
-      "id_province": "p_orchomenos",
+      "id": "p_orchomenos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -53,7 +53,7 @@
       "stability_bonus": -5
     },
     {
-      "id_province": "p_plataea",
+      "id": "p_plataea",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -66,7 +66,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_thespiae",
+      "id": "p_thespiae",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -79,7 +79,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_tanagra",
+      "id": "p_tanagra",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -92,7 +92,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_krissa",
+      "id": "p_krissa",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -105,7 +105,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_elateia",
+      "id": "p_elateia",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -118,7 +118,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_opous",
+      "id": "p_opous",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -131,7 +131,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_lamia",
+      "id": "p_lamia",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -144,7 +144,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_larissa",
+      "id": "p_larissa",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -157,7 +157,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_pherae",
+      "id": "p_pherae",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -170,7 +170,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_pharsalos",
+      "id": "p_pharsalos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": -1,
@@ -183,7 +183,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_kalydon",
+      "id": "p_kalydon",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -196,7 +196,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_megara",
+      "id": "p_megara",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -209,7 +209,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_sparta",
+      "id": "p_sparta",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -222,7 +222,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_pylos",
+      "id": "p_pylos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -235,7 +235,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_elis",
+      "id": "p_elis",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -248,7 +248,7 @@
       "stability_bonus": 8
     },
     {
-      "id_province": "p_tegea",
+      "id": "p_tegea",
       "surplus": 1,
       "growth": 0.1,
       "replenish_time": 0,
@@ -261,7 +261,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_mantineia",
+      "id": "p_mantineia",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -274,7 +274,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_patrai",
+      "id": "p_patrai",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -287,7 +287,7 @@
       "stability_bonus": 8
     },
     {
-      "id_province": "p_aigion",
+      "id": "p_aigion",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -300,7 +300,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_corinth",
+      "id": "p_corinth",
       "surplus": 1,
       "growth": -0.1,
       "replenish_time": 0,
@@ -313,7 +313,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_sicyon",
+      "id": "p_sicyon",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -326,7 +326,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_argos",
+      "id": "p_argos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -339,7 +339,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_epidaurus",
+      "id": "p_epidaurus",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -352,7 +352,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_troezen",
+      "id": "p_troezen",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -365,7 +365,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_aegina",
+      "id": "p_aegina",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -378,7 +378,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_chalcis",
+      "id": "p_chalcis",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -391,7 +391,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_eretria",
+      "id": "p_eretria",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -404,7 +404,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_naxos",
+      "id": "p_naxos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -417,7 +417,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_paros",
+      "id": "p_paros",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -430,7 +430,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_andros",
+      "id": "p_andros",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -443,7 +443,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_tinos",
+      "id": "p_tinos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -456,7 +456,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_thera",
+      "id": "p_thera",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -469,7 +469,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_melos",
+      "id": "p_melos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -482,7 +482,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_mytilene",
+      "id": "p_mytilene",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -495,7 +495,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_chios",
+      "id": "p_chios",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -508,7 +508,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_samos",
+      "id": "p_samos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -521,7 +521,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_kos",
+      "id": "p_kos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -534,7 +534,7 @@
       "stability_bonus": 8
     },
     {
-      "id_province": "p_knossos",
+      "id": "p_knossos",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -547,7 +547,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_gortyn",
+      "id": "p_gortyn",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -560,7 +560,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_phaistos",
+      "id": "p_phaistos",
       "surplus": 1,
       "growth": 0,
       "replenish_time": 0,
@@ -573,7 +573,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_kydonia",
+      "id": "p_kydonia",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -586,7 +586,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_kameiros",
+      "id": "p_kameiros",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -599,7 +599,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_lindos",
+      "id": "p_lindos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -612,7 +612,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_miletus",
+      "id": "p_miletus",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -625,7 +625,7 @@
       "stability_bonus": 8
     },
     {
-      "id_province": "p_ephesus",
+      "id": "p_ephesus",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -638,7 +638,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_smyrna",
+      "id": "p_smyrna",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -651,7 +651,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_phocaea",
+      "id": "p_phocaea",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -664,7 +664,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_teos",
+      "id": "p_teos",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -677,7 +677,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_cyme",
+      "id": "p_cyme",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,
@@ -690,7 +690,7 @@
       "stability_bonus": 5
     },
     {
-      "id_province": "p_halicarnassus",
+      "id": "p_halicarnassus",
       "surplus": 0,
       "growth": 0.1,
       "replenish_time": 0,
@@ -703,7 +703,7 @@
       "stability_bonus": 0
     },
     {
-      "id_province": "p_knidos",
+      "id": "p_knidos",
       "surplus": 0,
       "growth": 0,
       "replenish_time": 0,

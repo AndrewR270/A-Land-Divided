@@ -32,7 +32,7 @@ public class ResolutionScaler : MonoBehaviour
         ScenarioManager.ScenarioLoaded -= OnScenarioLoaded;
     }
 
-    private void OnScenarioLoaded(ScenarioData scenario)
+    private void OnScenarioLoaded(ScenarioAsset scenario)
     {
         // Now textures are loaded and SetNativeSize() has run
         ApplyBaseScale();

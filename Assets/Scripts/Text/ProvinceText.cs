@@ -21,10 +21,7 @@ public struct ProvinceTextEntry
 }
 
 [Serializable]
-public struct ProvinceTextWrapper
-{
-  public ProvinceTextEntry[] provinces;
-}
+public struct ProvinceTextWrapper { public ProvinceTextEntry[] provinces; }
 
 /*
 
@@ -40,7 +37,7 @@ public static class ProvinceText
   public static void Load()
   {
     string path = Path.Combine(ScenarioManager.Instance.TextPath, "ProvinceText.json");
-    if (!File.Exists(path)) { Debug.LogError("Missing ProvinceText for scenario."); return; }
+    if (!File.Exists(path)) { Debug.LogError("Missing ProvinceText.json."); return; }
     string json = File.ReadAllText(path);
     LoadFromJson(json);
   }
@@ -50,6 +47,6 @@ public static class ProvinceText
     ProvinceTextWrapper wrapper = JsonUtility.FromJson<ProvinceTextWrapper>(json);
     Text = new Dictionary<string, ProvinceTextEntry>();
     foreach (var p in wrapper.provinces) { Text[p.id_province] = p; }
-    Debug.Log("Province text loaded for scenario: " + ScenarioManager.Instance.ScenarioID);
+    Debug.Log("Province text loaded for " + ScenarioManager.Instance.ScenarioID);
   }
 }

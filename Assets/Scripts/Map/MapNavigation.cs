@@ -53,9 +53,9 @@ public class MapNavigation : MonoBehaviour
         ScenarioManager.ScenarioLoaded -= OnScenarioLoaded;
     }
 
-    public void OnScenarioLoaded(ScenarioData scenario)
+    public void OnScenarioLoaded(ScenarioAsset scenario)
     {
-        ColorMap = scenario.colorMap;
+        ColorMap = scenario.ColorMap;
     }
 
     public void updateScale() { 
@@ -274,7 +274,7 @@ public class MapNavigation : MonoBehaviour
         if (clickedColor.r == 0 && clickedColor.g == 0 && clickedColor.b == 0) return;
 
         // Convert color → provinceID
-        if (!MapColors.Colors.TryGetValue(clickedColor, out string provinceID)) { Debug.LogWarning("Unknown."); return; }
+        if (!ProvinceColors.Colors.TryGetValue(clickedColor, out string provinceID)) { Debug.LogWarning("Unknown."); return; }
         else { Debug.Log($"Clicked Color {clickedColor} → ProvinceID {provinceID}"); }
 
 
