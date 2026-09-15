@@ -15,6 +15,7 @@ public struct ScenarioText
   public string name;
   public string victory_points;
   public string money;
+  public string unit_default;
   public string description;
 }
 
