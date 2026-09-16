@@ -40,12 +40,15 @@ public static class ScenarioDataLoader
     catch { Debug.LogError($"Failed to parse JSON for {path}"); return; }
     if (root == null || root.scenario == null) { Debug.LogError($"Invalid JSON for {path}"); return; }
 
+    List<Province> provinces = new List<Province>();
+    foreach (var p_data in root.scenario.provinces) { provinces.Add(new Province(p_data)); }
+
     // Apply runtime data to ScenarioManager
     ScenarioManager.Instance.ApplyLoadedData(
       root.scenario.id_scenario,
       root.scenario.turn,
       root.scenario.factions,
-      root.scenario.provinces,
+      provinces,
       root.scenario.contingents,
       root.scenario.sea_regions
     );
