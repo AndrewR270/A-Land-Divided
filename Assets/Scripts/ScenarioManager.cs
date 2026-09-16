@@ -14,26 +14,38 @@ public class ScenarioManager : MonoBehaviour
 {
   public static ScenarioManager Instance { get; private set; }
 
-  // Scenario Asset
+  // Save File Information
+
+  public string SaveFileName { get; private set; }
+  public string SaveDirectory => Path.Combine(Application.persistentDataPath, "Saves", ScenarioID);
+  public string SavePath => Path.Combine(SaveDirectory, SaveFileName + ".json");
+
+  // Scenario Assets
 
   public ScenarioAsset[] scenarioData;
   private Dictionary<string, ScenarioAsset> scenarios;
   public ScenarioAsset activeScenario;
   public static event System.Action<ScenarioAsset> ScenarioLoaded;
 
-  // Scenario Information
+  // Runtime Game State
 
-  public string ScenarioID => activeScenario.scenarioID;
+  public string ScenarioID { get; private set; }
+  public int TurnNumber { get; private set; }
 
-  public ScenarioText ScenarioText { get; set; }
+  public List<Faction> Factions { get; private set; }
+  public List<Province> Provinces { get; private set; }
+  public List<Contingent> Contingents { get; private set; }
+  public List<SeaRegion> SeaRegions { get; private set; }
 
-  // Asset filepaths
+  public ScenarioText ScenarioText { get; private set; }
+
+  // Scenario Asset Paths
 
   public string ScenarioPath => Path.Combine(Application.dataPath, "Scenarios", ScenarioID);
   public string DataPath => Path.Combine(ScenarioPath, "Data");
   public string TextPath => Path.Combine(ScenarioPath, "Text", SettingsManager.Language);
 
-  // Visual elements for the scenario map
+  // Visual Elements
 
   public RawImage MapBorders;
   public RawImage BaseMap;
@@ -46,9 +58,7 @@ public class ScenarioManager : MonoBehaviour
 
   /*
 
-    Scenario Instance, Data Loading, and Lookup methods.
-    These essentially declare a static accessible instance for the scenario,
-    as well as unpack stored JSON data.
+    Initialization
 
   */
 
@@ -59,16 +69,43 @@ public class ScenarioManager : MonoBehaviour
     foreach (var s in scenarioData) { scenarios[s.scenarioID] = s; }
   }
 
-  public void LoadScenario(string id)
-  {
-    if (!scenarios.TryGetValue(id, out activeScenario)) { Debug.LogError($"Scenario not found."); return; }
+  // Apply Loaded JSON Data
 
-    // Load Scenario JSON data
-    
+  public void ApplyLoadedData(
+    string scenarioID,
+    int turn,
+    List<Faction> factions,
+    List<Province> provinces,
+    List<Contingent> contingents,
+    List<SeaRegion> seaRegions
+  )
+  {
+    ScenarioID = scenarioID;
+    TurnNumber = turn;
+
+    Factions = factions;
+    Provinces = provinces;
+    Contingents = contingents;
+    SeaRegions = seaRegions;
+  }
+
+  // Load Scenario Assets
+
+  public void LoadScenarioAssets()
+  {
+    if (!scenarios.TryGetValue(ScenarioID, out activeScenario)) { 
+      Debug.LogError($"Scenario asset not found: {ScenarioID}");
+      return;
+    }
+
+    // Load adjacency, colors, bonuses
+
     Adjacency.Load();
     FactionColors.Load();
     ProvinceColors.Load();
     Bonuses.Load();
+
+    // Load scenario text files
 
     ScenarioTextLoader.Load();
     FactionText.Load();
@@ -76,7 +113,7 @@ public class ScenarioManager : MonoBehaviour
     BonusText.Load();
     BuildingText.Load();
 
-    // Apply visual elements for the scenario map
+    // Apply map textures
 
     MapBorders.texture = activeScenario.MapBorders;
     BaseMap.texture = activeScenario.BaseMap;
@@ -89,9 +126,22 @@ public class ScenarioManager : MonoBehaviour
     CityLayer.SetNativeSize();
     LabelLayer.SetNativeSize();
 
+    // Background
+
     if (ActiveBackground != null) { Destroy(ActiveBackground); }
     ActiveBackground = Instantiate(activeScenario.Background, Background);
-
     ScenarioLoaded?.Invoke(activeScenario);
+  }
+
+  // Save Game
+
+  public void Save(string fileName)
+  {
+    SaveFileName = fileName;
+    Directory.CreateDirectory(SaveDirectory);
+    string path = SavePath;
+
+    // TODO: serialize Factions, Provinces, Contingents, SeaRegions, TurnNumber
+    // File.WriteAllText(path, json);
   }
 }

@@ -4,7 +4,12 @@
     "turn": 1,
 
     "factions": [
-      { "id_faction": "f_athens", "victory_points": 0, "money": 500, "province_ids": ["p_athens"], "diplomacy": {} },
+      { "id_faction": "f_athens", "victory_points": 0, "money": 500, "province_ids": ["p_athens"], 
+        "diplomacy": {
+          "f_sparta": "enemy",
+          "f_megara": "ally"
+        } 
+      },
       { "id_faction": "f_eleusis", "victory_points": 0, "money": 500, "province_ids": ["p_eleusis"], "diplomacy": {} },
       { "id_faction": "f_thebes", "victory_points": 0, "money": 500, "province_ids": ["p_thebes"], "diplomacy": {} },
       { "id_faction": "f_orchomenos", "victory_points": 0, "money": 500, "province_ids": ["p_orchomenos"], "diplomacy": {} },
@@ -63,10 +68,10 @@
 
     "provinces": [
       { "id_province": "p_athens", "owner": "f_athens",
-        "population_home": 10, "population_levied": 0, "stability": 50,
+        "population_home": 9, "population_levied": 1, "stability": 50,
         "buildings": { "farm": 1, "barracks": 0, "market": 0, "port": 0, "prestige": 0 },
         "pending_construction": [], "pending_recruitment": [],
-        "replenishment_counter": 0, "unit_id_counter": 0 
+        "replenishment_counter": 0, "unit_id_counter": 1
       },
       { "id_province": "p_eleusis", "owner": "f_eleusis",
         "population_home": 10, "population_levied": 0, "stability": 50,
@@ -394,13 +399,34 @@
       }
     ],
 
-    "contingents": [],
+    "contingents": [
+      {
+        "id_unit": "u_athens_0",
+        "name_unit": "",
+        "origin": "p_athens",
+        "experience": 0,
+        "location": "p_athens",
+        "levied": true,
+        "is_exile": false
+      }
+    ],
 
     "sea_regions": [
       { "id_sea_region": "s_gulf_of_corinth", "factions": [] },
       { "id_sea_region": "s_ionian_sea", "factions": [] },
       { "id_sea_region": "s_sea_of_crete", "factions": [] },
-      { "id_sea_region": "s_myrtoan_sea", "factions": [] },
+      { "id_sea_region": "s_myrtoan_sea", 
+        "factions": [
+          {
+            "id_faction": "f_athens",
+            "fleets": 1,
+            "merchants": 0,
+            "army_at_sea": false,
+            "ships_in_queue": 1,
+            "merchants_in_queue": 0
+          }
+        ]
+      },
       { "id_sea_region": "s_southern_aegean", "factions": [] },
       { "id_sea_region": "s_sea_of_the_cyclades", "factions": [] },
       { "id_sea_region": "s_rhodian_sea", "factions": [] },
