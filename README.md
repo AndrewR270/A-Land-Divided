@@ -136,3 +136,8 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 - Added unified bonus loaders for objects and text since data shape is identical: **Data/Bonuses.cs** constructs lookup dictionary of bonus objects with ids as keys which preserves faction and province identity with f_ and p_. Text fields added to Bonus objects in renamed **Bonus.cs**.
 - Added scenario text loader, faction text loader, faction colors loader, and adjacency loader. The latter stores string IDs, which is optimal architecture as adjacency does not change and includes both Provinces and Sea Regions.
 - Updated **Province.cs** and **Faction.cs** to use new data. To prevent race conditions when loading, variables are not directly assigned but use expression-bodied members as implicit getters for the data once loaded. ScenarioData renamed ScenarioAsset, as it primarily stores texture references, and data will likely be stored in ScenarioManager instead.
+
+**9/15/26**
+- Reorganized scenario initialization plan. Instead of passing in an id, a save file (or start file if beginning new game) will provide the id at the top, and **ScenarioManager.cs** has been updated to reflect this.
+- Added **Scenario.cs** in the *Data/* folder for loading JSON data. Currently assigns JSON blocks to lists of Faction, Province, etc, but architecture will be updated to initialize objects as well before sending.
+- Updated Province and Building classes to better reflect data fields from save files (such as time to upgrade) and started constructor and type block for Provinces, but not fully integrated yet (WIP).

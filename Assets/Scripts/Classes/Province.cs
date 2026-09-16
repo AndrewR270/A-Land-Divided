@@ -30,7 +30,6 @@ public class BuildingData
   public int prestige;
 }
 
-
 public class Province
 {
   // Identifiers
@@ -43,7 +42,7 @@ public class Province
   public string Pronunciation => ProvinceText.Text[ID].pronunciation;
   public string Description => ProvinceText.Text[ID].description;
 
-  // Province Bonuses & Bonus Text
+  // Bonuses
   public BonusSet ProvinceBonuses => Bonuses.BonusSets[ID];
   public string BonusName => ProvinceBonuses.name;
   public string BonusBenefit1 => ProvinceBonuses.benefit1;
@@ -56,18 +55,81 @@ public class Province
   public int Stability;
 
   // Buildings
-  public Farms Farms = new Farms(0);
-  public Barracks Barracks = new Barracks(0);
-  public Markets Markets = new Markets(0);
-  public Port Port = new Port(0);
-  public Prestige Prestige = new Prestige(0);
+  public Farms Farms;
+  public Barracks Barracks;
+  public Markets Markets;
+  public Port Port;
+  public Prestige Prestige;
 
   // Derived
   public int Surplus;
   public float GrowthRate;
 
   // Contingents
-  public List<Contingent> Contingents = new List<Contingent>();
+  public List<Contingent> Contingents;
 
-  public Province(string id) { ID = id; }
+  // Queues
+  public List<PendingConstruction> PendingConstruction;
+  public List<PendingRecruitment> PendingRecruitment;
+
+  public int ReplenishmentCounter;
+  public int UnitIDCounter;
+
+  // Constructor used by loader
+  public Province(ProvinceData data)
+  {
+    ID = data.id_province;
+
+    Owner = FactionManager.GetFaction(data.owner);
+
+    HomePopulation = data.population_home;
+    LeviedPopulation = data.population_levied;
+    Stability = data.stability;
+
+    // Buildings
+    Farms = new Farms(data.buildings.farm, GetPendingTime(data, BuildingID.Farms));
+    Barracks = new Barracks(data.buildings.barracks, GetPendingTime(data, BuildingID.Barracks));
+    Markets = new Markets(data.buildings.market, GetPendingTime(data, BuildingID.Markets));
+    Port = new Port(data.buildings.port, GetPendingTime(data, BuildingID.Port));
+    Prestige = new Prestige(data.buildings.prestige, GetPendingTime(data, BuildingID.Prestige));
+
+    // Derived
+    Surplus = Farms.surplus;
+    GrowthRate = Farms.growth;
+
+    // Contingents
+    Contingents = new List<Contingent>();
+
+    // Queues
+    PendingConstruction = ConvertConstruction(data.pending_construction);
+    PendingRecruitment = ConvertRecruitment(data.pending_recruitment);
+
+    ReplenishmentCounter = data.replenishment_counter;
+    UnitIDCounter = data.unit_id_counter;
+  }
+
+  private int GetPendingTime(ProvinceData data, BuildingID id)
+  {
+    foreach (var pc in data.pending_construction)
+      if (pc.building_type == id.ToString().ToLower())
+        return pc.turns_remaining;
+
+    return 0;
+  }
+
+  private List<PendingConstruction> ConvertConstruction(List<PendingConstructionData> list)
+  {
+    var result = new List<PendingConstruction>();
+    foreach (var pc in list)
+      result.Add(new PendingConstruction(pc));
+    return result;
+  }
+
+  private List<PendingRecruitment> ConvertRecruitment(List<PendingRecruitmentData> list)
+  {
+    var result = new List<PendingRecruitment>();
+    foreach (var pr in list)
+      result.Add(new PendingRecruitment(pr));
+    return result;
+  }
 }
