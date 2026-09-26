@@ -8,8 +8,10 @@ public class Contingent
     public string LocationID;
 
     public int Experience;
-    public bool IsAlive = true;
+
+    public bool IsLevied;
     public bool IsExile;
+    public bool IsAlive = true;
 
     public string CustomName;
 
@@ -20,5 +22,8 @@ public class Contingent
 
     public Faction Owner;
 
-    public Contingent(string id) { ID = id; }
+    public Contingent(string id)
+    {
+        ID = id;
+    }
 }
