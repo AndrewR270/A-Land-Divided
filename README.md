@@ -141,3 +141,7 @@ Defined Scenario modularity: all scenario specific assets, including text, now l
 - Reorganized scenario initialization plan. Instead of passing in an id, a save file (or start file if beginning new game) will provide the id at the top, and **ScenarioManager.cs** has been updated to reflect this.
 - Added **Scenario.cs** in the *Data/* folder for loading JSON data. Currently assigns JSON blocks to lists of Faction, Province, etc, but architecture will be updated to initialize objects as well before sending.
 - Updated Province and Building classes to better reflect data fields from save files (such as time to upgrade) and started constructor and type block for Provinces, but not fully integrated yet (WIP).
+
+**9/25/26**
+- Refactored DiplomacyState into **Diplomacy.cs** with a state for each faction and static manager for mutually updating war and alliances, and modified SeaProvince to store faction states instead of fleet and merchant objects, now removed.
+- Removed Army.cs and updated **Contingent.cs** to store levied state.
