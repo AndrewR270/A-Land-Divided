@@ -395,12 +395,12 @@ MonoBehaviour:
   scenarioData:
   - {fileID: 11400000, guid: 93c588cf25297d64f9e0bf39d44c1555, type: 2}
   activeScenario: {fileID: 0}
-  mapBorders: {fileID: 1873460664}
-  baseMap: {fileID: 1293749908}
-  highlight: {fileID: 1958837060}
-  cityLayer: {fileID: 758275807}
-  labelLayer: {fileID: 1484343510}
-  background: {fileID: 6115614435981773562}
+  MapBorders: {fileID: 1873460664}
+  BaseMap: {fileID: 1293749908}
+  HighlightLayer: {fileID: 1958837060}
+  CityLayer: {fileID: 758275807}
+  LabelLayer: {fileID: 1484343510}
+  Background: {fileID: 6115614435981773562}
 --- !u!114 &457523004
 MonoBehaviour:
   m_ObjectHideFlags: 0
